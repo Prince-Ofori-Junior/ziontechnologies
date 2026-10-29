@@ -2,149 +2,116 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
-/* ---------- Animated Why Zion ad ---------- */
+/* ---------- Animated Why Zion ad (photo story) ---------- */
+/* Needs: images in public/zion-ad/ and the zion-ad.css styles appended to globals.css */
 
-const delayClass = (seconds: number) =>
-  `delay-${seconds.toFixed(2).replace(/\.?0+$/, "").replace(".", "-")}`;
+type AdScene = {
+  src: string;
+  alt: string;
+  kind: "cut" | "card";
+  bg: string;
+  fg: string;
+  tint?: string;
+  cap: string;
+  sub: string;
+  flip?: boolean;
+  end?: boolean;
+};
 
-const SCENES = [
-  { id: "idea", cap: "It starts with your idea." },
-  { id: "listen", cap: "We listen first." },
-  { id: "design", cap: "Your brand, designed." },
-  { id: "build", cap: "Your software, built." },
-  { id: "print", cap: "Your print, delivered." },
-  { id: "end", cap: "One connected team." },
+const AD_SCENES: AdScene[] = [
+  { src: "/zion-ad/listen.jpg", alt: "Black telephone handset hanging from a coiled cord", kind: "cut",
+    bg: "#e4e4e4", fg: "#14312f", tint: "#cfe9ec", cap: "We listen first.",
+    sub: "Your goals, your customers and your budget. Then we plan." },
+  { src: "/zion-ad/brand.jpg", alt: "Designer screen showing a printed corporate profile with charts on the desk", kind: "card",
+    bg: "#eef4f5", fg: "#14312f", cap: "Brand and print that look the part.",
+    sub: "Profiles, brochures and logos that match your website.", flip: true },
+  { src: "/zion-ad/web.jpg", alt: "Laptop, phone and tablet showing a website with development icons", kind: "card",
+    bg: "#07122b", fg: "#ffffff", cap: "Websites and software, built right.",
+    sub: "Custom sites, online stores, apps and ongoing care." },
+  { src: "/zion-ad/trust.jpg", alt: "Two professionals shaking hands across a table", kind: "cut",
+    bg: "#e8e8e8", fg: "#14312f", tint: "#d3ecef", cap: "A partner you can trust.",
+    sub: "Clear quotes, honest timelines and one point of contact.", flip: true },
+  { src: "/zion-ad/love.jpg", alt: "Smiling woman making a heart with her hands", kind: "cut",
+    bg: "#e8f0ff", fg: "#14312f", tint: "#c9dcff", cap: "Clients who love the result.",
+    sub: "Friendly people who care about your success." },
+  { src: "/zion-ad/results.jpg", alt: "Woman celebrating with a laptop on an orange bean bag", kind: "cut",
+    bg: "#d2cfcb", fg: "#2a1a0a", tint: "#ffd9b8", cap: "Results worth celebrating.",
+    sub: "Launches that help your business grow.", flip: true },
+  { src: "/zion-ad/cta.jpg", alt: "Smiling man in a suit pointing to the side", kind: "cut",
+    bg: "#eaf8fb", fg: "#14312f", tint: "#bfe3e8", cap: "Ready to start? Let\u2019s talk.",
+    sub: "Tell us what you need and we\u2019ll send a clear quote.", end: true },
 ];
 
-const Z = ({ delay = 0 }: { delay?: number }) => (
-  <svg viewBox="0 0 40 40" className="zlogo" aria-hidden="true">
-    <path className={`draw ${delayClass(delay)}`} d="M11 11h18L11 29h18" />
-  </svg>
-);
-
-const Tick = ({ delay }: { delay: number }) => (
-  <svg viewBox="0 0 20 20" className="tick" aria-hidden="true">
-    <path className={`draw ${delayClass(delay)}`} d="M4 10l4 4 8-8" />
-  </svg>
-);
-
-function Scene({ id }: { id: string }) {
-  switch (id) {
-    case "idea":
-      return (
-        <div className="scene">
-          <p className="mono type delay-0-4">I need a website, a brand and print.</p>
-          <div className="chips">
-            {["Website", "Logo", "Brochures", "Signage"].map((c, i) => <span key={c} className={`a pop ${delayClass(2.2 + i * 0.35)}`}>{c}</span>)}
-          </div>
-        </div>
-      );
-    case "listen":
-      return (
-        <div className="scene">
-          <div className="list">
-            {[["Your goal", "Launch a better product"], ["Your audience", "Who it is really for"], ["Your constraints", "Budget, time, and tools"]].map(([t, s], i) => (
-              <div key={t} className={`row a sr ${delayClass(0.3 + i * 0.9)}`}>
-                <Tick delay={0.8 + i * 0.9} />
-                <div><b>{t}</b><span>{s}</span></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    case "design":
-      return (
-        <div className="scene row-scene">
-          <div className="tile a pop"><Z delay={0.4} /></div>
-          <div className="design-side">
-            <div className="swatches">
-              {["green", "orange", "blue", "cream"].map((color, i) => <i key={color} className={`a pop swatch-${color} ${delayClass(1.3 + i * 0.3)}`} />)}
-            </div>
-            <p className="specimen a rise delay-2-6">Aa <small>Type and colour, set as a system</small></p>
-          </div>
-        </div>
-      );
-    case "build":
-      return (
-        <div className="scene row-scene">
-          <div className="win a pop">
-            <div className="wbar"><i /><i /><i /></div>
-            <div className="wbody">
-              <i className="grow bl build-title delay-0-6" />
-              <i className="grow bl g build-hero delay-1" />
-              <div className="two">
-                <i className="grow bl build-card delay-1-5" />
-                <i className="grow bl build-card delay-1-8" />
-              </div>
-            </div>
-          </div>
-          <div className="code">
-            {[0, 1, 2, 3, 4].map((i) => <i key={i} className={`grow code-line-${i} ${delayClass(0.5 + i * 0.35)}`} />)}
-            <b className="live a pop delay-3-4">Live</b>
-          </div>
-        </div>
-      );
-    case "print":
-      return (
-        <div className="scene row-scene">
-          <div className="pcard a sl delay-0-3"><span className="mini"><Z delay={0.6} /></span>Zion</div>
-          <div className="fold">
-            {["green", "pale", "orange"].map((color, i) => <i key={color} className={`a rise fold-${color} ${delayClass(1 + i * 0.35)}`} />)}
-          </div>
-          <div className="sign a sr delay-1-8">Open</div>
-        </div>
-      );
-    default:
-      return (
-        <div className="scene">
-          <div className="tile a pop"><Z delay={0.3} /></div>
-          <h3 className="a rise delay-1-1">Zion Technologies</h3>
-          <p className="a rise delay-1-5">Software, print, and brand, working as one.</p>
-          <a className="endbtn a pop delay-2-2" href="#contact">Request a quote</a>
-        </div>
-      );
-  }
-}
-
 function ZionAd() {
-  const [scene, setScene] = useState(0);
-  const [on, setOn] = useState(true);
-  const [inView, setInView] = useState(false);
-  const root = useRef<HTMLDivElement>(null);
+  const [i, setI] = useState(0);
+  const [inView, setInView] = useState(true);
+  const root = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setOn(false);
     const el = root.current;
     if (!el) return;
-    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0.4 });
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0.1 });
     io.observe(el);
     return () => io.disconnect();
   }, []);
 
-  const run = on && inView;
-  const next = () => setScene((s) => (s + 1) % SCENES.length);
+  const s = AD_SCENES[i];
+  const next = () => setI((n) => (n + 1) % AD_SCENES.length);
+  const style = {
+    "--zs-bg": s.bg,
+    "--zs-fg": s.fg,
+    "--zs-tint": s.tint ?? "transparent",
+  } as CSSProperties;
 
   return (
-    <div className="zad" ref={root} data-run={run} role="region" aria-label="Zion Technologies animated introduction">
-      <div className="zad-top">
-        <b>Why Zion</b>
-        <span>{scene + 1} / {SCENES.length}</span>
-        <button type="button" onClick={() => setOn(!on)} aria-label={on ? "Pause animation" : "Play animation"}>{on ? "Pause" : "Play"}</button>
+    <section
+      ref={root}
+      className="zs"
+      style={style}
+      data-run={inView}
+      aria-label="Why choose Zion Technologies"
+    >
+      <div className={`zs-scene${s.flip ? " flip" : ""}`} key={`scene-${i}`}>
+        <div className={`zs-media ${s.kind === "cut" ? "zs-cut" : "zs-cardwrap"}`}>
+          {s.kind === "cut" ? (
+            <>
+              <i className="zs-ring" />
+              <Image src={s.src} alt={s.alt} fill sizes="(max-width: 640px) 90vw, 480px" priority={i === 0} className="zs-cut-img" />
+            </>
+          ) : (
+            <div className="zs-card">
+              <Image src={s.src} alt={s.alt} fill sizes="(max-width: 640px) 90vw, 480px" className="zs-card-img" />
+            </div>
+          )}
+        </div>
+        <div className="zs-txt">
+          <h2 className="zs-cap" aria-live="polite">{s.cap}</h2>
+          <i className="zs-bar" />
+          <p className="zs-sub">{s.sub}</p>
+          {s.end && <a className="zs-btn" href="#contact">Request a quote</a>}
+        </div>
       </div>
-      <div className="stage">
-        <Scene key={scene} id={SCENES[scene].id} />
-        <p className="cap" key={`c${scene}`} aria-live="polite">{SCENES[scene].cap}</p>
+
+      <div className="zs-top">
+        <span className="zs-brand">Zion Technologies</span>
       </div>
-      <div className="timeline">
-        {SCENES.map((s, i) => (
-          <button key={s.id} type="button" className={`seg seg-${s.id}${i < scene ? " done" : ""}`} aria-label={`Go to scene ${i + 1}: ${s.cap}`} onClick={() => setScene(i)}>
-            {i === scene && <i key={`f${scene}`} onAnimationEnd={next} />}
+
+      <div className="zs-tl">
+        {AD_SCENES.map((x, n) => (
+          <button
+            key={x.cap}
+            type="button"
+            className={`zs-seg${n < i ? " done" : ""}`}
+            aria-label={`Go to scene ${n + 1}: ${x.cap}`}
+            onClick={() => setI(n)}
+          >
+            {n === i && <i key={`f${i}`} onAnimationEnd={next} />}
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -207,6 +174,7 @@ const solutions = [
 export default function Home() {
   const [tab, setTab] = useState<Cat>("all");
   const [menu, setMenu] = useState(false);
+  const [marqueePaused, setMarqueePaused] = useState(false);
   const features = useRef<HTMLElement>(null);
   const serviceGallery = useRef<HTMLDivElement>(null);
 
@@ -222,7 +190,7 @@ export default function Home() {
 
   return (
     <>
-            <header className="site-header">
+      <header className="site-header">
         <nav className="main-nav" aria-label="Main navigation">
           <a className="brand" href="#top" aria-label="Zion Technologies home"><span>Z</span>Zion Technologies</a>
           <div className={menu ? "nav-links open" : "nav-links"}>
@@ -276,7 +244,7 @@ export default function Home() {
           <div className="service-gallery">
             <div className="service-gallery-row">
               <div className="service-gallery-controls">
-                <button type="button" aria-label="Show previous services" onClick={() => serviceGallery.current?.scrollBy({ left: -380, behavior: "smooth" })}>←</button>
+                {/* <button type="button" aria-label="Show previous services" onClick={() => serviceGallery.current?.scrollBy({ left: -380, behavior: "smooth" })}>←</button> */}
               </div>
               <div className="service-gallery-track" ref={serviceGallery} tabIndex={0} aria-label="Swipe or scroll to explore images of our six services">
                 {services.map((service) => (
@@ -287,7 +255,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="service-gallery-controls">
-                <button type="button" aria-label="Show next services" onClick={() => serviceGallery.current?.scrollBy({ left: 380, behavior: "smooth" })}>→</button>
+                {/* <button type="button" aria-label="Show next services" onClick={() => serviceGallery.current?.scrollBy({ left: 380, behavior: "smooth" })}>→</button> */}
               </div>
             </div>
           </div>
@@ -336,29 +304,29 @@ export default function Home() {
 
         <section className="work-partners-section">
           <div className="marquee-row">
-            <div className="marquee-track">
+            <div className="marquee-track" onMouseEnter={() => setMarqueePaused(true)} onMouseLeave={() => setMarqueePaused(false)} style={{ animationPlayState: marqueePaused ? 'paused' : 'running' }}>
               {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
                 <figure key={src} className="work-img-card">
-                  <Image src={src} alt="Work" width={180} height={180} />
+                  <Image src={src} alt="Work" width={340} height={200} />
                 </figure>
               ))}
               {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
                 <figure key={src + "-a"} className="work-img-card">
-                  <Image src={src} alt="Work" width={180} height={180} />
+                  <Image src={src} alt="Work" width={340} height={200} />
                 </figure>
               ))}
             </div>
           </div>
           <div className="marquee-row marquee-row--reverse">
-            <div className="marquee-track">
+            <div className="marquee-track" onMouseEnter={() => setMarqueePaused(true)} onMouseLeave={() => setMarqueePaused(false)} style={{ animationPlayState: marqueePaused ? 'paused' : 'running' }}>
               {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
                 <figure key={src + "-b"} className="work-img-card">
-                  <Image src={src} alt="Work" width={180} height={180} />
+                  <Image src={src} alt="Work" width={280} height={200} />
                 </figure>
               ))}
               {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
                 <figure key={src + "-c"} className="work-img-card">
-                  <Image src={src} alt="Work" width={180} height={180} />
+                  <Image src={src} alt="Work" width={280} height={200} />
                 </figure>
               ))}
             </div>

@@ -95,7 +95,7 @@ function ZionAd() {
       </div>
 
       <div className="zs-top">
-        <span className="zs-brand">Zion Technologies</span>
+        {/* <span className="zs-brand">Zion Technologies</span> */}
       </div>
 
       <div className="zs-tl">
@@ -212,8 +212,8 @@ export default function Home() {
     fill="none"
   >
     <path className="first" d="M3.75 6.5h14" />
-    <path className="middle" d="M3.75 12h20" />
-    <path className="last" d="M3.75 17.5h14" /> 
+    <path className="middle" d="M3.75 12.5h20" />
+    <path className="last" d="M3.75 18.5h14" /> 
   </svg>
 </button>
         </nav>

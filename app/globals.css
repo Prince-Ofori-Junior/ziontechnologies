@@ -158,12 +158,67 @@ button {
 
   .main-nav .menu-btn svg path {
     stroke: #000000 !important;
-    stroke-width: 3 !important;
+    stroke-width: 2 !important;
     fill: none !important;
   }
 }
 
-/* Hide hamburger on desktop - full menu displayed */
+/* Hamburger menu icon - black color */
+.hamburger path {
+  stroke: #000000 !important;
+  stroke-width: 2 !important;
+  fill: none !important;
+  background: transparent !important;
+  transition: stroke-width 0.3s, transform 0.3s;
+}
+
+.hamburger.active path.first {
+  transform: translateY(6px) rotate(-45deg);
+  transform-origin: 0% 0%;
+}
+
+.hamburger.active path.middle {
+  opacity: 0;
+  transform: rotate(45deg) translateY(-6px);
+  transform-origin: 0% 0%;
+}
+
+.hamburger.active path.last {
+  transform: translateY(-6px) rotate(45deg);
+  transform-origin: 0% 0%;
+}
+
+/* Ensure menu button has no background */
+.main-nav .menu-btn {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Mobile: show hamburger, desktop: hide */
+@media (max-width: 900px) {
+  .main-nav .menu-btn {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .main-nav .menu-btn svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-nav .menu-btn svg path {
+    stroke: #333333 !important;
+    stroke-width: 2 !important;
+    fill: none !important;
+  }
+}
+
+/* Hide menu button on desktop - show full menu */
 @media (min-width: 901px) {
   .main-nav .menu-btn {
     display: none;
@@ -1411,7 +1466,7 @@ footer p {
   .features-section .feature-grid,
   .features-section .service-gallery {
     opacity: 1;
-    transform: none;
+    transform: none;  
   }
 
   .service-gallery-track {

@@ -138,7 +138,37 @@ button {
   display: none;
 }
 
-/* ==================== Hero ==================== */
+/* Show menu button on mobile, hide on desktop */
+.main-nav .menu-btn {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .main-nav .menu-btn {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 0;
+    padding: 4px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .main-nav .menu-btn svg path {
+    stroke: #000000 !important;
+    stroke-width: 3 !important;
+    fill: none !important;
+  }
+}
+
+/* Hide hamburger on desktop - full menu displayed */
+@media (min-width: 901px) {
+  .main-nav .menu-btn {
+    display: none;
+  }
+}
 
 .hero {
   display: flex;

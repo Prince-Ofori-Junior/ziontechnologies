@@ -1,18 +1,23 @@
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+﻿import type { Metadata } from "next";
 import "./globals.css";
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Zion Technologies | Software, Printing & Branding",
   description: "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
   keywords: ["Software Development", "Web Development", "Mobile Apps", "Brand Identity", "Print Production", "Accra Ghana", "Zion Technologies"],
-  authors: [{ name: "Zion Technologies" }],
+  openGraph: {
+    title: "Zion Technologies | Software, Printing & Branding",
+    description: "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Zion Technologies",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zion Technologies | Software, Printing & Branding",
+    description: "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
+  },
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
   openGraph: {
     title: "Zion Technologies | Software, Printing & Branding",
     description: "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
@@ -35,7 +40,7 @@ const jsonLd = {
       "@id": "https://ziontechnologies.com/#organization",
       "name": "Zion Technologies",
       "url": "https://ziontechnologies.com",
-      "logo": "https://ziontechnologies.com/download.png",
+      "logo": "https://ziontechnologies.com/favicon.ico",
       "email": "hello@ziontechnologies.com",
       "telephone": "+233595856187",
       "address": {
@@ -52,8 +57,8 @@ const jsonLd = {
       "@type": "ProfessionalService",
       "@id": "https://ziontechnologies.com/#service",
       "name": "Zion Technologies",
-      "image": "https://ziontechnologies.com/download.png",
-      "priceRange": "$$",
+      "image": "https://ziontechnologies.com/favicon.ico",
+      "priceRange": "",
       "telephone": "+233595856187",
       "address": {
         "@type": "PostalAddress",
@@ -67,11 +72,12 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${roboto.variable} h-full antialiased`}
-    >
+    <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

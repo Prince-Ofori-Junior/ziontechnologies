@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -188,11 +188,12 @@ export default function Home() {
 
   const shown = services.filter((s) => tab === "all" || s.cat === tab);
 
-  return (
+  return (  
     <>
       <header className="site-header">
         <nav className="main-nav" aria-label="Main navigation">
-          <a className="brand" href="#top" aria-label="Zion Technologies home"><span>Z</span>Zion Technologies</a>
+          <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/favicon.ico" alt="Zion Technologies logo" width={72} height={72} /><div className="brand-text"><span className="logo-aqua">ionTechnologies</span><span className="logo-blue">.com</span></div></a>
+
           <div className={menu ? "nav-links open" : "nav-links"}>
             {[["Services", "#services"], ["Solutions", "#solutions"], ["How it works", "#process"], ["About", "#about"]].map(([l, h]) => (
               <a key={l} href={h} onClick={() => setMenu(false)}>{l}</a>
@@ -203,7 +204,18 @@ export default function Home() {
             <a href={`mailto:${EMAIL}`}>Contact</a>
             <a className="nav-cta" href="#contact">Get a quote</a>
           </div>
-          <button className="menu-btn" type="button" aria-expanded={menu} aria-label="Toggle menu" onClick={() => setMenu(!menu)}>{menu ? "Close" : "Menu"}</button>
+          <button className="menu-btn" type="button" aria-expanded={menu} aria-label="Toggle menu" onClick={() => setMenu(!menu)}>
+  <svg
+    className={`hamburger ${menu ? 'active' : ''}`}
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    fill="none"
+  >
+    <path className="first" d="M3.75 6.5h14" />
+    <path className="middle" d="M3.75 12h20" />
+    <path className="last" d="M3.75 17.5h14" /> 
+  </svg>
+</button>
         </nav>
       </header>
 

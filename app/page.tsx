@@ -192,7 +192,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <nav className="main-nav" aria-label="Main navigation">
-          <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/favicon.ico" alt="Zion Technologies logo" width={72} height={72} /><div className="brand-text"><span className="logo-aqua">ionTechnologies</span><span className="logo-blue">.com</span></div></a>
+          <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/favicon.ico" alt="Zion Technologies logo" width={48} height={48} /><div className="brand-text"><span className="logo-aqua"> </span><span className="logo-blue"></span></div></a>
 
           <div className={menu ? "nav-links open" : "nav-links"}>
             {[["Services", "#services"], ["Solutions", "#solutions"], ["How it works", "#process"], ["About", "#about"]].map(([l, h]) => (
@@ -349,11 +349,10 @@ export default function Home() {
           <div className="pre-footer-about">
             <h2>Software development</h2>
             <p>We design and build tailored web applications, mobile apps, and business systems that help teams work smarter and grow.</p>
-            <span className="pre-footer-logo" aria-label="Zion Technologies">Z</span>
           </div>
           <div className="pre-footer-links">
             <h2>Explore</h2>
-            <a href="#services">Services</a>
+            <a href="#services">Services</a> 
             <a href="#solutions">Solutions</a>
             <a href="#about">About us</a>
           </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+﻿﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -175,6 +175,8 @@ export default function Home() {
   const [tab, setTab] = useState<Cat>("all");
   const [menu, setMenu] = useState(false);
   const [marqueePaused, setMarqueePaused] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const features = useRef<HTMLElement>(null);
   const serviceGallery = useRef<HTMLDivElement>(null);
 
@@ -186,7 +188,20 @@ export default function Home() {
     return () => io.disconnect();
   }, []);
 
-  const shown = services.filter((s) => tab === "all" || s.cat === tab);
+  useEffect(() => {
+    setExpanded(false);
+  }, [tab]);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const handleChange = () => setIsMobile(mq.matches);
+    handleChange();
+    mq.addEventListener("change", handleChange);
+    return () => mq.removeEventListener("change", handleChange);
+  }, []);
+
+  const allShown = services.filter((s) => tab === "all" || s.cat === tab);
+  const shown = (isMobile && !expanded) ? allShown.slice(0, 3) : allShown;
 
   return (  
     <>
@@ -253,6 +268,16 @@ export default function Home() {
               </article>
             ))}
           </div>
+          {isMobile && !expanded && allShown.length > 3 && (
+            <button type="button" onClick={() => setExpanded(true)} className="view-more">
+              View more →
+            </button>
+          )}
+          {expanded && (
+            <button type="button" onClick={() => setExpanded(false)} className="view-more">
+              View less →
+            </button>
+          )}
           <div className="service-gallery">
             <div className="service-gallery-row">
               <div className="service-gallery-controls">

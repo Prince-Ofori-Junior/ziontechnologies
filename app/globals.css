@@ -690,6 +690,25 @@ button {
   font-size: 15px;
 }
 
+.view-more {
+  display: inline-block;
+  margin: 24px 0 0;
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-more:hover {
+  border-color: var(--ink);
+  background: var(--soft);
+}
+
 /* Service image gallery */
 
 .service-gallery {

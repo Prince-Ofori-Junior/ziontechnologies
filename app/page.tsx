@@ -117,7 +117,7 @@ function ZionAd() {
 
 /* ---------- Page ---------- */
 
-const EMAIL = "hello@ziontechnologies.com";
+const EMAIL = "ofori24688@gmail.com";
 
 type Cat = "all" | "digital" | "creative";
 type ServiceIcon = "software" | "automation" | "support" | "brand" | "print" | "creative";
@@ -213,11 +213,11 @@ export default function Home() {
             {[["Services", "#services"], ["Solutions", "#solutions"], ["How it works", "#process"], ["About", "#about"]].map(([l, h]) => (
               <a key={l} href={h} onClick={() => setMenu(false)}>{l}</a>
             ))}
-            <a className="nav-cta mobile-only" href="#contact" onClick={() => setMenu(false)}>Get a quote</a>
+            <a className="nav-cta nav-cta--accent mobile-only" href="#contact" onClick={() => setMenu(false)}>Get a quote</a>
           </div>
           <div className="nav-actions">
             <a href={`mailto:${EMAIL}`}>Contact</a>
-            <a className="nav-cta" href="#contact">Get a quote</a>
+            <a className="nav-cta nav-cta--accent" href="#contact">Get a quote</a>
           </div>
           <button className="menu-btn" type="button" aria-expanded={menu} aria-label="Toggle menu" onClick={() => setMenu(!menu)}>
   <svg
@@ -373,7 +373,7 @@ export default function Home() {
         <section className="seoFaqSection" id="faq" aria-label="Frequently asked questions">
           <h2>FAQ</h2>
           <div className="seoFaqList">
-            <details className="seoFaqItem">
+            <details className="seoFaqItem" open>
               <summary className="seoFaqQuestion">
                 Can businesses in Kumasi and New Edubiase request your services?
               </summary>

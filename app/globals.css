@@ -31,6 +31,7 @@ body {
   color: var(--ink);
   font: 17px/1.6 var(--sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -129,6 +130,16 @@ button {
 
 .nav-cta:hover {
   background: var(--green);
+  color: #fff;
+}
+
+.nav-cta--accent {
+  background: var(--ink);
+  color: #fff;
+}
+
+.nav-cta--accent:hover {
+  background: #3b3b3b;
   color: #fff;
 }
 
@@ -1441,8 +1452,16 @@ footer p {
 
   .pre-footer {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
     padding: 48px 20px;
+  }
+
+  .pre-footer-about,
+  .pre-footer-links,
+  .pre-footer-contact,
+  .pre-footer-location {
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
   .pre-footer-about {
@@ -1459,6 +1478,8 @@ footer p {
 .seoFaqSection {
   background: #fff;
   padding: 64px 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .seoFaqSection h2 {
@@ -1519,14 +1540,16 @@ footer p {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  content: "+";
-  font-size: 1.5rem;
+  content: "∨";
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1;
   color: var(--accent);
 }
 
 .seoFaqItem[open] .seoFaqQuestion::after {
-  content: "−";
+  content: "∧";
+  font-weight: 700;
 }
 
 .seoFaqQuestion:focus-visible {
@@ -1560,6 +1583,7 @@ footer p {
   .seoFaqItem {
     padding: 1rem;
     border-radius: 12px;
+    max-width: 100%;
   }
 
   .seoFaqQuestion {

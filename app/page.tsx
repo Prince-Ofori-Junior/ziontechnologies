@@ -237,8 +237,8 @@ export default function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <h1>Technology, print, <span>and brand, working as one.</span></h1>
-            <p>Zion Technologies helps businesses launch better digital products, build memorable brands, and produce polished materials.</p>
+            <h1>Software, Technology, And<br />Digital Innovation, Working As One.</h1>
+            <p>Zion Technologies helps businesses launch better software, build scalable web applications, and grow with modern technology.</p>
           </div>
 
           <ZionAd />

@@ -897,7 +897,7 @@ button {
   padding: 80px 24px 0;
   overflow-x: clip;
   background: #fff;
-  border-top: 1px solid #e74c3c;
+  
 }
 
 .marquee-row {
@@ -924,7 +924,7 @@ button {
   height: 180px;
   overflow: hidden;
   margin: 0;
-  border: 2px solid #e74c3c;
+  border: 6px solid #e74c3c;
   border-radius: 0;
   background: var(--soft);
   font-weight: 600;

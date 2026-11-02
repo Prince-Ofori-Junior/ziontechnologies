@@ -375,72 +375,66 @@ export default function Home() {
           <div className="seoFaqList">
             <details className="seoFaqItem" open>
               <summary className="seoFaqQuestion">
-                Can businesses in Kumasi and New Edubiase request your services?
+                Which is the best software development company in Ghana for my business?
               </summary>
               <div className="seoFaqAnswer">
                 <p>
-                  Yes. Businesses and organisations in Kumasi, New Edubiase, and other parts of Ghana can contact Zion Technologies with project enquiries. We will discuss the work required and confirm suitable communication and delivery arrangements for each project. Our business is based in Weija, Accra.
+                  Choosing the right software development company depends on its technical expertise, completed projects, communication, pricing transparency and ability to understand your business requirements. Zion Technologies provides custom software development, website development, mobile applications and digital solutions for businesses and organisations in Ghana. We encourage prospective clients to review our work and discuss their requirements before choosing a development partner.
                 </p>
               </div>
             </details>
 
             <details className="seoFaqItem">
               <summary className="seoFaqQuestion">
-                Can businesses in other African countries work with Zion Technologies?
+                How much does it cost to develop custom software in Ghana?
               </summary>
               <div className="seoFaqAnswer">
                 <p>
-                  We welcome project enquiries from businesses and organisations in Ghana and across Africa. Contact us with your location, project requirements, and preferred timeline so we can discuss the scope and determine suitable communication and delivery arrangements.
+                  The cost of custom software development in Ghana depends on the project's complexity, features, user requirements, database structure, integrations and development time. A simple business application will require a different budget from a complete management system or ecommerce platform. Zion Technologies provides project-specific quotations in Ghanaian cedis (GHS) based on your requirements.
                 </p>
               </div>
             </details>
 
             <details className="seoFaqItem">
               <summary className="seoFaqQuestion">
-                Can you develop ecommerce websites and mobile applications?
+                How long does it take to develop software in Ghana?
               </summary>
               <div className="seoFaqAnswer">
                 <p>
-                  Zion Technologies works on websites, online shopping experiences, mobile applications, and tailored web applications. We can discuss the features your business needs, such as product displays, customer accounts, online enquiries, and other project-specific functionality.
+                  Software development timelines depend on the type of application, number of features, design requirements, integrations and testing. A simple business website generally requires less development time than a complex web application or business management system. Zion Technologies establishes project milestones and an estimated delivery schedule after assessing the project requirements.
                 </p>
               </div>
             </details>
 
             <details className="seoFaqItem">
               <summary className="seoFaqQuestion">
-                Do you build custom software and business management systems?
+                Can I hire a software development company in Ghana if my business is located in Kumasi or New Edubiase?
               </summary>
               <div className="seoFaqAnswer">
                 <p>
-                  Yes. We design and build custom software and business systems based on an organisation's workflow. We can also discuss automation opportunities that reduce repetitive tasks and connect everyday business processes. Tell us about the tasks, users, and features involved so we can consider a suitable solution.
+                  Yes. Zion Technologies welcomes project enquiries from businesses and organisations in Accra, Kumasi, New Edubiase and other parts of Ghana. Project discussions, requirements gathering and progress updates can be conducted remotely, making it possible to work together without being in the same city.
                 </p>
               </div>
             </details>
 
             <details className="seoFaqItem">
               <summary className="seoFaqQuestion">
-                Do you offer branding, graphic design, and printing services?
+                Which company can develop an Android and iOS mobile application in Ghana?
               </summary>
               <div className="seoFaqAnswer">
                 <p>
-                  Yes. Our creative services include brand identity, logos, graphic design, brochures, signage, stationery, packaging, and other print materials. Contact us with your design or printing requirements to discuss the options for your project.
+                  Zion Technologies provides mobile application development solutions for businesses and entrepreneurs looking to build digital products. Depending on your requirements, we can discuss application design, user registration, dashboards, backend development, integrations and the appropriate mobile platforms.
                 </p>
               </div>
             </details>
 
             <details className="seoFaqItem">
               <summary className="seoFaqQuestion">
-                How much does it cost to build a website in Ghana?
+                How do software developers protect business data and customer information?
               </summary>
               <div className="seoFaqAnswer">
                 <p>
-                  Website development costs in Ghana depend on the project scope, number of pages,
-                  design requirements, functionality, integrations, and any ongoing support required.
-                  Because each project is different, we discuss your requirements before preparing
-                  a quote. Email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>, call
-                  <a href="tel:+233595856187"> +233 59 585 6187</a>, or contact us on
-                  <a href="https://wa.me/233595856187" target="_blank" rel="noreferrer"> WhatsApp</a>
-                  to discuss your website project.
+                  Data security should be considered throughout software design and development. Depending on the application, important considerations include secure authentication, user permissions, data protection, encrypted communication, database security, backups and testing. Zion Technologies can assess your security requirements and incorporate the appropriate measures into the agreed development scope.
                 </p>
               </div>
             </details>

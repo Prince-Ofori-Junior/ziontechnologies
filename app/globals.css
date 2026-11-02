@@ -84,6 +84,7 @@ button {
   gap: 10px;
   font-size: 20px;
   font-weight: 700;
+  z-index: 99;
 }
 
 .brand > span {
@@ -153,25 +154,13 @@ button {
   display: block;
 }
 
-@media (max-width: 900px) {
-  .main-nav .menu-btn {
-    display: block;
-    width: 36px;
-    height: 36px;
-    background: #f5f5f5;
-    border: none;
-    border-radius: 0;
-    padding: 4px;
-    cursor: pointer;
-    z-index: 100;
-  }
+
 
   .main-nav .menu-btn svg path {
     stroke: #000000 !important;
     stroke-width: 2 !important;
     fill: none !important;
   }
-}
 
 /* Hamburger menu icon - black color */
 .hamburger path {
@@ -210,10 +199,15 @@ button {
     display: block;
     width: 36px;
     height: 36px;
-    background: transparent;
+    background: #f5f5f5;
     border: none;
+    border-radius: 0;
+    padding: 4px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 99999;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   .main-nav .menu-btn svg {

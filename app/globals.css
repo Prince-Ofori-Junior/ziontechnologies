@@ -1,4 +1,4 @@
-﻿﻿@import "tailwindcss";
+﻿@import "tailwindcss";
 
 /* ==================== Theme ==================== */
 
@@ -1660,6 +1660,470 @@ footer p {
   .zs-seg i {
     animation: none;
     transform: none;
+  }
+}
+
+/* ==================== Navbar Development sub-tabs (dropdown) ==================== */
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-dropdown-toggle {
+  color: var(--muted);
+  font-size: 15px;
+  padding: 4px 0;
+}
+.nav-dropdown-toggle:hover {
+  color: var(--ink);
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  min-width: 220px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.09);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  animation: navDropdownSlide 0.25s ease forwards;
+}
+.nav-dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--ink);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.nav-dropdown-item:last-child {
+  border-bottom: none;
+}
+.nav-dropdown-item:hover {
+  background: var(--pale);
+  color: var(--green);
+}
+
+/* Mobile: reveal sub-tabs statically when the menu opens */
+@media (max-width: 640px) {
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    padding: 6px 0 0 18px;
+    background: transparent;
+    transition: none;
+  }
+  .nav-dropdown.open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-dropdown-item {
+    padding: 6px 0;
+    border-bottom: none;
+    color: var(--muted);
+  }
+  .nav-dropdown-item:hover {
+    background: transparent;
+    color: var(--ink);
+  }
+}
+
+/* ==================== Development pages ==================== */
+.dev-hero {
+  background: linear-gradient(135deg, var(--soft) 0%, #f4fafb 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 72px 24px 56px;
+  text-align: center;
+}
+.dev-hero h2 {
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: -0.2px;
+}
+.dev-hero p {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+.dev-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.7;
+  text-align: center;
+}
+.dev-intro p {
+  margin: 0 0 16px;
+}
+.dev-section {
+  padding: 56px 24px;
+}
+.dev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.dev-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 22px;
+  background: var(--paper);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: block;
+}
+.dev-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  border-color: var(--green);
+  text-decoration: none;
+}
+.dev-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+.dev-card p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.dev-cta {
+  text-align: center;
+  padding: 56px 24px;
+}
+.dev-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.dev-cta a:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .dev-hero h2 {
+    font-size: 26px;
+  }
+  .dev-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================== Enhanced Navbar Development Dropdown ==================== */
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+.nav-dropdown-toggle::after {
+  content: "▾";
+  font-size: 11px;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+.nav-dropdown:hover .nav-dropdown-toggle::after,
+.nav-dropdown-toggle:focus-visible::after,
+.nav-dropdown.open .nav-dropdown-toggle::after {
+  transform: rotate(180deg);
+  color: var(--green);
+}
+.nav-dropdown-toggle:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.nav-dropdown-menu {
+  will-change: opacity, transform;
+}
+@keyframes navDropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+.nav-dropdown-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  transition: background 0.15s, color 0.15s, padding-left 0.15s;
+}
+.nav-dropdown-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--green);
+  border-radius: 0 2px 2px 0;
+  transition: height 0.15s ease;
+}
+.nav-dropdown-item:hover {
+  padding-left: 22px;
+  color: var(--green);
+}
+.nav-dropdown-item:hover::before {
+  height: 60%;
+}
+.nav-dropdown-item:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: -2px;
+  border-radius: 6px;
+  background: var(--pale);
+}
+
+/* ==================== Enhanced Development Pages ==================== */
+.dev-hero {
+  position: relative;
+  overflow: hidden;
+}
+.dev-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 191, 255, 0.08) 0%, transparent 55%),
+    linear-gradient(135deg, var(--soft) 0%, #f4fafb 100%);
+  z-index: 0;
+}
+.dev-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.dev-hero h2 {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--ink) 0%, #00BFFF 60%, var(--ink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 191, 255, 0.15));
+}
+.dev-hero p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+.dev-intro {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 16px;
+  font-size: 16.5px;
+  color: var(--ink);
+  line-height: 1.8;
+  text-align: center;
+}
+.dev-intro p {
+  margin: 0 0 20px;
+  opacity: 0.95;
+}
+.dev-intro p:last-child {
+  margin-bottom: 0;
+}
+.dev-section-header {
+  max-width: 1080px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+  text-align: center;
+}
+.dev-section-header h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.4px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+.dev-section-header h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 4px;
+  background: linear-gradient(90deg, #00BFFF, var(--accent));
+  border-radius: 2px;
+}
+.dev-section-header p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.dev-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 30px 24px;
+  background: var(--paper);
+  transition: transform 0.35s cubic-bezier(0.2, 1, 0.3, 1),
+    box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.dev-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.04) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.dev-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  border-color: #00BFFF;
+  background: #ffffff;
+  color: var(--ink);
+  text-decoration: none;
+}
+.dev-card:hover::before {
+  opacity: 1;
+}
+.dev-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+.dev-card p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+.dev-grid .dev-card {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: devCardUp 0.5s ease forwards;
+}
+.dev-grid .dev-card:nth-child(1) { animation-delay: 0.05s; }
+.dev-grid .dev-card:nth-child(2) { animation-delay: 0.12s; }
+.dev-grid .dev-card:nth-child(3) { animation-delay: 0.19s; }
+.dev-grid .dev-card:nth-child(4) { animation-delay: 0.26s; }
+.dev-grid .dev-card:nth-child(5) { animation-delay: 0.33s; }
+.dev-grid .dev-card:nth-child(6) { animation-delay: 0.40s; }
+@keyframes devCardUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+.dev-cta {
+  text-align: center;
+  padding: 64px 24px 48px;
+}
+.dev-cta a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--ink) 0%, #00BFFF 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 24px rgba(0, 191, 255, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  overflow: hidden;
+  isolation: isolate;
+}
+.dev-cta a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.18) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+.dev-cta a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(0, 191, 255, 0.35);
+  filter: brightness(1.05);
+  color: #fff;
+  text-decoration: none;
+}
+.dev-cta a:hover::before {
+  transform: translateX(100%);
+}
+.dev-cta a:focus-visible {
+  outline: 3px solid #00BFFF;
+  outline-offset: 4px;
+}
+@media (max-width: 640px) {
+  .dev-hero h2 {
+    font-size: 30px;
+  }
+  .dev-hero p {
+    font-size: 16.5px;
+    padding: 0 12px;
+  }
+  .dev-intro {
+    font-size: 15.5px;
+    padding: 40px 16px 12px;
+  }
+  .dev-card {
+    padding: 24px 20px;
+  }
+  .dev-card h3 {
+    font-size: 17.5px;
+  }
+  .dev-section-header h3 {
+    font-size: 24px;
   }
 }
 

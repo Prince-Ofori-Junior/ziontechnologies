@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ziontechnologie.com"),
-  title: "Zion Technologies | Software, Printing & Branding",
+title: "Zion Technologies | Software Development Company in Ghana",
   description:
     "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses in Ghana.",
   keywords: [

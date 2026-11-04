@@ -1,4 +1,4 @@
-﻿﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -127,6 +127,16 @@ const tabs: { id: Cat; label: string }[] = [
   { id: "creative", label: "Creative & print" },
 ];
 
+/* Software development sub-tabs used in the navbar Development dropdown */
+const DEV_SUBTABS: { label: string; href: string }[] = [
+  { label: "Web Development", href: "/web-development" },
+  { label: "Mobile App Development", href: "/mobile-development" },
+  { label: "Custom Software", href: "/custom-software" },
+  { label: "API & Backend", href: "/api-backend" },
+  { label: "UI/UX Design", href: "/ui-ux-design" },
+  { label: "Software Maintenance", href: "/software-maintenance" },
+];
+
 const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; text: string; image: string; imageAlt: string }[] = [
   { cat: "digital", icon: "software", title: "Custom software", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/custom software2.jpg", imageAlt: "A website design displayed across desktop and mobile devices." },
   { cat: "digital", icon: "automation", title: "Smart automation", text: "Connect tools and remove repetitive work from daily operations.", image: "/Smiling Man Exploring Floating Analytics Dashboards.png", imageAlt: "A professional working with floating analytics dashboards." },
@@ -174,6 +184,7 @@ const solutions = [
 export default function Home() {
   const [tab, setTab] = useState<Cat>("all");
   const [menu, setMenu] = useState(false);
+  const [devMenu, setDevMenu] = useState(false);
   const [marqueePaused, setMarqueePaused] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -213,6 +224,14 @@ export default function Home() {
             {[["Services", "#services"], ["Solutions", "#solutions"], ["How it works", "#process"], ["About", "#about"]].map(([l, h]) => (
               <a key={l} href={h} onClick={() => setMenu(false)}>{l}</a>
             ))}
+            <div className={`nav-dropdown ${devMenu ? "open" : ""}`}>
+              <a className="nav-dropdown-toggle" href="/development" onClick={(e) => { e.preventDefault(); setDevMenu(!devMenu); }}>Development</a>
+              <div className="nav-dropdown-menu" aria-label="Development sub-tabs">
+                {DEV_SUBTABS.map(({ label, href }) => (
+                  <a key={label} className="nav-dropdown-item" href={href}>{label}</a>
+                ))}
+              </div>
+            </div>
             <a className="nav-cta nav-cta--accent mobile-only" href="#contact" onClick={() => setMenu(false)}>Get a quote</a>
           </div>
           <div className="nav-actions">
@@ -415,7 +434,7 @@ export default function Home() {
                   Yes. Zion Technologies welcomes project enquiries from businesses and organisations in Accra, Kumasi, New Edubiase and other parts of Ghana. Project discussions, requirements gathering and progress updates can be conducted remotely, making it possible to work together without being in the same city.
                 </p>
               </div>
-            </details>
+            </details> 
 
             <details className="seoFaqItem">
               <summary className="seoFaqQuestion">

@@ -120,7 +120,7 @@ function ZionAd() {
 const EMAIL = "ofori24688@gmail.com";
 
 type Cat = "all" | "digital" | "creative";
-type ServiceIcon = "software" | "automation" | "support" | "brand" | "print" | "creative";
+type ServiceIcon = "software" | "automation" | "support" | "shield" | "web" | "cloud" | "mobile";
 const tabs: { id: Cat; label: string }[] = [
   { id: "all", label: "Core services" },
   { id: "digital", label: "Digital" },
@@ -139,12 +139,12 @@ const DEV_SUBTABS: { label: string; href: string }[] = [
 ];
 
 const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; text: string; image: string; imageAlt: string }[] = [
-  { cat: "digital", icon: "software", title: "Custom software", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/custom software2.jpg", imageAlt: "A website design displayed across desktop and mobile devices." },
-  { cat: "digital", icon: "automation", title: "Smart automation", text: "Connect tools and remove repetitive work from daily operations.", image: "/Smiling Man Exploring Floating Analytics Dashboards.png", imageAlt: "A professional working with floating analytics dashboards." },
-  { cat: "digital", icon: "support", title: "Digital support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/87d0a1aba271991647c19601708dbd72.jpg", imageAlt: "A customer support professional wearing a headset." },
-  { cat: "creative", icon: "brand", title: "Brand identity", text: "Distinctive logos, visual systems, and brand guidelines.", image: "/Brand Identity.jpg", imageAlt: "Branded promotional products displaying a company identity." },
-  { cat: "creative", icon: "print", title: "Print production", text: "Brochures, signage, packaging, stationery, and large-format prints.", image: "/Print Production1.jpg", imageAlt: "A wide-format printer producing colorful prints in a print studio." },
-  { cat: "creative", icon: "creative", title: "Creative materials", text: "Campaigns, presentations, uniforms, merchandise, and branded assets.", image: "/Creative Design.jpg", imageAlt: "A heat press producing custom-designed apparel and merchandise." },
+  { cat: "digital", icon: "web", title: "Web Development", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/custom software2.jpg", imageAlt: "A website design displayed across desktop and mobile devices." },
+  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Smiling Man Exploring Floating Analytics Dashboards.png", imageAlt: "A professional working with mobile applications." },
+  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/custom software2.jpg", imageAlt: "Desktop applications running on multiple devices." },
+  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/87d0a1aba271991647c19601708dbd72.jpg", imageAlt: "Technology consulting services." },
+  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/87d0a1aba271991647c19601708dbd72.jpg", imageAlt: "A customer support professional wearing a headset." },
+  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/custom software2.jpg", imageAlt: "Cloud computing and infrastructure services." },
 ];
 
 function ServiceIconGraphic({ icon }: { icon: ServiceIcon }) {
@@ -152,9 +152,10 @@ function ServiceIconGraphic({ icon }: { icon: ServiceIcon }) {
     software: <><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8m-4-4v4M7 9l2 2-2 2m4 0h3" /></>,
     automation: <><path d="M12 3v4m0 10v4M3 12h4m10 0h4M5.64 5.64l2.83 2.83m7.06 7.06 2.83 2.83m0-12.72-2.83 2.83m-7.06 7.06-2.83 2.83" /><circle cx="12" cy="12" r="4" /></>,
     support: <><path d="M3 13v-2a9 9 0 0 1 18 0v2" /><path d="M5 13h2v6H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2Zm14 0h-2v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2Zm0 6a5 5 0 0 1-5 3h-2" /></>,
-    brand: <><path d="m12 3 2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2L12 3Z" /><path d="m19 3 .8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z" /></>,
-    print: <><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><path d="M6 14h12v7H6zM18 12h.01" /></>,
-    creative: <><rect x="3" y="4" width="18" height="16" rx="2" /><circle cx="8.5" cy="9" r="1.5" /><path d="m21 15-5-5L5 20" /></>,
+    shield: <><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M12 8v4" /></>,
+    web: <><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9c0-2.5.5-4.9 1.4-7m14 7a9 9 0 0 0-9-9m0 18c4.71 0 8.54-3.42 9.67-8z" /></>,
+    cloud: <><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 2.55 1.28 4.82 3.18 6.04A10.55 10.55 0 0 0 12 22c3.17 0 6.04-1.5 7.8-3.85C21.33 20.97 23 18.44 23 16c0-1.46-.6-2.78-1.52-3.77z" /></>,
+    mobile: <><rect x="2" y="3" width="20" height="18" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></>,
   };
 
   return (
@@ -257,8 +258,8 @@ export default function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <h1>Software, Technology, And<br />Digital Innovation, Working As One.</h1>
-            <p>Zion Technologies helps businesses launch better software, build scalable web applications, and grow with modern technology.</p>
+            <h1>Software Technology And Digital<br />Innovation Working As One.</h1>
+            <p>Zion Technologies helps businesses launch<br />better software, build scalable web applications, and grow with modern technology.</p>
           </div>
 
           <ZionAd />

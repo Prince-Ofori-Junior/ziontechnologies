@@ -178,7 +178,14 @@ button {
     fill: none !important;
   }
 
-/* Hamburger menu icon - black color */
+/* Hamburger menu icon - professional styling */
+.hamburger {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
 .hamburger path {
   stroke: #000000 !important;
   stroke-width: 2 !important;
@@ -187,20 +194,33 @@ button {
   transition: stroke-width 0.3s, transform 0.3s;
 }
 
-.hamburger.active path.first {
-  transform: translateY(14px) rotate(-45deg);
-  transform-origin: 0% 0%;
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s transform ease-in-out;
 }
 
-.hamburger.active path.middle {
+/* Top bar - hide on mobile click */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+/* Middle bar - hide on mobile click */
+.hamburger.active span:nth-child(2) {
   opacity: 0;
-  transform: rotate(45deg) translateY(2px);
-  transform-origin: 0% 0%;
+  transform: rotate(90deg) translate(0, -50%);
 }
 
-.hamburger.active path.last {
-  transform: translateY(2px) rotate(45deg);
-  transform-origin: 0% 0%;
+/* Bottom bar - hide on mobile click */
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0, -50%);
 }
 
 /* Ensure menu button has no background */

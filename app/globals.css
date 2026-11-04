@@ -69,13 +69,14 @@ button {
 }
 
 .main-nav {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   max-width: 1240px;
   height: 72px;
   margin: 0 auto;
   padding: 0 24px;
+  gap: 24px;
 }
 
 .brand {
@@ -112,7 +113,6 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  justify-self: end;
   gap: 22px;
   font-size: 15px;
 }
@@ -1663,7 +1663,7 @@ footer p {
   }
 }
 
-/* ==================== Navbar Development sub-tabs (dropdown) ==================== */
+/* ==================== Navbar Services sub-tabs (dropdown) ==================== */
 .nav-dropdown {
   position: relative;
   display: inline-flex;
@@ -1672,7 +1672,6 @@ footer p {
 .nav-dropdown-toggle {
   color: var(--muted);
   font-size: 15px;
-  padding: 4px 0;
 }
 .nav-dropdown-toggle:hover {
   color: var(--ink);
@@ -1843,7 +1842,7 @@ footer p {
   }
 }
 
-/* ==================== Enhanced Navbar Development Dropdown ==================== */
+/* ==================== Enhanced Navbar Services Dropdown ==================== */
 .nav-dropdown-toggle {
   display: inline-flex;
   align-items: center;

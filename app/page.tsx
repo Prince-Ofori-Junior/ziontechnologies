@@ -127,14 +127,15 @@ const tabs: { id: Cat; label: string }[] = [
   { id: "creative", label: "Creative & print" },
 ];
 
-/* Software development sub-tabs used in the navbar Development dropdown */
+/* Services sub-tabs used in the navbar Services dropdown */
 const DEV_SUBTABS: { label: string; href: string }[] = [
   { label: "Web Development", href: "/web-development" },
-  { label: "Mobile App Development", href: "/mobile-development" },
-  { label: "Custom Software", href: "/custom-software" },
-  { label: "API & Backend", href: "/api-backend" },
+  { label: "Mobile Application", href: "/mobile-development" },
+  { label: "Desktop Application", href: "/desktop-application" },
   { label: "UI/UX Design", href: "/ui-ux-design" },
-  { label: "Software Maintenance", href: "/software-maintenance" },
+  { label: "Tech Consulting", href: "/tech-consulting" },
+  { label: "Digital Support", href: "/digital-support" },
+  { label: "Cloud Solutions", href: "/cloud-solutions" },
 ];
 
 const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; text: string; image: string; imageAlt: string }[] = [
@@ -221,12 +222,12 @@ export default function Home() {
           <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/favicon.ico" alt="Zion Technologies logo" width={48} height={48} /><div className="brand-text"><span className="logo-aqua"> </span><span className="logo-blue"></span></div></a>
 
           <div className={menu ? "nav-links open" : "nav-links"}>
-            {[["Services", "#services"], ["Solutions", "#solutions"], ["How it works", "#process"], ["About", "#about"]].map(([l, h]) => (
+            {[["Home", "#top"], ["Solutions", "#solutions"], ["About", "/about"], ["Blogs", "/blogs"]].map(([l, h]) => (
               <a key={l} href={h} onClick={() => setMenu(false)}>{l}</a>
             ))}
             <div className={`nav-dropdown ${devMenu ? "open" : ""}`}>
-              <a className="nav-dropdown-toggle" href="/development" onClick={(e) => { e.preventDefault(); setDevMenu(!devMenu); }}>Development</a>
-              <div className="nav-dropdown-menu" aria-label="Development sub-tabs">
+              <a className="nav-dropdown-toggle" href="/services" onClick={(e) => { e.preventDefault(); setDevMenu(!devMenu); }}>Services</a>
+              <div className="nav-dropdown-menu" aria-label="Services sub-tabs">
                 {DEV_SUBTABS.map(({ label, href }) => (
                   <a key={label} className="nav-dropdown-item" href={href}>{label}</a>
                 ))}

@@ -38,7 +38,7 @@ title: "Zion Technologies | Software Development Company in Ghana",
     description:
       "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
   },
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/logo.png" }],
 };
 
 const jsonLd = {
@@ -49,7 +49,7 @@ const jsonLd = {
       "@id": "https://www.ziontechnologie.com/#organization",
       name: "Zion Technologies",
       url: "https://www.ziontechnologie.com",
-      logo: "https://www.ziontechnologie.com/favicon.ico",
+      logo: "https://www.ziontechnologie.com/logo.png",
       email: "hello@ziontechnologies.com",
       telephone: "+233595856187",
       address: {
@@ -65,7 +65,7 @@ const jsonLd = {
       "@id": "https://www.ziontechnologie.com/#service",
       name: "Zion Technologies",
       url: "https://www.ziontechnologie.com",
-      image: "https://www.ziontechnologie.com/favicon.ico",
+      image: "https://www.ziontechnologie.com/logo.png",
       telephone: "+233595856187",
       email: "hello@ziontechnologies.com",
       address: {

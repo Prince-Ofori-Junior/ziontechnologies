@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 /* ==================== Theme ==================== */
 
@@ -77,6 +77,7 @@ button {
   margin: 0 auto;
   padding: 0 24px;
   gap: 24px;
+  position: relative;
 }
 
 .brand {
@@ -86,6 +87,20 @@ button {
   font-size: 20px;
   font-weight: 700;
   z-index: 99;
+}
+
+.brand img {
+  width: 150px;
+  height: 80px;
+  transition: width 0.3s, height 0.3s;
+}
+
+@media (max-width: 640px) {
+  .brand img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
 }
 
 .brand > span {
@@ -172,18 +187,18 @@ button {
 }
 
 .hamburger.active path.first {
-  transform: translateY(6px) rotate(-45deg);
+  transform: translateY(14px) rotate(-45deg);
   transform-origin: 0% 0%;
 }
 
 .hamburger.active path.middle {
   opacity: 0;
-  transform: rotate(45deg) translateY(-6px);
+  transform: rotate(45deg) translateY(2px);
   transform-origin: 0% 0%;
 }
 
 .hamburger.active path.last {
-  transform: translateY(-6px) rotate(45deg);
+  transform: translateY(2px) rotate(45deg);
   transform-origin: 0% 0%;
 }
 
@@ -1027,13 +1042,21 @@ button {
 .pre-footer-logo {
   display: grid;
   place-items: center;
-  width: 80px;
+  width: 150px;
   height: 80px;
   margin-top: 20px;
   background: var(--green);
   color: #fff;
   font-size: 40px;
   font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .pre-footer-logo {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
 }
 
 .pre-footer-links,
@@ -2125,6 +2148,24 @@ footer p {
   }
   .dev-section-header h3 {
     font-size: 24px;
+  }
+}
+
+/* Mobile: show hamburger, desktop: hide */
+@media (max-width: 900px) {
+  .main-nav .menu-btn {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 0;
+    padding: 4px;
+    cursor: pointer;
+    z-index: 99999;
+    position: absolute;
+    top: 12px;
+    right: 0;
   }
 }
 

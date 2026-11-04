@@ -220,7 +220,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <nav className="main-nav" aria-label="Main navigation">
-          <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/favicon.ico" alt="Zion Technologies logo" width={48} height={48} /><div className="brand-text"><span className="logo-aqua"> </span><span className="logo-blue"></span></div></a>
+          <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/logo.png" alt="Zion Technologies logo" /><div className="brand-text"><span className="logo-aqua"> </span><span className="logo-blue"></span></div></a>
 
           <div className={menu ? "nav-links open" : "nav-links"}>
             {[["Home", "#top"], ["Solutions", "#solutions"], ["About", "/about"], ["Blogs", "/blogs"]].map(([l, h]) => (

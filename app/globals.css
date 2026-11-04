@@ -90,15 +90,16 @@ button {
 }
 
 .brand img {
-  width: 150px;
-  height: 80px;
+  width: 180px;
+  height: auto;
+  max-height: 80px;
   transition: width 0.3s, height 0.3s;
 }
 
 @media (max-width: 640px) {
   .brand img {
     width: 100%;
-    max-width: 150px;
+    max-width: 180px;
     height: auto;
   }
 }
@@ -135,8 +136,8 @@ button {
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
-  padding: 0 16px;
+  min-height: 32px;
+  padding: 0 12px;
   border-radius: 8px;
   background: var(--ink);
   color: #fff;
@@ -1042,8 +1043,9 @@ button {
 .pre-footer-logo {
   display: grid;
   place-items: center;
-  width: 150px;
-  height: 80px;
+  width: 180px;
+  height: auto;
+  max-height: 80px;
   margin-top: 20px;
   background: var(--green);
   color: #fff;
@@ -1054,7 +1056,7 @@ button {
 @media (max-width: 640px) {
   .pre-footer-logo {
     width: 100%;
-    max-width: 150px;
+    max-width: 180px;
     height: auto;
   }
 }

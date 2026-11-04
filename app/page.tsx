@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
 
 /* ---------- Animated Why Zion ad (photo story) ---------- */
@@ -139,12 +140,12 @@ const DEV_SUBTABS: { label: string; href: string }[] = [
 ];
 
 const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; text: string; image: string; imageAlt: string }[] = [
-  { cat: "digital", icon: "web", title: "Web Development", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/custom software2.jpg", imageAlt: "A website design displayed across desktop and mobile devices." },
-  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Smiling Man Exploring Floating Analytics Dashboards.png", imageAlt: "A professional working with mobile applications." },
-  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/custom software2.jpg", imageAlt: "Desktop applications running on multiple devices." },
-  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/87d0a1aba271991647c19601708dbd72.jpg", imageAlt: "Technology consulting services." },
-  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/87d0a1aba271991647c19601708dbd72.jpg", imageAlt: "A customer support professional wearing a headset." },
-  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/custom software2.jpg", imageAlt: "Cloud computing and infrastructure services." },
+  { cat: "digital", icon: "web", title: "Web Development", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/Customes softwares.jpg", imageAlt: "A website design displayed across desktop and mobile devices." },
+  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Mobile Application1.jpg", imageAlt: "A professional working with mobile applications." },
+  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/Desktop Application0.jpg", imageAlt: "Desktop applications running on multiple devices." },
+  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/Tech Consult.png", imageAlt: "Technology consulting services." },
+  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/Digital Support2.jpg", imageAlt: "A customer support professional wearing a headset." },
+  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/Cloud Solutions.jpg", imageAlt: "Cloud computing and infrastructure services." },
 ];
 
 function ServiceIconGraphic({ icon }: { icon: ServiceIcon }) {
@@ -190,6 +191,7 @@ export default function Home() {
   const [marqueePaused, setMarqueePaused] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
   const features = useRef<HTMLElement>(null);
   const serviceGallery = useRef<HTMLDivElement>(null);
 
@@ -223,9 +225,11 @@ export default function Home() {
           <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/logo.png" alt="Zion Technologies logo" /><div className="brand-text"><span className="logo-aqua"> </span><span className="logo-blue"></span></div></a>
 
           <div className={menu ? "nav-links open" : "nav-links"}>
-            {[["Home", "#top"], ["Solutions", "#solutions"], ["About", "/about"], ["Blogs", "/blogs"]].map(([l, h]) => (
-              <a key={l} href={h} onClick={() => setMenu(false)}>{l}</a>
-            ))}
+            {["Home", "Solutions", "About", "Blogs"].map((l, index) => {
+              const h = index === 0 ? "#top" : index === 1 ? "#solutions" : index === 2 ? "/about" : "/blogs";
+              const isActive = pathname === h || (h === "#top" && pathname === "/");
+              return <a key={index} href={h} onClick={() => setMenu(false)} className={isActive ? "active" : ""}>{l}</a>;
+            })}
             <div className={`nav-dropdown ${devMenu ? "open" : ""}`}>
               <a className="nav-dropdown-toggle" href="/services" onClick={(e) => { e.preventDefault(); setDevMenu(!devMenu); }}>Services</a>
               <div className="nav-dropdown-menu" aria-label="Services sub-tabs">
@@ -324,7 +328,7 @@ export default function Home() {
             <p className="kicker">Flexible payment options</p>
             <h2 id="payment-heading">Flexible payments, agreed upfront.</h2>
             <p>We’ll agree on a payment schedule that fits your project, with clear costs and milestones before work begins.</p>
-            <a className="payment-link" href={`mailto:${EMAIL}?subject=Discuss%20a%20project%20payment%20schedule`}>Discuss your project <span>→</span></a>
+            <a href={`mailto:${EMAIL}`}>Discuss your project</a>
           </div>
           <Image
             src="/Excited Man Using Laptop (1).png"

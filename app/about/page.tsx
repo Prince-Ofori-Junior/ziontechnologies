@@ -15,22 +15,57 @@ const body = Hanken_Grotesk({
   display: "swap",
 });
 
+// Company values with inline SVG icons
 const values = [
   {
     t: "Quality first",
     d: "Clean code, tested applications and careful design in every project.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    ),
   },
   {
     t: "Transparent pricing",
     d: "Clear quotes with no hidden fees, agreed before we start.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="2" />
+        <path d="M2 10h20" />
+        <path d="M6 15h4" />
+        <path d="M16 15h2" />
+      </svg>
+    ),
   },
   {
     t: "Client partnership",
     d: "We listen first, then solve your real business problems.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3" />
+        <path d="M8 11c-1.7 0-3-1.3-3-3s1.3-3 3-3" />
+        <circle cx="12" cy="8" r="4" />
+        <path d="M2 21c0-3.3 4.5-5 10-5s10 1.7 10 5" />
+      </svg>
+    ),
   },
   {
     t: "Ongoing support",
     d: "Launch is the beginning. We stay on after delivery.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 13a8 8 0 0 1 16 0" />
+        <rect x="2" y="12" width="4" height="7" rx="2" />
+        <rect x="18" y="12" width="4" height="7" rx="2" />
+        <path d="M18 19a6 6 0 0 1-6 3h-2" />
+      </svg>
+    ),
   },
 ];
 
@@ -182,18 +217,21 @@ export default function AboutPage() {
       <section className="ab-section">
         <div className="ab-wrap">
 
-          {/* <h2 className="ab-title">What we stand for</h2> */}
-
           <ul className="ab-cols ab-cols-4 ab-value-cards">
             {values.map((v, index) => (
               <li key={v.t} className="ab-value-card">
 
-                <span className="ab-value-number">
-                  0{index + 1}
-                </span>
+                <div className="ab-value-top">
+                  <span className="ab-value-number">
+                    0{index + 1}
+                  </span>
+
+                  <span className="ab-value-icon">
+                    {v.icon}
+                  </span>
+                </div>
 
                 <h3>{v.t}</h3>
-
                 <p>{v.d}</p>
 
               </li>

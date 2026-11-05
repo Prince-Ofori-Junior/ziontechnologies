@@ -1,0 +1,83 @@
+﻿
+Name                                                    Extension  Length
+----                                                    ---------  ------
+002091c5925fb9748486f628296ae391.jpg                    .jpg        65253
+0a86aa7eed7787bfecc65b7f4be90407.jpg                    .jpg        39518
+11.jpg                                                  .jpg       122491
+13184a419361e8f2c5b38396caedd532.jpg                    .jpg        73377
+20f09fe00ca3f0a4dd54e67b998ea6d9.jpg                    .jpg        46334
+329ad85f4ab2047cae13d582274f9270.jpg                    .jpg        22099
+41ba34a391147590f2c1f576a19c7f67.jpg                    .jpg        48003
+41d73526c81163a553b796ed34a78f37.jpg                    .jpg       164723
+45adf4384c4851495a66515729122a25.jpg                    .jpg       260992
+60cbcdf7e011523226c4788c622207c6.jpg                    .jpg        21976
+71aa9e2c34f3df2772288292d107401b.jpg                    .jpg       106769
+87d0a1aba271991647c19601708dbd72.jpg                    .jpg        65682
+8eaa19053483e84781d53a3bcd93e1a1.jpg                    .jpg        43179
+946284b6a0c8d3be7b020fa68be0eb84.jpg                    .jpg       127237
+a553c197ed99a699df0cb3287ee667fc.jpg                    .jpg        24157
+a708402f90a9a646fd995c2644fdea8e.jpg                    .jpg        69530
+a8118e4fc3731ab2810c29e162600966.jpg                    .jpg       203975
+aca8b695-d550-42ce-a10c-f8e1db9df281.jfif               .jfif       80562
+B.jpg                                                   .jpg        28696
+Brand Identity.jpg                                      .jpg        69684
+brand.jpg                                               .jpg       172487
+brand.jpg                                               .jpg       172487
+C.jpg                                                   .jpg       105413
+c3b24a1b34f059d28ead05789412021f.jpg                    .jpg        93268
+Cloud Solutions00.jpg                                   .jpg        34013
+Cloud Solutions1.jpg                                    .jpg        14208
+Creative Design.jpg                                     .jpg        90325
+cs.jpg                                                  .jpg        71244
+cta.jpg                                                 .jpg        29319
+cta.jpg                                                 .jpg        29319
+custom software2.jpg                                    .jpg        57739
+Customes softwares.jpg                                  .jpg        79943
+Customes softwares1.jpg                                 .jpg        62422
+Desktop Application0.jpg                                .jpg       105465
+Desktop Application1.jpg                                .jpg       107451
+Digital Support.jpg                                     .jpg       134777
+Digital Support2.jpg                                    .jpg        45395
+Disturb Me, I’m Free (1).png                            .png      1417706
+download (1).png                                        .png         1572
+download.png                                            .png         1572
+e1f61a30a7353e77708dbaba8cfab8d6.jpg                    .jpg        36811
+Excited Man Using Laptop (1).png                        .png      1480473
+favicon.ico                                             .ico         4533
+file.svg                                                .svg          391
+globe.svg                                               .svg         1035
+image1.jpg                                              .jpg        26618
+image2.jpg                                              .jpg        61282
+listen.jpg                                              .jpg        26651
+listen.jpg                                              .jpg        26651
+logo.png                                                .png       514279
+love.jpg                                                .jpg        46775
+love.jpg                                                .jpg        46775
+Mobile Application.jpg                                  .jpg       197830
+Mobile Application1.jpg                                 .jpg        54171
+next.svg                                                .svg         1375
+Orange ZionTechnologie.png                              .png       514279
+payment-flexibility.svg                                 .svg        84619
+Print Production.jpg                                    .jpg        34283
+Print Production1.jpg                                   .jpg       183668
+Print Production2.jpg                                   .jpg        42418
+results.jpg                                             .jpg        55897
+results.jpg                                             .jpg        55897
+Smiling Man Exploring Floating Analytics Dashboards.png .png      1691999
+Tecc Consulting.jpg                                     .jpg        67236
+Tech Consult.png                                        .png      1113214
+Tech Consult1.jpg                                       .jpg        39793
+Tech Consulting.jpg                                     .jpg       441701
+trust.jpg                                               .jpg        44950
+trust.jpg                                               .jpg        44950
+vercel.svg                                              .svg          128
+watermarked_img_12813621724920278567.jpg                .jpg       399982
+watermarked_img_1433866948490299420.jpg                 .jpg       447755
+watermarked_img_14646974465765611237.jpg                .jpg       519551
+web.jpg                                                 .jpg        70774
+web.jpg                                                 .jpg        70774
+window.svg                                              .svg          385
+Zion.png                                                .png      1709004
+ZT.jpg                                                  .jpg        22477
+
+

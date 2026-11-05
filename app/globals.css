@@ -1828,6 +1828,41 @@ footer p {
   margin: 0 auto 24px;
   line-height: 1.6;
 }
+.dev-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.dev-hero-content > div {
+  flex: 1;
+  min-width: 280px;
+}
+.dev-hero-image {
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .dev-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .dev-hero-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .dev-hero-content > div {
+    order: -1;
+  }
+}
 .dev-intro {
   max-width: 900px;
   margin: 0 auto;

@@ -145,7 +145,7 @@ const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; te
   { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/Desktop Application0.jpg", imageAlt: "Desktop applications running on multiple devices." },
   { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/Tech Consult.png", imageAlt: "Technology consulting services." },
   { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/Digital Support2.jpg", imageAlt: "A customer support professional wearing a headset." },
-  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/Cloud Solutions.jpg", imageAlt: "Cloud computing and infrastructure services." },
+  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/Cloud Solutions00.jpg", imageAlt: "Cloud computing infrastructure and migration services." },
 ];
 
 function ServiceIconGraphic({ icon }: { icon: ServiceIcon }) {

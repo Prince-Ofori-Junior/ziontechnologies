@@ -1,13 +1,18 @@
+import Image from "next/image";
+
 export default function CloudSolutionsPage() {
   return (
     <>
       <section className="dev-hero">
-        <div style={{ maxWidth: 880, margin: "0 auto" }}>
-          <h2>Cloud Solutions</h2>
+        <div style={{ maxWidth: 880, margin: "0 auto" }} className="dev-hero-content">
+          <Image src="/Cloud Solutions00.jpg" alt="Cloud computing infrastructure and migration services." width={800} height={450} className="dev-hero-image" />
+          <div>
+            <h2>Cloud Solutions</h2>
           <p>
             Scalable cloud infrastructure and migration services that help your business
             grow without worrying about servers and maintenance.
           </p>
+          </div>
         </div>
       </section>
 

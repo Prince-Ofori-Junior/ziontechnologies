@@ -680,3 +680,147 @@
   color: #fff;
   transform: translateY(-3px);
 }
+
+
+/* Meet the Team */
+.ab-team-section {
+  background: var(--paper);
+}
+
+.ab-team-heading {
+  max-width: 600px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.ab-team-heading h2 {
+  font-family: var(--font-display);
+  margin: 12px 0;
+}
+
+.ab-team-heading > p {
+  color: var(--muted);
+}
+
+.ab-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ab-team-card {
+  min-width: 0;
+}
+
+.ab-team-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4 / 4.8;
+  background: #edf2f4;
+}
+
+.ab-team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ab-team-card:hover .ab-team-image img {
+  transform: scale(1.05);
+}
+
+.ab-team-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 7px 11px;
+  border-radius: 8px;
+  background: #fff;
+  color: #00b1ec;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ab-team-info {
+  padding: 17px 2px;
+}
+
+.ab-team-info h3 {
+  margin: 0 0 5px;
+  font-family: var(--font-display);
+}
+
+.ab-team-info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .ab-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ab-team-heading {
+    margin-bottom: 30px;
+  }
+
+  .ab-team-grid {
+    gap: 16px;
+  }
+
+  .ab-team-image {
+    border-radius: 12px;
+  }
+
+  .ab-team-info {
+    padding: 12px 2px;
+  }
+
+  .ab-team-info h3 {
+    font-size: 15px;
+  }
+
+  .ab-team-info p {
+    font-size: 12px;
+  }
+}
+
+/* Values SVG icons */
+.ab-value-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.ab-value-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(0, 177, 236, 0.10);
+  color: #00b1ec;
+  transition: all 0.3s ease;
+}
+
+.ab-value-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.ab-value-card:hover .ab-value-icon {
+  background: #00b1ec;
+  color: #fff;
+  transform: translateY(-3px);
+}

@@ -464,7 +464,7 @@ export default function AboutPage() {
 
               <div className="ab-team-heading">
                 <span className="ab-kicker">
-                  The people behind Zion
+                  The People Behind Zion
                 </span>
 
                 <h2>Meet the team</h2>

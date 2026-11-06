@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DevelopmentPage() {
   return (
     <>
@@ -7,7 +9,7 @@ export default function DevelopmentPage() {
           <p>
             We design and build tailored web applications, mobile apps, and business systems that help teams
             work smarter, serve customers better, and grow.
-          </p>
+          </p>  
         </div>
       </section>
 
@@ -22,6 +24,7 @@ export default function DevelopmentPage() {
       <section className="dev-section">
         <div className="dev-grid">
           <a className="dev-card" href="/web-development">
+            <Image src="/Web Development.png" alt="Web Development" width={400} height={300} className="dev-card-image" />
             <h3>Web Development</h3>
             <p>Responsive websites, web applications, and online stores built to perform on every device.</p>
           </a>

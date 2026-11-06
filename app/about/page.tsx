@@ -138,22 +138,22 @@ const team = [
   {
     name: "Team Member One",
     role: "Chief Executive Officer",
-    image: "/team/member-1.jpg",
+    image: "/Member1.jpg",
   },
   {
     name: "Team Member Two",
     role: "Lead Software Engineer",
-    image: "/team/member-2.jpg",
+    image: "/Member2.png",
   },
   {
     name: "Team Member Three",
     role: "UI/UX Designer",
-    image: "/team/member-3.jpg",
+    image: "/Menber3.jpg",
   },
   {
     name: "Team Member Four",
     role: "Project Manager",
-    image: "/team/member-4.jpg",
+    image: "/Member4.jpg",
   },
 ];
 
@@ -510,13 +510,17 @@ export default function AboutPage() {
             <div className="ab-wrap ab-split">
 
               <div>
-                <Image
-                  src="/Orange ZionTechnologie.png"
-                  alt="Zion Technologies team at work"
+                <video
+                  src="/story.mp4"
+                  aria-label="Zion Technologies team at work"
+                  poster="/Orange ZionTechnologie.png"
+                  className="ab-story-img"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   width={500}
                   height={450}
-                  sizes="(max-width: 900px) 90vw, 460px"
-                  className="ab-story-img"
                 />
               </div>
 

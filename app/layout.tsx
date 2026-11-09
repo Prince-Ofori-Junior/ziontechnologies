@@ -25,10 +25,6 @@ export const metadata: Metadata = {
     "Zion Technologies",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
-
   openGraph: {
     title: "Zion Technologies | Software Development Company in Ghana",
     description:

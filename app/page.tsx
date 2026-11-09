@@ -96,6 +96,7 @@ function ZionAd() {
       </div>
 
       <div className="zs-top">
+        
         {/* <span className="zs-brand">Zion Technologies</span> */}
       </div>
 
@@ -175,14 +176,34 @@ const steps = [
   ["Support", "Training, updates, refinements, and ongoing care."],
 ];
 
+
 const solutions = [
-  ["Startups & SMEs", "Launch a polished digital product and brand without adding unnecessary complexity."],
-  ["Corporate teams", "Build internal systems, reports, presentations, and consistent communications."],
-  ["Retail & commerce", "Create ecommerce experiences, packaging, signage, and promotional materials."],
-  ["Education", "Develop portals, prospectuses, certificates, and learning resources."],
-  ["Events & hospitality", "Design invitations, menus, displays, campaigns, and guest experiences."],
-  ["Institutions", "Deliver accessible websites, public documents, and clear civic branding."],
+  [
+    "Startups & SMEs",
+    "Build professional websites, customer portals and custom business applications."
+  ],
+  [
+    "Corporate teams",
+    "Improve operations with internal tools, dashboards and connected business systems."
+  ],
+  [
+    "Retail & commerce",
+    "Create ecommerce websites and digital tools for managing customers and orders."
+  ],
+  [
+    "Education",
+    "Develop school websites, student portals and online learning platforms."
+  ],
+  [
+    "Events & hospitality",
+    "Create booking websites, enquiry systems and digital customer experiences."
+  ],
+  [
+    "Institutions",
+    "Build accessible websites, information portals and online service platforms."
+  ],
 ];
+
 
 export default function Home() {
   const [tab, setTab] = useState<Cat>("all");

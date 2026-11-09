@@ -6,6 +6,8 @@ import { BlogFooter, BlogNav } from "../blog-nav";
 import { blogPosts } from "../blog-data";
 import "../blogs.css";
 
+export const instant = false;
+
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
 };

@@ -6,38 +6,46 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ziontechnologie.com"),
-title: "Zion Technologies | Software Development Company in Ghana",
-description:
-  "Zion Technologies builds custom software, websites, mobile applications, and business systems for businesses in Ghana and across Africa.",
+
+  title: "Zion Technologies | Software Development Company in Ghana",
+
+  description:
+    "Zion Technologies is a software development company in Ghana specialising in custom software, web applications, mobile apps, and business automation for businesses across Ghana and Africa.",
+
   keywords: [
-    "Software Development",
-    "Web Development",
-    "Mobile App Development",
-    "Brand Identity",
-    "Print Production",
-    "Accra Ghana",
+    "Software Development Company in Ghana",
     "Software Development Ghana",
+    "Software Developers in Accra",
+    "Web Development Ghana",
     "Website Design Ghana",
+    "Mobile App Development Ghana",
+    "Custom Software Development",
+    "Business Automation Ghana",
+    "Desktop Application Development",
     "Zion Technologies",
   ],
+
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
-    title: "Zion Technologies | Software, Printing & Branding",
+    title: "Zion Technologies | Software Development Company in Ghana",
     description:
-      "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
+      "Custom software development, web applications, mobile apps, and business automation for businesses in Ghana and across Africa.",
     type: "website",
     locale: "en_GH",
     siteName: "Zion Technologies",
     url: "https://www.ziontechnologie.com",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Zion Technologies | Software, Printing & Branding",
+    title: "Zion Technologies | Software Development Company in Ghana",
     description:
-      "Custom software development, printing solutions, brand identity, and digital design for ambitious businesses.",
+      "Custom software, web applications, mobile apps, and business automation for businesses in Ghana and across Africa.",
   },
+
   icons: [{ rel: "icon", url: "/logo.png" }],
 };
 
@@ -82,7 +90,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <meta
           name="viewport"
@@ -96,7 +104,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
           rel="stylesheet"
         />
 

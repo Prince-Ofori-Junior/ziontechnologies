@@ -37,68 +37,80 @@ const SERVICES = [
     icon: "▣",
     title: "Android App Development",
     description:
-      "Custom Android applications designed to deliver reliable performance, intuitive navigation and engaging experiences across Android smartphones and tablets.",
+      "Custom Android applications built for smartphones and tablets, with practical features, intuitive navigation and reliable performance.",
   },
   {
     number: "02",
     icon: "◉",
     title: "iOS App Development",
     description:
-      "Modern iPhone and iPad applications built around Apple's platform conventions, usability standards and expectations for a polished mobile experience.",
+      "Purpose-built applications for iPhone and iPad, designed around Apple's platform standards and user experience conventions.",
   },
   {
     number: "03",
     icon: "⇄",
-    title: "Cross-Platform Development",
+    title: "Cross-Platform Apps",
     description:
-      "Develop applications for Android and iOS using shared technologies, helping streamline development and maintain a consistent experience across platforms.",
+      "Applications for Android and iOS using shared technologies, helping reduce duplicated development while maintaining a consistent experience.",
   },
   {
     number: "04",
     icon: "✳",
     title: "Mobile UI/UX Design",
     description:
-      "Thoughtfully designed mobile interfaces, intuitive navigation, interactive components and user journeys that make applications easy to use.",
+      "User-friendly interfaces, clear navigation and carefully planned screens that make your application simple to understand and use.",
   },
   {
     number: "05",
     icon: "⌘",
-    title: "API & Third-Party Integration",
+    title: "API & Payment Integration",
     description:
-      "Connect mobile applications to backend services, databases, payment gateways, authentication systems and other essential integrations.",
+      "Connect your app to backend systems, databases, payment gateways, authentication services and other third-party platforms.",
   },
   {
     number: "06",
     icon: "↻",
     title: "App Maintenance & Support",
     description:
-      "Ongoing application updates, bug fixes, compatibility improvements and performance optimisation to keep your mobile app reliable.",
+      "Keep your application up to date with bug fixes, security improvements, compatibility updates and new features.",
   },
 ];
 
 const PLATFORMS = [
   {
-    label: "PLATFORM 01",
+    label: "01 / ANDROID",
     title: "Android Applications",
     description:
-      "Reach Android users with applications designed for the devices and experiences they use every day. We focus on usability, performance and compatibility.",
+      "Reach users across Android smartphones and tablets with applications designed around your business requirements and target audience.",
     features: [
-      "Custom Android application development",
-      "Smartphone and tablet compatibility",
-      "API and backend connectivity",
+      "Custom Android applications",
+      "Smartphone and tablet support",
+      "API and backend integration",
       "Google Play publishing assistance",
     ],
   },
   {
-    label: "PLATFORM 02",
+    label: "02 / APPLE",
     title: "iOS Applications",
     description:
-      "Deliver polished mobile experiences for Apple's ecosystem with carefully considered interfaces, smooth interactions and dependable functionality.",
+      "Build mobile experiences for Apple's ecosystem with polished interfaces, dependable functionality and platform-conscious design.",
     features: [
-      "Custom iPhone and iPad applications",
-      "iOS interface and interaction design",
-      "Backend and third-party integrations",
+      "Custom iPhone and iPad apps",
+      "iOS interface design",
+      "Backend and payment integration",
       "App Store publishing assistance",
+    ],
+  },
+  {
+    label: "03 / MULTI-PLATFORM",
+    title: "Cross-Platform Applications",
+    description:
+      "Develop for multiple mobile platforms through shared technologies where appropriate, while keeping the experience consistent.",
+    features: [
+      "Android and iOS development",
+      "Shared application code",
+      "Consistent user experience",
+      "Simplified feature development",
     ],
   },
 ];
@@ -106,102 +118,66 @@ const PLATFORMS = [
 const CAPABILITIES = [
   {
     icon: "✦",
-    title: "Intuitive Interfaces",
+    title: "User-Friendly Design",
     description:
-      "Clear navigation and thoughtfully designed screens that make applications easy to use.",
+      "Clear layouts and intuitive navigation that make everyday tasks easier.",
   },
   {
     icon: "⚡",
-    title: "Performance Optimisation",
+    title: "Performance",
     description:
-      "Efficient application architecture and performance-focused development.",
+      "Efficient application architecture and responsive interactions.",
   },
   {
     icon: "🔒",
-    title: "Application Security",
+    title: "Security",
     description:
-      "Security-conscious development practices and appropriate data protection measures.",
+      "Security-conscious development and appropriate data protection practices.",
   },
   {
     icon: "☁",
-    title: "Backend Integration",
+    title: "Backend Connectivity",
     description:
-      "Connect applications with APIs, databases, payment services and cloud infrastructure.",
+      "Integration with APIs, databases, cloud services and business systems.",
   },
   {
     icon: "◈",
     title: "Push Notifications",
     description:
-      "Notification functionality to support timely updates and user engagement.",
-  },
-  {
-    icon: "↗",
-    title: "Scalable Architecture",
-    description:
-      "Build application foundations that can accommodate new features and growing usage.",
-  },
-  {
-    icon: "⌁",
-    title: "Device Compatibility",
-    description:
-      "Consider screen sizes, operating system versions and device-specific behaviour.",
+      "Timely notifications for important updates and user engagement.",
   },
   {
     icon: "✓",
-    title: "Testing & Quality",
+    title: "Testing & Compatibility",
     description:
-      "Test application workflows, usability and functionality before release.",
+      "Testing across relevant devices, screen sizes and operating system versions.",
   },
 ];
 
 const PROCESS = [
   {
     number: "01",
-    title: "Discovery & Strategy",
+    title: "Discover",
     description:
-      "We discuss your app idea, target audience, business objectives, required features and technical requirements before defining the project scope.",
+      "We understand your idea, audience, business objectives, required features and project budget.",
   },
   {
     number: "02",
-    title: "UI/UX Design",
+    title: "Design",
     description:
-      "We plan the user journeys, application structure and interface designs to create an intuitive experience for your intended users.",
+      "We plan the application structure, user journeys and interface before development begins.",
   },
   {
     number: "03",
-    title: "Development",
+    title: "Develop",
     description:
-      "We develop the application, implement its features, connect the required services and build the functionality defined in the project scope.",
+      "We build the application, implement its features and connect the required services.",
   },
   {
     number: "04",
-    title: "Testing & Launch",
+    title: "Test & Launch",
     description:
-      "We test application functionality, resolve issues, prepare release builds and assist with the relevant app store submission process.",
-  },
-];
-
-const PROJECTS = [
-  {
-    image: "/Mobile Application.jpg",
-    alt: "Mobile application design and development",
-    title: "Custom Mobile Applications",
-    description:
-      "Purpose-built mobile experiences for business and everyday needs.",
-  },
-  {
-    image: "/Mobile Application1.jpg",
-    alt: "Android and iOS mobile application interface",
-    title: "Android & iOS Experiences",
-    description:
-      "Applications designed for intuitive interaction across mobile platforms.",
-  },
-  {
-    image: "/Excited Man Using Laptop (1).png",
-    alt: "Mobile application development workspace",
-    title: "Application Development",
-    description:
-      "From initial planning to application testing and deployment.",
+      "We test functionality, resolve issues and assist with preparing and publishing the application.",
   },
 ];
 
@@ -209,32 +185,32 @@ const FAQS = [
   {
     question: "How much does mobile app development cost in Ghana?",
     answer:
-      "The cost depends on the application's features, design complexity, platforms, integrations and development requirements. We assess your project and provide a quotation based on its scope.",
+      "The cost depends on the application's features, design complexity, platform requirements and integrations. We review your requirements before providing a project quotation.",
   },
   {
-    question: "Can you develop applications for Android and iOS?",
+    question: "Can you develop both Android and iOS applications?",
     answer:
-      "Yes. We offer Android development, iOS development and cross-platform application development. The recommended approach depends on your audience, requirements and budget.",
+      "Yes. We develop Android applications, iOS applications and cross-platform solutions. The best approach depends on your target users, functionality and budget.",
   },
   {
-    question: "How long does it take to develop a mobile application?",
+    question: "How long does it take to build a mobile app?",
     answer:
-      "Timelines depend on the number of features, design requirements, integrations and testing needs. We establish a project timeline after understanding the requirements.",
+      "Development time depends on the application's scope, features, integrations and testing requirements. We provide a project timeline after reviewing your specifications.",
   },
   {
-    question: "Can you integrate payments into a mobile application?",
+    question: "Can you integrate mobile money and online payments?",
     answer:
-      "Yes. Depending on your requirements, mobile applications can integrate payment gateways and payment services, subject to provider availability, approval and technical requirements.",
+      "Yes. We can integrate supported payment gateways and payment services based on your requirements, provider availability and approval processes.",
   },
   {
-    question: "Do you provide mobile app maintenance?",
+    question: "Do you provide support after an app is launched?",
     answer:
-      "Yes. We can provide maintenance, bug fixes, compatibility updates, performance improvements and additional feature development after launch.",
+      "Yes. Support can include bug fixes, maintenance, compatibility updates, performance improvements and the development of additional features.",
   },
   {
-    question: "Can you help publish my app on Google Play and the App Store?",
+    question: "Can you publish my application on Google Play or the App Store?",
     answer:
-      "We can assist with preparing application builds, store listings and submission requirements. Publishing is subject to the relevant platform's developer account requirements and review approval.",
+      "We can assist with preparing application builds and store submissions. Publishing is subject to the relevant developer account requirements and platform review.",
   },
 ];
 
@@ -299,10 +275,7 @@ export default function MobileDevelopmentPage() {
                 Services
               </a>
 
-              <div
-                className="nav-dropdown-menu"
-                aria-label="Services sub-tabs"
-              >
+              <div className="nav-dropdown-menu" aria-label="Services sub-tabs">
                 {DEV_SUBTABS.map(({ label, href }) => (
                   <a
                     key={label}
@@ -366,19 +339,18 @@ export default function MobileDevelopmentPage() {
             <div className="md-wrap md-hero-grid">
               <div className="md-hero-content">
                 <span className="md-kicker">
-                  Zion Technologies · Mobile App Development
+                  Zion Technologies / Mobile Development
                 </span>
 
                 <h1>
-                  Mobile Apps Built to{" "}
-                  <span>Connect, Engage & Grow.</span>
+                  Mobile apps that turn{" "}
+                  <span>ideas into experiences.</span>
                 </h1>
 
                 <p className="md-lead">
-                  We design and develop modern Android and iOS
-                  applications that bring your ideas to life,
-                  simplify everyday experiences and help businesses
-                  connect with customers wherever they are.
+                  We design and develop Android, iOS and cross-platform
+                  applications that help businesses serve customers,
+                  simplify processes and deliver useful digital experiences.
                 </p>
 
                 <div className="md-actions">
@@ -387,13 +359,13 @@ export default function MobileDevelopmentPage() {
                   </a>
 
                   <a href="#mobile-services" className="md-btn md-btn-outline">
-                    Explore Our Services
+                    Explore Services
                   </a>
                 </div>
 
                 <div className="md-hero-note">
                   <span></span>
-                  Android · iOS · Cross-platform applications
+                  Android · iOS · Cross-platform
                 </div>
               </div>
 
@@ -401,7 +373,7 @@ export default function MobileDevelopmentPage() {
                 <div className="md-hero-image">
                   <Image
                     src="/Mobile Application.jpg"
-                    alt="Custom mobile application development"
+                    alt="Mobile application interface and development"
                     width={900}
                     height={1000}
                     priority
@@ -411,50 +383,11 @@ export default function MobileDevelopmentPage() {
                 <div className="md-floating-card">
                   <div className="md-floating-icon">✦</div>
                   <div>
-                    <strong>Designed Around Users</strong>
-                    <small>Thoughtful mobile experiences</small>
+                    <strong>Built Around Your Users</strong>
+                    <small>Design, development and support</small>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          {/* TRUST STRIP */}
-          <section className="md-trust">
-            <div className="md-wrap md-trust-grid">
-              <div className="md-trust-item">
-                <span className="md-trust-number">01</span>
-                User-focused app experiences
-              </div>
-
-              <div className="md-trust-item">
-                <span className="md-trust-number">02</span>
-                Android & iOS development
-              </div>
-
-              <div className="md-trust-item">
-                <span className="md-trust-number">03</span>
-                Development & ongoing support
-              </div>
-            </div>
-          </section>
-
-          {/* INTRODUCTION */}
-          <section className="md-intro">
-            <div className="md-intro-inner">
-              <span className="md-kicker">What We Build</span>
-
-              <h2>Turning Mobile App Ideas Into Real Experiences</h2>
-
-              <p>
-                At Zion Technologies, we help businesses, startups,
-                organisations and individuals transform their ideas
-                into functional mobile applications. From initial
-                concept and interface design to development,
-                integrations, testing and deployment, we focus on
-                creating applications that are practical, intuitive
-                and built around the needs of their users.
-              </p>
             </div>
           </section>
 
@@ -462,37 +395,25 @@ export default function MobileDevelopmentPage() {
           <section className="md-services" id="mobile-services">
             <div className="md-wrap">
               <div className="md-section-heading">
-                <span className="md-kicker">Our Expertise</span>
-
+                <span className="md-kicker">What We Do</span>
                 <h2>Mobile App Development Services</h2>
-
                 <p>
-                  Whether you are launching a new product or improving
-                  an existing application, we provide mobile development
-                  services designed around your objectives.
+                  From the first concept to ongoing improvements, we provide
+                  the services needed to plan, build and maintain your mobile
+                  application.
                 </p>
               </div>
 
               <div className="md-grid">
                 {SERVICES.map((service) => (
                   <article className="md-card" key={service.number}>
-                    <span className="md-card-number">
-                      {service.number}
-                    </span>
-
-                    <div className="md-card-icon">
-                      {service.icon}
-                    </div>
-
+                    <span className="md-card-number">{service.number}</span>
+                    <div className="md-card-icon">{service.icon}</div>
                     <h3>{service.title}</h3>
-
                     <p>{service.description}</p>
 
-                    <a
-                      href="/#contact"
-                      className="md-card-link"
-                    >
-                      Discuss this service <span>→</span>
+                    <a href="/#contact" className="md-card-link">
+                      Discuss your project <span>→</span>
                     </a>
                   </article>
                 ))}
@@ -500,32 +421,23 @@ export default function MobileDevelopmentPage() {
             </div>
           </section>
 
-          {/* MOBILE PLATFORMS */}
+          {/* PLATFORMS */}
           <section className="md-platforms">
             <div className="md-wrap">
               <div className="md-section-heading">
-                <span className="md-kicker">Mobile Platforms</span>
-
-                <h2>Applications for the Platforms Your Customers Use</h2>
-
+                <span className="md-kicker">Supported Platforms</span>
+                <h2>Choose the Right Platform for Your App</h2>
                 <p>
-                  Choose the platform that best fits your audience,
-                  business model and application requirements.
+                  We help you select an approach based on your audience,
+                  application requirements and available budget.
                 </p>
               </div>
 
               <div className="md-platform-grid">
                 {PLATFORMS.map((platform) => (
-                  <article
-                    className="md-platform-card"
-                    key={platform.title}
-                  >
-                    <span className="md-platform-label">
-                      {platform.label}
-                    </span>
-
+                  <article className="md-platform-card" key={platform.title}>
+                    <span className="md-platform-label">{platform.label}</span>
                     <h3>{platform.title}</h3>
-
                     <p>{platform.description}</p>
 
                     <ul className="md-platform-list">
@@ -542,34 +454,23 @@ export default function MobileDevelopmentPage() {
             </div>
           </section>
 
-          {/* DEVELOPMENT CAPABILITIES */}
+          {/* CAPABILITIES */}
           <section className="md-capabilities">
             <div className="md-wrap">
               <div className="md-section-heading">
-                <span className="md-kicker">
-                  Built With Purpose
-                </span>
-
-                <h2>What Goes Into a Great Mobile Application?</h2>
-
+                <span className="md-kicker">Application Features</span>
+                <h2>More Than Just an App Interface</h2>
                 <p>
-                  A successful mobile application requires more than
-                  attractive screens. We consider the functionality,
-                  performance, security and experience behind every
-                  interaction.
+                  We consider the technology behind the screens to create
+                  applications that are useful, dependable and ready to grow.
                 </p>
               </div>
 
               <div className="md-capability-grid">
                 {CAPABILITIES.map((item) => (
-                  <article
-                    className="md-capability"
-                    key={item.title}
-                  >
+                  <article className="md-capability" key={item.title}>
                     <span>{item.icon}</span>
-
                     <h3>{item.title}</h3>
-
                     <p>{item.description}</p>
                   </article>
                 ))}
@@ -577,89 +478,112 @@ export default function MobileDevelopmentPage() {
             </div>
           </section>
 
-          {/* DEVELOPMENT PROCESS */}
-          <section className="md-process">
-            <div className="md-wrap">
-              <div className="md-section-heading">
-                <span className="md-kicker">How We Work</span>
+        
+{/* MOBILE APP VISUAL SHOWCASE */}
+<section className="md-visual-showcase">
+  <div className="md-wrap md-visual-grid">
 
-                <h2>From Your Idea to a Published Application</h2>
+    <div className="md-visual-collage">
+      <div className="md-collage-image md-collage-one">
+        <Image
+          src="/Mobile Application.jpg"
+          alt="Mobile application development"
+          fill
+          sizes="(max-width: 768px) 45vw, 300px"
+        />
+      </div>
 
-                <p>
-                  We follow a structured development process to
-                  understand your requirements, create the right
-                  experience and deliver a reliable mobile application.
-                </p>
-              </div>
+      <div className="md-collage-image md-collage-two">
+        <Image
+          src="/Mobile Application1.jpg"
+          alt="Mobile application interface"
+          fill
+          sizes="(max-width: 768px) 45vw, 300px"
+        />
+      </div>
 
-              <div className="md-process-grid">
-                {PROCESS.map((step) => (
-                  <article
-                    className="md-process-item"
-                    key={step.number}
-                  >
-                    <span>STEP {step.number}</span>
+      <div className="md-collage-image md-collage-three">
+        <Image
+          src="/Mobile Application2.jpg"
+          alt="Mobile app user experience"
+          fill
+          sizes="(max-width: 768px) 45vw, 300px"
+        />
+      </div>
 
-                    <h3>{step.title}</h3>
+      <div className="md-collage-image md-collage-four">
+        <Image
+          src="/Mobile Application3.jpg"
+          alt="Mobile technology and application design"
+          fill
+          sizes="(max-width: 768px) 45vw, 300px"
+        />
+      </div>
 
-                    <p>{step.description}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
+      <div className="md-collage-decoration">
+        <span>APP</span>
+        <strong>DESIGN</strong>
+        <span>& DEVELOPMENT</span>
+      </div>
+    </div>
 
-          {/* PROJECT SHOWCASE */}
-          <section className="md-showcase">
-            <div className="md-wrap">
-              <div className="md-section-heading">
-                <span className="md-kicker">Our Work</span>
+    <div className="md-visual-content">
+      <span className="md-kicker">Mobile Innovation</span>
 
-                <h2>Exploring Mobile Application Experiences</h2>
+      <h2>
+        Ideas That Become
+        <span> Powerful Mobile Experiences.</span>
+      </h2>
 
-                <p>
-                  From intuitive interfaces to feature-rich mobile
-                  experiences, we focus on building applications
-                  that solve practical problems and serve real users.
-                </p>
-              </div>
+      <p>
+        We transform ideas into mobile applications that make a
+        difference. From intuitive interfaces to powerful functionality,
+        every application is developed with its users and purpose in mind.
+      </p>
 
-              <div className="md-gallery-grid">
-                {PROJECTS.map((project) => (
-                  <article
-                    className="md-gallery-item"
-                    key={project.title}
-                  >
-                    <Image
-                      src={project.image}
-                      alt={project.alt}
-                      width={600}
-                      height={750}
-                    />
+      <div className="md-visual-points">
+        <div>
+          <span>01</span>
+          <p>
+            <strong>Thoughtful Design</strong>
+            Interfaces designed around real user needs.
+          </p>
+        </div>
 
-                    <div className="md-gallery-overlay">
-                      <h3>{project.title}</h3>
-                      <p>{project.description}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
+        <div>
+          <span>02</span>
+          <p>
+            <strong>Purposeful Development</strong>
+            Features built to solve practical problems.
+          </p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>
+            <strong>Connected Technology</strong>
+            Integrations that bring your application together.
+          </p>
+        </div>
+      </div>
+
+      <a href="/#contact" className="md-btn">
+        Discuss Your App Idea <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
 
           {/* FAQ */}
           <section className="md-section">
             <div className="md-wrap">
               <div className="md-section-heading">
-                <span className="md-kicker">
-                  Frequently Asked Questions
-                </span>
-
-                <h2>Mobile App Development Questions</h2>
-
+                <span className="md-kicker">Frequently Asked Questions</span>
+                <h2>Mobile App Development in Ghana</h2>
                 <p>
-                  Find answers to common questions about developing
-                  Android and iOS applications with Zion Technologies.
+                  Answers to common questions about mobile application
+                  development, costs, platforms and support.
                 </p>
               </div>
 
@@ -700,22 +624,17 @@ export default function MobileDevelopmentPage() {
           <section className="md-cta">
             <div className="md-wrap md-cta-inner">
               <div className="md-cta-content">
-                <span className="md-kicker">
-                  Let's Build Your Next App
-                </span>
-
-                <h2>Have a Mobile App Idea? Let's Make It Happen.</h2>
-
+                <span className="md-kicker">Have an App Idea?</span>
+                <h2>Let's Build Your Mobile Application.</h2>
                 <p>
-                  Whether you are planning an Android application,
-                  an iOS product or a cross-platform solution, tell us
-                  about your idea. Let's discuss the features,
-                  requirements and the right approach for your project.
+                  Tell us what you want to build, who it is for and what you
+                  want it to achieve. We will discuss the requirements and
+                  the right development approach for your project.
                 </p>
               </div>
 
               <a href="/#contact" className="md-btn">
-                Get a Mobile App Quote <span>→</span>
+                Request a Mobile App Quote <span>→</span>
               </a>
             </div>
           </section>
@@ -731,12 +650,11 @@ export default function MobileDevelopmentPage() {
         <div className="md-pre-footer-wrap">
           <div className="md-pre-footer-about">
             <h2>Mobile App Development</h2>
-
             <p>
-              Zion Technologies designs and develops Android,
-              iOS and cross-platform mobile applications that
-              help businesses connect with customers, improve
-              digital experiences and bring ideas to life.
+              Zion Technologies develops Android, iOS and cross-platform
+              applications for businesses, organisations and individuals.
+              We focus on practical functionality and useful digital
+              experiences.
             </p>
           </div>
 
@@ -750,15 +668,9 @@ export default function MobileDevelopmentPage() {
 
           <div className="md-pre-footer-contact">
             <h2>Get in touch</h2>
-
-            <p>
-              Have a mobile application project in mind?
-              Let's discuss your requirements.
-            </p>
-
+            <p>Discuss your mobile application requirements with us.</p>
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             <a href="tel:+233595856187">+233 59 585 6187</a>
-
             <a
               href="https://wa.me/233595856187"
               target="_blank"
@@ -776,7 +688,6 @@ export default function MobileDevelopmentPage() {
             <p>Monday–Friday</p>
 
             <h2>Follow us</h2>
-
             <div className="md-social-icons" aria-label="Social media">
               <a href="#" aria-label="YouTube" title="YouTube">
                 <svg viewBox="0 0 24 24" aria-hidden="true">

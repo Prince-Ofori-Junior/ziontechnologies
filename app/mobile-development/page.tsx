@@ -154,33 +154,6 @@ const CAPABILITIES = [
   },
 ];
 
-const PROCESS = [
-  {
-    number: "01",
-    title: "Discover",
-    description:
-      "We understand your idea, audience, business objectives, required features and project budget.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description:
-      "We plan the application structure, user journeys and interface before development begins.",
-  },
-  {
-    number: "03",
-    title: "Develop",
-    description:
-      "We build the application, implement its features and connect the required services.",
-  },
-  {
-    number: "04",
-    title: "Test & Launch",
-    description:
-      "We test functionality, resolve issues and assist with preparing and publishing the application.",
-  },
-];
-
 const FAQS = [
   {
     question: "How much does mobile app development cost in Ghana?",
@@ -217,7 +190,10 @@ const FAQS = [
 export default function MobileDevelopmentPage() {
   const [menu, setMenu] = useState(false);
   const [devMenu, setDevMenu] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null);
+
+  // FIX: FAQ state accepts either a number or null.
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const pathname = usePathname();
 
   return (
@@ -478,102 +454,100 @@ export default function MobileDevelopmentPage() {
             </div>
           </section>
 
-        
-{/* MOBILE APP VISUAL SHOWCASE */}
-<section className="md-visual-showcase">
-  <div className="md-wrap md-visual-grid">
+          {/* MOBILE APP VISUAL SHOWCASE */}
+          <section className="md-visual-showcase">
+            <div className="md-wrap md-visual-grid">
+              <div className="md-visual-collage">
+                <div className="md-collage-image md-collage-one">
+                  <Image
+                    src="/Mobile Application.jpg"
+                    alt="Mobile application development"
+                    fill
+                    sizes="(max-width: 768px) 45vw, 300px"
+                  />
+                </div>
 
-    <div className="md-visual-collage">
-      <div className="md-collage-image md-collage-one">
-        <Image
-          src="/Mobile Application.jpg"
-          alt="Mobile application development"
-          fill
-          sizes="(max-width: 768px) 45vw, 300px"
-        />
-      </div>
+                <div className="md-collage-image md-collage-two">
+                  <Image
+                    src="/Mobile Application1.jpg"
+                    alt="Mobile application interface"
+                    fill
+                    sizes="(max-width: 768px) 45vw, 300px"
+                  />
+                </div>
 
-      <div className="md-collage-image md-collage-two">
-        <Image
-          src="/Mobile Application1.jpg"
-          alt="Mobile application interface"
-          fill
-          sizes="(max-width: 768px) 45vw, 300px"
-        />
-      </div>
+                <div className="md-collage-image md-collage-three">
+                  <Image
+                    src="/Mobile Application2.jpg"
+                    alt="Mobile app user experience"
+                    fill
+                    sizes="(max-width: 768px) 45vw, 300px"
+                  />
+                </div>
 
-      <div className="md-collage-image md-collage-three">
-        <Image
-          src="/Mobile Application2.jpg"
-          alt="Mobile app user experience"
-          fill
-          sizes="(max-width: 768px) 45vw, 300px"
-        />
-      </div>
+                <div className="md-collage-image md-collage-four">
+                  <Image
+                    src="/Mobile Application3.jpg"
+                    alt="Mobile technology and application design"
+                    fill
+                    sizes="(max-width: 768px) 45vw, 300px"
+                  />
+                </div>
 
-      <div className="md-collage-image md-collage-four">
-        <Image
-          src="/Mobile Application3.jpg"
-          alt="Mobile technology and application design"
-          fill
-          sizes="(max-width: 768px) 45vw, 300px"
-        />
-      </div>
+                <div className="md-collage-decoration">
+                  <span>APP</span>
+                  <strong>DESIGN</strong>
+                  <span>& DEVELOPMENT</span>
+                </div>
+              </div>
 
-      <div className="md-collage-decoration">
-        <span>APP</span>
-        <strong>DESIGN</strong>
-        <span>& DEVELOPMENT</span>
-      </div>
-    </div>
+              <div className="md-visual-content">
+                <span className="md-kicker">Mobile Innovation</span>
 
-    <div className="md-visual-content">
-      <span className="md-kicker">Mobile Innovation</span>
+                <h2>
+                  Ideas That Become
+                  <span> Powerful Mobile Experiences.</span>
+                </h2>
 
-      <h2>
-        Ideas That Become
-        <span> Powerful Mobile Experiences.</span>
-      </h2>
+                <p>
+                  We transform ideas into mobile applications that make a
+                  difference. From intuitive interfaces to powerful
+                  functionality, every application is developed with its
+                  users and purpose in mind.
+                </p>
 
-      <p>
-        We transform ideas into mobile applications that make a
-        difference. From intuitive interfaces to powerful functionality,
-        every application is developed with its users and purpose in mind.
-      </p>
+                <div className="md-visual-points">
+                  <div>
+                    <span>01</span>
+                    <p>
+                      <strong>Thoughtful Design</strong>
+                      Interfaces designed around real user needs.
+                    </p>
+                  </div>
 
-      <div className="md-visual-points">
-        <div>
-          <span>01</span>
-          <p>
-            <strong>Thoughtful Design</strong>
-            Interfaces designed around real user needs.
-          </p>
-        </div>
+                  <div>
+                    <span>02</span>
+                    <p>
+                      <strong>Purposeful Development</strong>
+                      Features built to solve practical problems.
+                    </p>
+                  </div>
 
-        <div>
-          <span>02</span>
-          <p>
-            <strong>Purposeful Development</strong>
-            Features built to solve practical problems.
-          </p>
-        </div>
+                  <div>
+                    <span>03</span>
+                    <p>
+                      <strong>Connected Technology</strong>
+                      Integrations that bring your application together.
+                    </p>
+                  </div>
+                </div>
 
-        <div>
-          <span>03</span>
-          <p>
-            <strong>Connected Technology</strong>
-            Integrations that bring your application together.
-          </p>
-        </div>
-      </div>
-
-      <a href="/#contact" className="md-btn">
-        Discuss Your App Idea <span>→</span>
-      </a>
-    </div>
-
-  </div>
-</section>
+                <a href="/#contact" className="md-btn">
+                  Discuss Your App Idea <span>→</span>
+                </a>
+              </div>
+            </div>
+          </section>
 
           {/* FAQ */}
           <section className="md-section">

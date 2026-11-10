@@ -1,112 +1,44 @@
 /* =========================================
-   ZION TECHNOLOGIES — UI/UX DESIGN PAGE
-   All styles scoped under .ux
+   ZION TECHNOLOGIES — UI/UX DESIGN
+   Modern creative: purple/pink gradients
 ========================================= */
+
+:root {
+  --ux-primary: #8b5cf6;
+  --ux-accent: #ec4899;
+  --ux-dark: #312e81;
+}
 
 .ux {
   font-family: var(--sans), system-ui, sans-serif;
   color: var(--ink);
   background: var(--paper);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-.ux *,
-.ux *::before,
-.ux *::after {
-  box-sizing: border-box;
 }
 
 .ux h1,
 .ux h2,
 .ux h3 {
   margin: 0;
-  color: var(--ink, #1a1a2e);
+  color: var(--ux-dark);
   font-family: var(--sans), system-ui, sans-serif;
-  line-height: 1.15;
+  line-line-height: 1.15;
   letter-spacing: -0.025em;
-  text-wrap: balance;
 }
 
 .ux p {
   margin: 0;
+  color: var(--muted);
 }
 
 .ux a:focus-visible {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--ux-primary);
   outline-offset: 3px;
 }
 
-/* Container */
 .ux-wrap {
-  width: 100%;
   max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 24px;
-}
-
-/* Sections */
-.ux-section {
-  padding: 52px 0;
-}
-
-.ux-intro {
-  max-width: 900px;
   margin: 0 auto;
-  padding: 40px 24px;
-  font-size: 16px;
-  color: var(--ink);
-  line-height: 1.7;
-  text-align: center;
-}
-
-.ux-intro p {
-  margin: 0 0 16px;
-}
-
-.ux-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.ux-card {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 26px 22px;
-  background: var(--paper);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  display: block;
-}
-
-.ux-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
-  border-color: var(--green);
-  text-decoration: none;
-}
-
-.ux-card h3 {
-  font-size: 18px;
-  margin: 0 0 10px;
-  color: var(--ink);
-}
-
-.ux-card p {
-  font-size: 14.5px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin: 0;
-}
-
-.ux h2 {
-  font-size: clamp(1rem, 3vw, 2rem);
-}
-
-.ux-title {
-  margin-bottom: 28px;
+  padding: 0 24px;
 }
 
 /* Buttons */
@@ -135,49 +67,92 @@
   background: #1b2a41;
 }
 
-/* Hero */
+/* =========================================
+   ZION TECHNOLOGIES — UI/UX DESIGN
+   Modern creative: purple/pink gradients
+========================================= */
+
+:root {
+  --ux-primary: #8b5cf6;
+  --ux-accent: #ec4899;
+  --ux-dark: #312e81;
+}
+
+.ux {
+  font-family: var(--sans), system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.ux h1,
+.ux h2,
+.ux h3 {
+  margin: 0;
+  color: var(--ux-dark);
+  font-family: var(--sans), system-ui, sans-serif;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.ux p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ux a:focus-visible {
+  outline: 3px solid var(--ux-primary);
+  outline-offset: 3px;
+}
+
+.ux-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HERO */
 .ux-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: auto;
-  padding: 64px 0 0;
-  background: radial-gradient(
-    60% 80% at 100% 0%,
-    rgba(0, 191, 255, 0.10),
-    transparent 60%
-  );
+  padding: 96px 0 64px;
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .ux-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 48px;
   align-items: center;
 }
 
 .ux-kicker {
   display: inline-block;
-  margin-bottom: 20px;
-  color: #009fe6;
-  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--ux-primary);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
 }
 
 .ux-hero h1 {
-  max-width: 750px;
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  line-height: 1.12;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, var(--ux-primary), var(--ux-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .ux-lead {
-  max-width: 48ch;
-  margin: 20px 0 26px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 500px;
 }
 
 .ux-actions {

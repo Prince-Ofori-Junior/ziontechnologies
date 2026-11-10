@@ -46,9 +46,9 @@
   align-items: center;
   gap: 10px;
   color: var(--wd-primary-dark);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.10em;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -60,20 +60,20 @@
 }
 
 .wd-section-heading {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto 48px;
   text-align: center;
 }
 
 .wd-section-heading h2 {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-weight: 800;
   margin: 14px 0;
 }
 
 .wd-section-heading p {
   color: var(--wd-muted);
-  font-size: 1.0rem;
+  font-size: 1.05rem;
 }
 
 /* BUTTONS */

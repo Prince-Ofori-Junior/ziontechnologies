@@ -994,11 +994,11 @@ export default function TechConsultingPage() {
           COPYRIGHT
       ========================================= */}
 
-      <footer className="tc-footer">
-        <p>
-          © {new Date().getFullYear()} Zion Technologies. All rights reserved.
-        </p>
-      </footer>
+    <footer className="tc-footer">
+  <p>
+    © 2026 Zion Technologies. All rights reserved.
+  </p>
+</footer>
 
     </>
   );

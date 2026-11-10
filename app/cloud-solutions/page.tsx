@@ -139,6 +139,43 @@ export default function CloudSolutionsPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="cs-video">
+            <div className="cs-video-wrap">
+              <h2>See Our Cloud Solutions in Action</h2>
+              <div className="cs-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Cloud Solutions Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="cs-gallery">
+            <div className="cs-gallery-wrap">
+              <h2>Our Cloud Solutions Projects</h2>
+              <div className="cs-gallery-grid">
+                <div className="cs-gallery-item">
+                  <Image src="/Cloud Solutions00.jpg" alt="Cloud Computing Infrastructure" width={400} height={300} priority />
+                  <span>Cloud Infrastructure</span>
+                </div>
+                <div className="cs-gallery-item">
+                  <Image src="/Cloud Solutions1.jpg" alt="Cloud Migration" width={400} height={300} />
+                  <span>Cloud Migration</span>
+                </div>
+                <div className="cs-gallery-item">
+                  <Image src="/cs.jpg" alt="Cloud Services" width={400} height={300} />
+                  <span>Cloud Services</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

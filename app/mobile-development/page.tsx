@@ -138,6 +138,43 @@ export default function MobileDevelopmentPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="md-video">
+            <div className="md-video-wrap">
+              <h2>See Our Mobile Apps in Action</h2>
+              <div className="md-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Mobile App Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="md-gallery">
+            <div className="md-gallery-wrap">
+              <h2>Our Mobile Development Projects</h2>
+              <div className="md-gallery-grid">
+                <div className="md-gallery-item">
+                  <Image src="/Mobile Application.jpg" alt="Mobile App Project" width={400} height={300} priority />
+                  <span>Mobile App</span>
+                </div>
+                <div className="md-gallery-item">
+                  <Image src="/Mobile Application1.jpg" alt="iOS & Android App" width={400} height={300} />
+                  <span>iOS & Android</span>
+                </div>
+                <div className="md-gallery-item">
+                  <Image src="/Excited Man Using Laptop (1).png" alt="Mobile Development" width={400} height={300} />
+                  <span>Mobile Development</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

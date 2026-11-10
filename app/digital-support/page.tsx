@@ -139,6 +139,39 @@ export default function DigitalSupportPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="ds-video">
+            <div className="ds-video-wrap">
+              <h2>See Our Digital Support Services</h2>
+              <div className="ds-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Digital Support Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="ds-gallery">
+            <div className="ds-gallery-wrap">
+              <h2>Our Digital Support Projects</h2>
+              <div className="ds-gallery-grid">
+                <div className="ds-gallery-item">
+                  <Image src="/Digital Support.jpg" alt="Digital Support Project" width={400} height={300} priority />
+                  <span>Digital Support</span>
+                </div>
+                <div className="ds-gallery-item">
+                  <Image src="/Digital Support2.jpg" alt="Technical Support" width={400} height={300} />
+                  <span>Technical Support</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

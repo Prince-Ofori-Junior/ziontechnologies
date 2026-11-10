@@ -139,6 +139,47 @@ export default function WebDevelopmentPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="wd-video">
+            <div className="wd-video-wrap">
+              <h2>See Our Web Development Work</h2>
+              <div className="wd-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Web Development Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="wd-gallery">
+            <div className="wd-gallery-wrap">
+              <h2>Our Web Development Projects</h2>
+              <div className="wd-gallery-grid">
+                <div className="wd-gallery-item">
+                  <Image src="/Web Development.png" alt="Web Development Project" width={400} height={300} priority />
+                  <span>Business Website</span>
+                </div>
+                <div className="wd-gallery-item">
+                  <Image src="/Customes softwares.jpg" alt="Custom Software" width={400} height={300} />
+                  <span>Custom Software</span>
+                </div>
+                <div className="wd-gallery-item">
+                  <Image src="/Customes softwares1.jpg" alt="Web Application" width={400} height={300} />
+                  <span>Web Application</span>
+                </div>
+                <div className="wd-gallery-item">
+                  <Image src="/web.jpg" alt="Website Design" width={400} height={300} />
+                  <span>Website Design</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

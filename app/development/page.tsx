@@ -149,6 +149,43 @@ export default function DevelopmentPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="dev-video">
+            <div className="dev-video-wrap">
+              <h2>See Our Software Development Work</h2>
+              <div className="dev-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Software Development Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="dev-gallery">
+            <div className="dev-gallery-wrap">
+              <h2>Our Software Development Projects</h2>
+              <div className="dev-gallery-grid">
+                <div className="dev-gallery-item">
+                  <Image src="/custom software2.jpg" alt="Custom Software Project" width={400} height={300} priority />
+                  <span>Custom Software</span>
+                </div>
+                <div className="dev-gallery-item">
+                  <Image src="/Smiling Man Exploring Floating Analytics Dashboards.png" alt="Analytics Dashboard" width={400} height={300} />
+                  <span>Analytics Dashboard</span>
+                </div>
+                <div className="dev-gallery-item">
+                  <Image src="/Excited Man Using Laptop (1).png" alt="Development Work" width={400} height={300} />
+                  <span>Development</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

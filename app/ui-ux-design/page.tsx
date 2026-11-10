@@ -138,6 +138,47 @@ export default function UiUxDesignPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="ux-video">
+            <div className="ux-video-wrap">
+              <h2>See Our UI/UX Design Process</h2>
+              <div className="ux-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="UI/UX Design Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="ux-gallery">
+            <div className="ux-gallery-wrap">
+              <h2>Our UI/UX Design Projects</h2>
+              <div className="ux-gallery-grid">
+                <div className="ux-gallery-item">
+                  <Image src="/Creative Design.jpg" alt="Creative Design Project" width={400} height={300} priority />
+                  <span>Creative Design</span>
+                </div>
+                <div className="ux-gallery-item">
+                  <Image src="/Brand Identity.jpg" alt="Brand Identity" width={400} height={300} />
+                  <span>Brand Identity</span>
+                </div>
+                <div className="ux-gallery-item">
+                  <Image src="/Print Production.jpg" alt="Print Production" width={400} height={300} />
+                  <span>Print Production</span>
+                </div>
+                <div className="ux-gallery-item">
+                  <Image src="/Print Production1.jpg" alt="Print Design" width={400} height={300} />
+                  <span>Print Design</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

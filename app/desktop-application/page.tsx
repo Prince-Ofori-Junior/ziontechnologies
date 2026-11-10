@@ -140,6 +140,39 @@ export default function DesktopApplicationPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="da-video">
+            <div className="da-video-wrap">
+              <h2>See Our Desktop Applications</h2>
+              <div className="da-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Desktop Application Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="da-gallery">
+            <div className="da-gallery-wrap">
+              <h2>Our Desktop Application Projects</h2>
+              <div className="da-gallery-grid">
+                <div className="da-gallery-item">
+                  <Image src="/Desktop Application0.jpg" alt="Desktop Application Project" width={400} height={300} priority />
+                  <span>Desktop App</span>
+                </div>
+                <div className="da-gallery-item">
+                  <Image src="/Desktop Application1.jpg" alt="Cross-Platform Desktop" width={400} height={300} />
+                  <span>Cross-Platform</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

@@ -140,6 +140,43 @@ export default function TechConsultingPage() {
             </a>
           </section>
 
+          {/* Video Section */}
+          <section className="tc-video">
+            <div className="tc-video-wrap">
+              <h2>See Our Tech Consulting Work</h2>
+              <div className="tc-video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Tech Consulting Portfolio"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Picture Gallery */}
+          <section className="tc-gallery">
+            <div className="tc-gallery-wrap">
+              <h2>Our Tech Consulting Projects</h2>
+              <div className="tc-gallery-grid">
+                <div className="tc-gallery-item">
+                  <Image src="/Tech Consult.jpg" alt="Tech Consulting Project" width={400} height={300} priority />
+                  <span>Tech Consulting</span>
+                </div>
+                <div className="tc-gallery-item">
+                  <Image src="/Tech Consult1.jpg" alt="Technology Strategy" width={400} height={300} />
+                  <span>Technology Strategy</span>
+                </div>
+                <div className="tc-gallery-item">
+                  <Image src="/Tech Consulting.jpg" alt="Digital Transformation" width={400} height={300} />
+                  <span>Digital Transformation</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -30,6 +31,100 @@ const DEV_SUBTABS = [
   { label: "Cloud Solutions", href: "/cloud-solutions" },
 ];
 
+const solutions = [
+  {
+    number: "01",
+    icon: "▦",
+    title: "Business Management",
+    description:
+      "Manage business operations, records and everyday activities from one central application.",
+  },
+  {
+    number: "02",
+    icon: "▤",
+    title: "Inventory Management",
+    description:
+      "Monitor stock levels, organise products and keep accurate inventory records.",
+  },
+  {
+    number: "03",
+    icon: "▣",
+    title: "Point of Sale Systems",
+    description:
+      "Handle sales, receipts, product information and transaction records efficiently.",
+  },
+  {
+    number: "04",
+    icon: "▥",
+    title: "Database Applications",
+    description:
+      "Store, organise and retrieve important information through structured desktop systems.",
+  },
+  {
+    number: "05",
+    icon: "⌘",
+    title: "Custom Desktop Software",
+    description:
+      "Get purpose-built applications for specialised tasks and unique business workflows.",
+  },
+];
+
+const capabilities = [
+  {
+    number: "01",
+    title: "Offline Access",
+    description: "Use essential application features without constant internet access.",
+  },
+  {
+    number: "02",
+    title: "Database Integration",
+    description: "Store and manage business information using structured databases.",
+  },
+  {
+    number: "03",
+    title: "Secure Access",
+    description: "Use appropriate authentication and access controls to protect information.",
+  },
+  {
+    number: "04",
+    title: "System Integration",
+    description: "Connect with relevant files, devices and desktop operating system features.",
+  },
+  {
+    number: "05",
+    title: "Data Synchronisation",
+    description: "Synchronise local information with remote services when required.",
+  },
+  {
+    number: "06",
+    title: "Ongoing Support",
+    description: "Receive maintenance, improvements and software updates.",
+  },
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Discover",
+    description: "We understand your requirements, users and business processes.",
+  },
+  {
+    number: "02",
+    title: "Design",
+    description: "We plan the interface, features and application structure.",
+  },
+  {
+    number: "03",
+    title: "Develop",
+    description: "We build and test the application for its intended environment.",
+  },
+  {
+    number: "04",
+    title: "Deploy",
+    description: "We prepare your software for installation and ongoing use.",
+  },
+];
+
 export default function DesktopApplicationPage() {
   const [menu, setMenu] = useState(false);
   const [devMenu, setDevMenu] = useState(false);
@@ -46,39 +141,98 @@ export default function DesktopApplicationPage() {
               <span className="logo-blue"></span>
             </div>
           </a>
+
           <div className={menu ? "nav-links open" : "nav-links"}>
-            <a href="/" onClick={() => setMenu(false)} className={pathname === "/" ? "active" : ""}>
+            <a
+              href="/"
+              onClick={() => setMenu(false)}
+              className={pathname === "/" ? "active" : ""}
+            >
               Home
             </a>
-            <a href="/#solutions" onClick={() => setMenu(false)}>Solutions</a>
-            <a href="/about" onClick={() => setMenu(false)} className={pathname === "/about" ? "active" : ""}>
+
+            <a href="/#solutions" onClick={() => setMenu(false)}>
+              Solutions
+            </a>
+
+            <a
+              href="/about"
+              onClick={() => setMenu(false)}
+              className={pathname === "/about" ? "active" : ""}
+            >
               About
             </a>
-            <a href="/blogs" onClick={() => setMenu(false)} className={pathname === "/blogs" ? "active" : ""}>
+
+            <a
+              href="/blogs"
+              onClick={() => setMenu(false)}
+              className={pathname === "/blogs" ? "active" : ""}
+            >
               Blogs
             </a>
+
             <div className={`nav-dropdown ${devMenu ? "open" : ""}`}>
-              <a className="nav-dropdown-toggle" href="/services" onClick={(e) => { e.preventDefault(); setDevMenu(!devMenu); }} aria-expanded={devMenu}>
+              <a
+                className="nav-dropdown-toggle"
+                href="/services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setDevMenu(!devMenu);
+                }}
+                aria-expanded={devMenu}
+              >
                 Services
               </a>
+
               <div className="nav-dropdown-menu" aria-label="Services sub-tabs">
                 {DEV_SUBTABS.map(({ label, href }) => (
-                  <a key={label} className="nav-dropdown-item" href={href} onClick={() => { setMenu(false); setDevMenu(false); }}>
+                  <a
+                    key={label}
+                    className="nav-dropdown-item"
+                    href={href}
+                    onClick={() => {
+                      setMenu(false);
+                      setDevMenu(false);
+                    }}
+                  >
                     {label}
                   </a>
                 ))}
               </div>
             </div>
-            <a className="nav-cta nav-cta--accent mobile-only" href="/#contact" onClick={() => setMenu(false)}>
+
+            <a
+              className="nav-cta nav-cta--accent mobile-only"
+              href="/#contact"
+              onClick={() => setMenu(false)}
+            >
               Get a quote
             </a>
           </div>
+
           <div className="nav-actions">
             <a href={`mailto:${EMAIL}`}>Contact</a>
-            <a className="nav-cta nav-cta--accent" href="/#contact">Get a quote</a>
+            <a className="nav-cta nav-cta--accent" href="/#contact">
+              Get a quote
+            </a>
           </div>
-          <button className="menu-btn" type="button" aria-expanded={menu} aria-label="Toggle menu" onClick={() => { setMenu(!menu); if (menu) setDevMenu(false); }}>
-            <svg className={`hamburger ${menu ? "active" : ""}`} viewBox="0 0 24 24" strokeWidth={2} fill="none">
+
+          <button
+            className="menu-btn"
+            type="button"
+            aria-expanded={menu}
+            aria-label="Toggle menu"
+            onClick={() => {
+              setMenu(!menu);
+              if (menu) setDevMenu(false);
+            }}
+          >
+            <svg
+              className={`hamburger ${menu ? "active" : ""}`}
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              fill="none"
+            >
               <path className="first" d="M3.75 6.5h14" />
               <path className="middle" d="M3.75 12.5h20" />
               <path className="last" d="M3.75 18.5h14" />
@@ -87,125 +241,243 @@ export default function DesktopApplicationPage() {
         </nav>
       </header>
 
-      {/* ================= DESKTOP APPLICATION PAGE ================= */}
-
       <main>
         <div className={`da ${display.variable} ${body.variable}`}>
 
-          {/* Hero */}
+          {/* HERO */}
           <section className="da-hero">
             <div className="da-wrap da-hero-grid">
-              <div>
-                <h2>Desktop Application</h2>
+              <div className="da-hero-copy">
+                <span className="da-kicker">
+                  Desktop Application Development
+                </span>
+
+                <h1>
+                  Powerful software.
+                  <span> Built for your desktop.</span>
+                </h1>
+
+                <p className="da-lead">
+                  We develop custom desktop applications that simplify
+                  operations, manage business information and improve
+                  productivity. Designed for Windows, macOS and Linux.
+                </p>
+
+                <div className="da-actions">
+                  <a href="#da-contact" className="da-btn">
+                    Discuss your project <span>↗</span>
+                  </a>
+
+                  <a href="#da-solutions" className="da-btn-outline">
+                    Explore solutions <span>↓</span>
+                  </a>
+                </div>
+
+                <div className="da-hero-note">
+                  <span className="da-note-dot"></span>
+                  <span>Custom-built applications for real business needs.</span>
+                </div>
+              </div>
+
+              <div className="da-hero-visual">
+                <div className="da-hero-image">
+                  <Image
+                    src="/Desktop Application0.jpg"
+                    alt="Desktop application interface"
+                    fill
+                    priority
+                    sizes="(max-width: 700px) 100vw, 55vw"
+                  />
+                </div>
+
+                <div className="da-floating-card">
+                  <span className="da-floating-icon">▦</span>
+                  <div>
+                    <strong>Designed around your workflow</strong>
+                    <small>Custom desktop software</small>
+                  </div>
+                </div>
+
+                <div className="da-visual-index">DESKTOP SOFTWARE</div>
+              </div>
+            </div>
+          </section>
+
+          {/* SOLUTIONS */}
+          <section className="da-solutions" id="da-solutions">
+            <div className="da-wrap">
+              <div className="da-section-heading">
+                <div>
+                  <span className="da-kicker">What we develop</span>
+                  <h2>
+                    Desktop solutions for
+                    <span> your business.</span>
+                  </h2>
+                </div>
+
                 <p>
-                  Powerful desktop applications built for Windows, macOS, and Linux that run
-                  smoothly offline and integrate deeply with your operating system.
+                  Practical applications designed around your operations,
+                  requirements and the way your team works.
                 </p>
               </div>
-            </div>
-          </section>
 
-          <section className="da-intro">
-            <p>
-              Whether you need an internal business tool, a desktop client for your service,
-              or a cross-platform utility, we build fast, secure desktop applications tailored
-              to your workflow.
-            </p>
-          </section>
+              <div className="da-solutions-grid">
+                {solutions.map((item) => (
+                  <article className="da-solution-card" key={item.number}>
+                    <div className="da-solution-top">
+                      <span className="da-solution-number">{item.number}</span>
+                      <span className="da-solution-icon">{item.icon}</span>
+                    </div>
 
-          <section className="da-section">
-            <div className="da-grid">
-              <div className="da-card">
-                <h3>Cross-Platform Apps</h3>
-                <p>Desktop applications that run on Windows, macOS, and Linux from a single codebase.</p>
-              </div>
-              <div className="da-card">
-                <h3>Native Performance</h3>
-                <p>Optimised for speed and responsiveness with full access to system resources.</p>
-              </div>
-              <div className="da-card">
-                <h3>Offline-First</h3>
-                <p>Applications that work without an internet connection and sync when back online.</p>
-              </div>
-              <div className="da-card">
-                <h3>Auto Updates</h3>
-                <p>Seamless background updates so your users always have the latest version.</p>
+                    <div className="da-solution-bottom">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <a href="#da-contact" aria-label={`Discuss ${item.title}`}>
+                        Discuss your needs <span>↗</span>
+                      </a>
+                    </div>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
 
-          <section className="da-cta">
-            <a href="/?#contact" className="da-btn da-btn-dark">
-              Get a quote for desktop application &rarr;
-            </a>
-          </section>
-
-          {/* Video Section */}
-          <section className="da-video">
-            <div className="da-video-wrap">
-              <h2>See Our Desktop Applications</h2>
-              <div className="da-video-container">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Desktop Application Portfolio"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+          {/* CAPABILITIES */}
+          <section className="da-capabilities">
+            <div className="da-wrap">
+              <div className="da-capabilities-heading">
+                <span className="da-kicker">Built for performance</span>
+                <h2>
+                  Essential features.
+                  <span> Reliable applications.</span>
+                </h2>
+                <p>
+                  We focus on the functionality, security and usability
+                  your desktop software needs.
+                </p>
               </div>
-            </div>
-          </section>
 
-          {/* Picture Gallery */}
-          <section className="da-gallery">
-            <div className="da-gallery-wrap">
-              <h2>Our Desktop Application Projects</h2>
-              <div className="da-gallery-grid">
-                <div className="da-gallery-item">
-                  <Image src="/Desktop Application0.jpg" alt="Desktop Application Project" width={400} height={300} priority />
-                  <span>Desktop App</span>
+              <div className="da-capabilities-layout">
+                <div className="da-capabilities-visual">
+                  <Image
+                    src="/Desktop Application1.jpg"
+                    alt="Desktop software workspace"
+                    fill
+                    sizes="(max-width: 700px) 100vw, 40vw"
+                  />
+                  <div className="da-capabilities-caption">
+                    <span>DESKTOP APPLICATIONS</span>
+                    <strong>Functionality meets usability.</strong>
+                  </div>
                 </div>
-                <div className="da-gallery-item">
-                  <Image src="/Desktop Application1.jpg" alt="Cross-Platform Desktop" width={400} height={300} />
-                  <span>Cross-Platform</span>
+
+                <div className="da-capabilities-list">
+                  {capabilities.map((item) => (
+                    <article className="da-capability" key={item.number}>
+                      <span className="da-capability-number">{item.number}</span>
+                      <div>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
+                    </article>
+                  ))}
                 </div>
               </div>
             </div>
           </section>
 
+          {/* PROCESS */}
+          <section className="da-process" id="da-process">
+            <div className="da-wrap">
+              <div className="da-section-heading">
+                <div>
+                  <span className="da-kicker">How we work</span>
+                  <h2>
+                    From idea to
+                    <span> finished software.</span>
+                  </h2>
+                </div>
+
+                <p>
+                  A clear development process keeps your project focused
+                  from the first discussion to deployment.
+                </p>
+              </div>
+
+              <div className="da-process-grid">
+                {process.map((item) => (
+                  <article className="da-process-card" key={item.number}>
+                    <span className="da-process-number">{item.number}</span>
+                    <span className="da-process-line"></span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="da-cta" id="da-contact">
+            <div className="da-wrap da-cta-inner">
+              <div className="da-cta-copy">
+                <span className="da-kicker">Start your project</span>
+                <h2>
+                  Have an idea for a desktop application?
+                </h2>
+                <p>
+                  Tell us what you need. Let's discuss the features,
+                  requirements and development approach for your software.
+                </p>
+              </div>
+
+              <div className="da-cta-actions">
+                <a
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(
+                    "Desktop Application Development Enquiry"
+                  )}`}
+                  className="da-btn da-btn-light"
+                >
+                  Start a project <span>↗</span>
+                </a>
+
+                <a
+                  href="https://wa.me/233595856187"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="da-cta-secondary"
+                >
+                  Chat on WhatsApp
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
 
-      {/* ================= SHARED FOOTER ================= */}
-
-      <section className="da-pre-footer" id="contact" aria-label="Company information">
-
+      {/* FOOTER */}
+      <section className="da-pre-footer" aria-label="Company information">
         <div className="da-pre-footer-wrap">
           <div className="da-pre-footer-about">
-            <h2>Desktop Application</h2>
+            <h2>Desktop Applications</h2>
             <p>
-              Powerful desktop applications for Windows, macOS, and Linux that
-              run offline and integrate deeply with your operating system.
+              Custom desktop software for Windows, macOS and Linux,
+              developed around your business requirements.
             </p>
           </div>
 
           <div className="da-pre-footer-links">
             <h2>Explore</h2>
-            <a href="/#services">Services</a>
-            <a href="/#solutions">Solutions</a>
-            <a href="/about">About us</a>
-            <a href="/blogs">Blogs</a>
+            <a href="/web-development">Web Development</a>
+            <a href="/mobile-development">Mobile Applications</a>
+            <a href="/desktop-application">Desktop Applications</a>
+            <a href="/ui-ux-design">UI/UX Design</a>
           </div>
 
           <div className="da-pre-footer-contact">
-            <h2>Get in touch</h2>
-            <p>
-              Have a project in mind? We&apos;d be glad to hear from you.
-            </p>
-
+            <h2>Contact</h2>
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             <a href="tel:+233595856187">+233 59 585 6187</a>
-
             <a
               href="https://wa.me/233595856187"
               target="_blank"
@@ -216,51 +488,17 @@ export default function DesktopApplicationPage() {
           </div>
 
           <div className="da-pre-footer-location">
-            <h2>Find us</h2>
-            <p>Accra, Weija</p>
-
-            <h2>Business hours</h2>
+            <h2>Location</h2>
+            <p>Accra, Ghana</p>
+            <h2 className="da-footer-subheading">Business hours</h2>
             <p>Monday–Friday</p>
-
-            <h2>Follow us</h2>
-
-            <div className="da-social-icons" aria-label="Social media">
-
-              <a href="#" aria-label="YouTube" title="YouTube">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
-                </svg>
-              </a>
-
-              <a href="#" aria-label="Facebook" title="Facebook">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.8V21h3.7Z"/>
-                </svg>
-              </a>
-
-              <a href="#" aria-label="X" title="X">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.5l7.3-8.4L1.9 2h6.5l4.5 6.7L18.9 2Zm-1.1 17.9h1.7L7.4 4H5.6l12.2 15.9Z"/>
-                </svg>
-              </a>
-
-              <a href="#" aria-label="TikTok" title="TikTok">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19.6 6.3a5.8 5.8 0 0 1-3.5-1.2 5.8 5.8 0 0 1-1.8-3.5h-3.7v14.1a3.1 3.1 0 1 1-3.1-3.1c.5 0 .9.1 1.3 .3V9.1a7 7 0 1 0 5.5 6.8V8.7a9.4 9.4 0 0 0 5.3 1.7V6.7c0-.1 0-.3 0-.4Z"/>
-                </svg>
-              </a>
-
-            </div>
           </div>
         </div>
-
       </section>
 
-      {/* Copyright */}
       <footer id="da">
         <p>© 2026 Zion Technologies. All rights reserved.</p>
       </footer>
-
     </>
   );
 }

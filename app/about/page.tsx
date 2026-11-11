@@ -298,275 +298,475 @@ export default function AboutPage() {
         </nav>
       </header>
 
-      {/* ================= ABOUT PAGE ================= */}
+     {/* ================= WORLD-CLASS ABOUT PAGE ================= */}
 
-      <main>
-        <div className={`ab ${display.variable} ${body.variable}`}>
+<main>
+  <div className={`ab ${display.variable} ${body.variable}`}>
 
-          {/* Hero */}
-          <section className="ab-hero">
-            <div className="ab-wrap ab-hero-grid">
+    {/* HERO */}
+    <section className="ab-hero">
+      <div className="ab-wrap">
 
-              <div>
-                <a href="/" className="ab-kicker">
-                  About Zion Technologies
-                </a>
+        <div className="ab-hero-grid">
 
-                <h1>
-                  We help businesses grow with technology that works.
-                </h1>
+          <div className="ab-hero-content">
+            <span className="ab-eyebrow">
+              <span className="ab-eyebrow-dot" />
+              WHO WE ARE · ZION TECHNOLOGIES
+            </span>
 
-                <p className="ab-lead">
-                  Zion Technologies is a digital agency in Weija, Accra. We build
-                  websites, apps, software and brands for startups, SMEs and
-                  corporate teams.
-                </p>
+            <h1>
+              Technology should move your business <span>forward.</span>
+            </h1>
 
-                <div className="ab-actions"></div>
-              </div>
+            <p className="ab-hero-description">
+              We turn ambitious ideas into dependable digital products.
+              From custom software to intelligent business systems, we build
+              technology that solves real problems and creates room to grow.
+            </p>
 
-              {/* Hero Images and Stats */}
-              <div className="ab-hero-media">
-
-                <div className="ab-hero-main">
-                  <Image
-                    src="/Zion.png"
-                    alt="Zion Technologies logo"
-                    width={300}
-                    height={250}
-                    className="ab-hero-img ab-hero-img-main"
-                  />
-
-                  <section className="ab-stats-band">
-                    <dl className="ab-stats">
-                      <div>
-                        <dd>2020</dd>
-                        <dt>Founded in Accra</dt>
-                      </div>
-
-                      <div>
-                        <dd>50+</dd>
-                        <dt>Projects delivered</dt>
-                      </div>
-
-                      <div>
-                        <dd>6</dd>
-                        <dt>Core services</dt>
-                      </div>
-                    </dl>
-                  </section>
-                </div>
-
-                <div className="ab-hero-side">
-                  <Image
-                    src="/Zion.png"
-                    alt="Zion Technologies logo"
-                    width={300}
-                    height={250}
-                    className="ab-hero-img"
-                  />
-
-                  <Image
-                    src="/Zion.png"
-                    alt="Zion Technologies logo"
-                    width={300}
-                    height={250}
-                    className="ab-hero-img"
-                  />
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          {/* Mission & Vision */}
-          <section className="ab-section ab-tint">
-            <div className="ab-wrap ab-mission-vision">
-
-              <div className="ab-mv-card">
-                <h2>Our mission</h2>
-                <p>
-                  To empower businesses with reliable, affordable technology
-                  that drives growth, efficiency and lasting success.
-                </p>
-              </div>
-
-            </div>
-          </section>
-
-          {/* Values */}
-          <section className="ab-section">
-            <div className="ab-wrap">
-
-              <ul className="ab-cols ab-cols-4 ab-value-cards">
-                {values.map((v, index) => (
-                  <li key={v.t} className="ab-value-card">
-
-                    <div className="ab-value-top">
-                      <span className="ab-value-number">
-                        0{index + 1}
-                      </span>
-
-                      <span className="ab-value-icon">
-                        {v.icon}
-                      </span>
-                    </div>
-
-                    <h3>{v.t}</h3>
-                    <p>{v.d}</p>
-
-                  </li>
-                ))}
-              </ul>
-
-            </div>
-          </section>
-
-          {/* Services */}
-          <section id="services" className="ab-section ab-tint">
-            <div className="ab-wrap">
-
-              <h2 className="ab-title">What we do</h2>
-
-              <ul className="ab-cols ab-cols-3">
-                {services.map((s) => (
-                  <li key={s.t}>
-                    <h3>{s.t}</h3>
-                    <p>{s.d}</p>
-                  </li>
-                ))}
-              </ul>
-
-            </div>
-          </section>
-
-          {/* Why Us */}
-          <section className="ab-section">
-            <div className="ab-wrap ab-split ab-split-wide">
-
-              <h2>Why teams choose Zion</h2>
-
-              <ul className="ab-rows">
-                {reasons.map(([t, d]) => (
-                  <li key={t}>
-                    <h3>{t}</h3>
-                    <p>{d}</p>
-                  </li>
-                ))}
-              </ul>
-
-            </div>
-          </section>
-
-          {/* Meet the Team */}
-          <section className="ab-section ab-team-section">
-            <div className="ab-wrap">
-
-              <div className="ab-team-heading">
-                <span className="ab-kicker">
-                  The People Behind Zion
-                </span>
-
-                <h2>Meet the team</h2>
-
-                <p>
-                  Meet the talented people behind our technology,
-                  innovation and commitment to delivering quality solutions.
-                </p>
-              </div>
-
-              <div className="ab-team-grid">
-                {team.map((member, index) => (
-                  <article className="ab-team-card" key={member.name}>
-
-                    <div className="ab-team-image">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={400}
-                        height={450}
-                        sizes="(max-width: 600px) 45vw, (max-width: 1000px) 45vw, 25vw"
-                      />
-
-                      <span className="ab-team-number">
-                        0{index + 1}
-                      </span>
-                    </div>
-
-                    <div className="ab-team-info">
-                      <h3>{member.name}</h3>
-                      <p>{member.role}</p>
-                    </div>
-
-                  </article>
-                ))}
-              </div>
-
-            </div>
-          </section>
-
-          {/* Story */}
-          <section className="ab-section">
-            <div className="ab-wrap ab-split">
-
-              <div>
-                <video
-                  src="/story.mp4"
-                  aria-label="Zion Technologies team at work"
-                  poster="/Orange ZionTechnologie.png"
-                  className="ab-story-img"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  width={500}
-                  height={450}
-                />
-              </div>
-
-              <div>
-                <h2>Our story</h2>
-
-                <p>
-                  We started in 2020 by helping local businesses get online:
-                  websites, branding and simple software tools. As our clients
-                  grew, we grew with them.
-                </p>
-
-                <p>
-                  Today we deliver custom web applications, mobile apps, desktop
-                  software, cloud infrastructure and long-term support. Every
-                  project is built to be maintainable, fast and ready to scale,
-                  so your technology keeps up with your business.
-                </p>
-              </div>
-
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section className="ab-cta">
-            <div className="ab-wrap ab-cta-inner">
-
-              <div>
-                <h2>Ready to start your project?</h2>
-
-                <p>
-                  Tell us what you need and we&apos;ll send a clear,
-                  no-obligation quote.
-                </p>
-              </div>
-
-              <a href="/#contact" className="ab-btn ab-btn-dark">
-                Get a quote
+            <div className="ab-hero-actions">
+              <a href="/#contact" className="ab-primary-btn">
+                Start a conversation <span>↗</span>
               </a>
-
+              <a href="#our-story" className="ab-text-link">
+                Discover our story <span>↓</span>
+              </a>
             </div>
-          </section>
+
+            <div className="ab-hero-proof">
+              <div className="ab-proof-avatars">
+                {team.slice(0, 3).map((member) => (
+                  <Image
+                    key={member.name}
+                    src={member.image}
+                    alt=""
+                    width={42}
+                    height={42}
+                  />
+                ))}
+              </div>
+
+              <div>
+                <strong>Built around people.</strong>
+                <span>Driven by technology and purpose.</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="ab-hero-visual">
+
+            <div className="ab-hero-image-main">
+              <Image
+                src="/Member1.jpg"
+                alt="Zion Technologies team member"
+                fill
+                priority
+                sizes="(max-width: 760px) 90vw, 45vw"
+              />
+              <div className="ab-image-shade" />
+
+              <div className="ab-image-caption">
+                <span>THE PEOPLE BEHIND THE TECHNOLOGY</span>
+                <strong>Ideas into impact.</strong>
+              </div>
+            </div>
+
+            <div className="ab-floating-card ab-floating-card-top">
+              <span className="ab-floating-icon">✳</span>
+              <div>
+                <strong>Purpose-built</strong>
+                <span>Digital solutions</span>
+              </div>
+            </div>
+
+            <div className="ab-floating-card ab-floating-card-bottom">
+              <strong>2020</strong>
+              <span>Our journey began in Accra</span>
+            </div>
+
+            <div className="ab-hero-decoration" />
+          </div>
 
         </div>
-      </main>
 
+        <div className="ab-hero-bottom">
+          <span>INNOVATION WITH PURPOSE</span>
+          <span>SOFTWARE · DESIGN · TECHNOLOGY</span>
+          <span>ACCRA, GHANA</span>
+        </div>
+
+      </div>
+    </section>
+
+    {/* COMPANY INTRODUCTION */}
+    <section className="ab-intro-section">
+      <div className="ab-wrap ab-intro-grid">
+
+        <div className="ab-intro-label">
+          <span className="ab-section-index">01 / THE COMPANY</span>
+          <span className="ab-small-line" />
+          <p>Technology with a clear direction.</p>
+        </div>
+
+        <div className="ab-intro-content">
+          <h2>
+            We are more than a technology provider. We are a partner in
+            <span> progress.</span>
+          </h2>
+
+          <p>
+            Zion Technologies is a Ghana-based technology company focused on
+            building digital products and software solutions that help
+            businesses operate better, serve customers effectively and
+            prepare for what comes next.
+          </p>
+
+          <p>
+            We combine practical thinking, thoughtful design and modern
+            engineering to create solutions that are useful today and
+            adaptable for tomorrow.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    {/* STATS */}
+    <section className="ab-stats-section">
+      <div className="ab-wrap">
+
+        <div className="ab-stats-heading">
+          <span>OUR JOURNEY IN NUMBERS</span>
+          <p>Progress built through ideas, people and meaningful work.</p>
+        </div>
+
+        <div className="ab-stats-grid">
+          <div className="ab-stat">
+            <strong>2020</strong>
+            <span>Year established</span>
+          </div>
+
+          <div className="ab-stat">
+            <strong>50<span>+</span></strong>
+            <span>Projects delivered</span>
+          </div>
+
+          <div className="ab-stat">
+            <strong>6</strong>
+            <span>Technology capabilities</span>
+          </div>
+
+          <div className="ab-stat">
+            <strong>100<span>%</span></strong>
+            <span>Commitment to quality</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* STORY */}
+    <section className="ab-story-section" id="our-story">
+      <div className="ab-wrap ab-story-grid">
+
+        <div className="ab-story-visual">
+          <div className="ab-story-video">
+            <video
+              src="/story.mp4"
+              poster="/Orange ZionTechnologie.png"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label="Zion Technologies company story"
+            />
+          </div>
+
+          <div className="ab-story-stamp">
+            <span>OUR</span>
+            <strong>STORY</strong>
+            <span>EST. 2020</span>
+          </div>
+        </div>
+
+        <div className="ab-story-content">
+          <span className="ab-section-index">02 / OUR STORY</span>
+
+          <h2>
+            A vision to make technology work <span>for everyone.</span>
+          </h2>
+
+          <p>
+            Our journey began in 2020 with a simple idea: businesses deserve
+            technology that makes their work easier, not more complicated.
+          </p>
+
+          <p>
+            We started by helping businesses establish their digital
+            presence. Over time, our work expanded into custom web
+            applications, mobile products, desktop software, cloud
+            infrastructure and ongoing technical support.
+          </p>
+
+          <p>
+            Today, that same commitment drives us: understand the problem,
+            build the right solution and support it beyond launch.
+          </p>
+
+          <a href="/#contact" className="ab-story-link">
+            Build something with us <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    {/* MISSION AND VISION */}
+    <section className="ab-purpose-section">
+      <div className="ab-wrap">
+
+        <div className="ab-purpose-heading">
+          <span className="ab-section-index">03 / OUR PURPOSE</span>
+          <h2>What drives everything we build.</h2>
+        </div>
+
+        <div className="ab-purpose-grid">
+
+          <article className="ab-purpose-card ab-purpose-primary">
+            <span className="ab-purpose-number">01</span>
+            <span className="ab-purpose-symbol">↗</span>
+            <span className="ab-purpose-label">OUR MISSION</span>
+
+            <h3>Empowering growth through technology.</h3>
+
+            <p>
+              To empower businesses with reliable, accessible and
+              innovative technology that improves operations, creates
+              opportunities and drives lasting success.
+            </p>
+          </article>
+
+          <article className="ab-purpose-card ab-purpose-secondary">
+            <span className="ab-purpose-number">02</span>
+            <span className="ab-purpose-symbol">◎</span>
+            <span className="ab-purpose-label">OUR VISION</span>
+
+            <h3>Building a smarter digital future.</h3>
+
+            <p>
+              To become a trusted technology partner, recognised for
+              creating meaningful digital solutions that help businesses
+              and communities thrive.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    {/* VALUES */}
+    <section className="ab-values-section">
+      <div className="ab-wrap">
+
+        <div className="ab-section-heading">
+          <div>
+            <span className="ab-section-index">04 / WHAT WE BELIEVE</span>
+            <h2>Our values shape every solution.</h2>
+          </div>
+
+          <p>
+            The principles behind how we think, work, collaborate and
+            deliver.
+          </p>
+        </div>
+
+        <div className="ab-values-grid">
+          {values.map((value, index) => (
+            <article className="ab-value-card" key={value.t}>
+              <div className="ab-value-card-top">
+                <span>0{index + 1}</span>
+                <div className="ab-value-icon">{value.icon}</div>
+              </div>
+
+              <h3>{value.t}</h3>
+              <p>{value.d}</p>
+
+              <span className="ab-value-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    {/* CAPABILITIES */}
+    <section className="ab-capabilities-section" id="services">
+      <div className="ab-wrap">
+
+        <div className="ab-capabilities-heading">
+          <span className="ab-section-index">05 / WHAT WE DO</span>
+
+          <h2>
+            The capabilities to turn your next idea into reality.
+          </h2>
+
+          <p>
+            From the first concept to the finished product, we bring
+            together the skills needed to build and support digital
+            solutions.
+          </p>
+        </div>
+
+        <div className="ab-capabilities-grid">
+          {services
+            .filter((service) => service.t !== "Brand & print")
+            .map((service, index) => (
+              <article className="ab-capability-card" key={service.t}>
+                <span className="ab-capability-number">
+                  0{index + 1}
+                </span>
+
+                <div>
+                  <h3>{service.t}</h3>
+                  <p>{service.d}</p>
+                </div>
+
+                <span className="ab-capability-arrow">↗</span>
+              </article>
+            ))}
+        </div>
+
+        <a href="/#services" className="ab-capabilities-link">
+          Explore our services <span>↗</span>
+        </a>
+
+      </div>
+    </section>
+
+    {/* WHY ZION */}
+    <section className="ab-difference-section">
+      <div className="ab-wrap ab-difference-grid">
+
+        <div className="ab-difference-intro">
+          <span className="ab-section-index">06 / THE ZION DIFFERENCE</span>
+
+          <h2>
+            Good technology is built on <span>understanding.</span>
+          </h2>
+
+          <p>
+            We believe the best solutions start with listening. We take
+            time to understand your goals, your users and the challenges
+            your business needs to overcome.
+          </p>
+
+          <a href="/#contact" className="ab-primary-btn">
+            Let's work together <span>↗</span>
+          </a>
+        </div>
+
+        <div className="ab-difference-list">
+          {reasons.map(([title, description], index) => (
+            <article className="ab-difference-item" key={title}>
+              <span>0{index + 1}</span>
+
+              <div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+
+              <span className="ab-difference-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    {/* TEAM */}
+    <section className="ab-team-section">
+      <div className="ab-wrap">
+
+        <div className="ab-section-heading ab-team-heading">
+          <div>
+            <span className="ab-section-index">07 / THE PEOPLE</span>
+            <h2>Meet the minds behind the work.</h2>
+          </div>
+
+          <p>
+            Different skills. Shared ambition. One commitment to building
+            technology that makes a difference.
+          </p>
+        </div>
+
+        <div className="ab-team-grid">
+          {team.map((member, index) => (
+            <article className="ab-team-card" key={member.name}>
+
+              <div className="ab-team-image">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="(max-width: 600px) 85vw, (max-width: 1000px) 45vw, 25vw"
+                />
+
+                <span className="ab-team-number">
+                  0{index + 1}
+                </span>
+              </div>
+
+              <div className="ab-team-info">
+                <div>
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                </div>
+
+                <span>↗</span>
+              </div>
+
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    {/* FINAL CTA */}
+    <section className="ab-final-cta">
+      <div className="ab-wrap">
+
+        <div className="ab-final-cta-inner">
+          <div className="ab-final-cta-content">
+            <span>YOUR NEXT CHAPTER STARTS HERE</span>
+
+            <h2>
+              Have an idea? Let's build something <em>meaningful.</em>
+            </h2>
+
+            <p>
+              Tell us about your goals. We'll help you explore the right
+              technology and take the next step.
+            </p>
+
+            <a href="/#contact" className="ab-final-cta-btn">
+              Start your project <span>↗</span>
+            </a>
+          </div>
+
+          <div className="ab-final-decoration">
+            <div className="ab-orbit ab-orbit-one" />
+            <div className="ab-orbit ab-orbit-two" />
+            <div className="ab-orbit-core">Z</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
       {/* ================= SHARED FOOTER ================= */}
 
       <section className="pre-footer" id="contact" aria-label="Company information">

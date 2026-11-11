@@ -34,72 +34,72 @@ const DEV_SUBTABS = [
 const SERVICES = [
   {
     number: "01",
+    icon: "✳",
     title: "Business Website Design",
     description:
-      "Professional and modern business websites that establish your online presence, showcase your services and help potential customers connect with your brand.",
-    href: "#contact",
+      "Distinctive business websites with carefully composed layouts, professional visuals and clear messaging that introduce your brand with confidence.",
   },
   {
     number: "02",
-    title: "E-commerce Website Development",
+    icon: "◈",
+    title: "E-commerce Website Design",
     description:
-      "Powerful online stores with product catalogues, shopping carts, secure checkout and easy product management to help your business sell online.",
-    href: "#contact",
+      "Beautiful online storefronts with engaging product presentation, intuitive shopping journeys and thoughtfully designed customer experiences.",
   },
   {
     number: "03",
+    icon: "↗",
     title: "Landing Page Design",
     description:
-      "Beautiful, conversion-focused landing pages designed to promote your products, services, campaigns and business offers.",
-    href: "#contact",
+      "Purposeful landing pages with strong visual hierarchy, compelling content sections and clear calls to action.",
   },
   {
     number: "04",
+    icon: "▧",
     title: "Website Redesign",
     description:
-      "Transform outdated websites into modern, attractive and user-friendly experiences that better represent your brand and business.",
-    href: "#contact",
+      "Transform an outdated website into a modern digital experience with refreshed layouts, improved presentation and a more cohesive identity.",
   },
   {
     number: "05",
-    title: "Responsive Web Design",
+    icon: "▣",
+    title: "Responsive Website Design",
     description:
-      "Websites that adapt seamlessly to smartphones, tablets, laptops and desktop screens for a consistent browsing experience.",
-    href: "#contact",
+      "Carefully adapted layouts that deliver a consistent, polished experience across smartphones, tablets, laptops and desktop screens.",
   },
   {
     number: "06",
-    title: "Website Maintenance & SEO",
+    icon: "◎",
+    title: "UI & UX Website Design",
     description:
-      "Keep your website updated, secure and performing well with technical maintenance, search engine optimisation and ongoing website support.",
-    href: "#contact",
+      "User-focused interface design that makes your website easier to understand, navigate and interact with.",
   },
 ];
 
 const PROCESS = [
   {
     number: "01",
-    title: "Discovery & Planning",
+    title: "Discover",
     description:
-      "We learn about your business, target audience, website goals, preferred design and the features your website needs.",
+      "We understand your brand, audience, objectives and the impression you want your website to create.",
   },
   {
     number: "02",
-    title: "Website Design",
+    title: "Art Direction",
     description:
-      "We create the website layout, visual direction and user experience to reflect your brand and make navigation intuitive.",
+      "We establish the visual direction, page structure, typography, colour palette and overall design language.",
   },
   {
     number: "03",
-    title: "Development & Testing",
+    title: "Design",
     description:
-      "We transform the approved design into a functional website, testing responsiveness, loading speed, functionality and browser compatibility.",
+      "We shape the experience with intentional layouts, engaging imagery, thoughtful details and responsive compositions.",
   },
   {
     number: "04",
-    title: "Launch & Maintenance",
+    title: "Refine",
     description:
-      "We publish your website, configure essential settings and provide ongoing maintenance to keep your website running smoothly.",
+      "We review the design, improve the details and prepare the finished website experience for implementation.",
   },
 ];
 
@@ -229,120 +229,178 @@ export default function DevelopmentPage() {
           <section className="wd-hero">
             <div className="wd-wrap wd-hero-grid">
               <div className="wd-hero-content">
-                <span className="wd-eyebrow">
-                  Zion Technologies · Website Design & Development
+                <span className="wd-hero-kicker">
+                  <span></span>
+                  Zion Technologies · Website Design Studio
                 </span>
 
                 <h1>
-                  We Design Websites That{" "}
-                  <span>Make Your Business Stand Out.</span>
+                  Digital
+                  <span>Experiences</span>
+                  <em>With Character.</em>
                 </h1>
 
-                <p className="wd-lead">
-                  We design and develop beautiful, responsive and
-                  high-performing websites that strengthen your online
-                  presence, showcase your brand and help your business
-                  reach more customers.
+                <p className="wd-hero-description">
+                  Your website should be more than a place people visit.
+                  It should express your identity, capture attention and
+                  make your brand unforgettable. We create distinctive
+                  website designs that bring ideas to life.
                 </p>
 
-                <div className="wd-actions">
+                {/* <div className="wd-actions">
                   <a href="/#contact" className="wd-btn wd-btn-primary">
-                    Get Your Website <span>→</span>
+                    Let's Create Together <span>↗</span>
                   </a>
 
-                  <a href="/about" className="wd-btn wd-btn-outline">
-                    Discover Zion Technologies
+                  <a href="#design-gallery" className="wd-btn wd-btn-outline">
+                    Explore Design <span>↓</span>
                   </a>
+                </div> */}
+
+                <div className="wd-hero-meta">
+                  <span><i></i> Brand-led creativity</span>
+                  <span><i></i> Thoughtful experiences</span>
+                  <span><i></i> Responsive layouts</span>
                 </div>
               </div>
 
-              <div className="wd-hero-image">
-                <Image
-                  src="/Web Development.png"
-                  alt="Professional website design and development"
-                  width={900}
-                  height={700}
-                  priority
-                />
+              <div className="wd-hero-visual">
+                <div className="wd-hero-main-image">
+                  <Image
+                    src="/Web Development.png"
+                    alt="Creative website design concept displayed on a digital screen"
+                    width={1100}
+                    height={950}
+                    priority
+                  />
+                </div>
+
+                <div className="wd-hero-mini-image">
+                  <Image
+                    src="/Excited Man Using Laptop (1).png"
+                    alt="Person exploring a digital experience on a laptop"
+                    width={650}
+                    height={500}
+                    priority
+                  />
+                </div>
+
+                <div className="wd-hero-label">
+                  <span className="wd-hero-label-mark">✳</span>
+                  <div>
+                    <strong>Creative Direction</strong>
+                    <small>Made around your identity</small>
+                  </div>
+                </div>
+
+                <div className="wd-hero-bubble">
+                  IDEAS
+                  <br />
+                  INTO
+                  <br />
+                  DESIGN
+                </div>
+
+                <span className="wd-hero-caption">
+                  Designed to make an impression
+                </span>
               </div>
             </div>
           </section>
 
-          {/* TRUST STRIP */}
-          <section className="wd-trust">
-            <div className="wd-wrap wd-trust-grid">
-              <div className="wd-trust-item">
-                <span className="wd-trust-number">01</span>
-                Modern Website Designs
-              </div>
-
-              <div className="wd-trust-item">
-                <span className="wd-trust-number">02</span>
-                Mobile-Friendly Websites
-              </div>
-
-              <div className="wd-trust-item">
-                <span className="wd-trust-number">03</span>
-                Performance & SEO Focused
-              </div>
+          {/* MOVING DESIGN STRIP */}
+          <section className="wd-marquee" aria-label="Design specialties">
+            <div className="wd-marquee-track">
+              {[0, 1].map((item) => (
+                <span key={item}>
+                  Website Design <b>✳</b>
+                  Creative Direction <b>✳</b>
+                  Digital Experiences <b>✳</b>
+                  UI & UX Design <b>✳</b>
+                  Visual Storytelling <b>✳</b>
+                  Responsive Design <b>✳</b>
+                </span>
+              ))}
             </div>
           </section>
 
-          {/* INTRO */}
+          {/* INTRODUCTION */}
           <section className="wd-intro">
-            <div className="wd-wrap wd-intro-inner">
-              <span className="wd-eyebrow">
-                Website Design & Development
-              </span>
+            <div className="wd-wrap wd-intro-layout">
+              <div className="wd-intro-side">
+                <strong>01.</strong>
+                <span>
+                  A fresh perspective on how your brand appears online.
+                </span>
+              </div>
 
-              <h2>Creating Websites That Work for Your Business</h2>
+              <div className="wd-intro-main">
+                <span className="wd-eyebrow">A Different Kind of Website</span>
 
-              <p>
-                At Zion Technologies, we specialise in designing and
-                developing professional websites for businesses,
-                organisations, entrepreneurs and individuals. From
-                business websites and landing pages to e-commerce
-                platforms, we combine attractive designs, intuitive
-                navigation, responsive layouts and reliable performance
-                to create websites that help you establish your online
-                presence and achieve your business goals.
-              </p>
-            </div>
-          </section>
-
-          {/* WEBSITE DESIGN & DEVELOPMENT SERVICES */}
-          <section className="wd-section" id="website-services">
-            <div className="wd-wrap">
-              <div className="wd-section-heading">
-                <span className="wd-eyebrow">What We Do</span>
-
-                <h2>Our Website Design & Development Services</h2>
+                <h2>
+                  Your brand deserves a digital presence that feels
+                  <span> unmistakably yours.</span>
+                </h2>
 
                 <p>
-                  From business websites to complete online stores,
-                  we provide professional website design and development
-                  services tailored to your brand, audience and business
-                  objectives.
+                  Every brand has a story. The right website design gives
+                  that story a visual identity, a clear structure and a
+                  memorable place to live. At Zion Technologies, we combine
+                  creative thinking, purposeful layouts and user-centred
+                  design to create digital experiences that feel considered
+                  from the first impression to the final detail.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* DESIGN SERVICES */}
+          <section className="wd-services" id="website-services">
+            <div className="wd-wrap">
+              <div className="wd-services-heading">
+                <div className="wd-section-heading">
+                  <span className="wd-eyebrow">What We Create</span>
+
+                  <h2>
+                    One vision. Endless ways to make it visible.
+                  </h2>
+
+                  <p>
+                    From a bold business presence to an elegant online
+                    storefront, we design websites around the character
+                    and needs of your brand.
+                  </p>
+                </div>
+
+                <p className="wd-services-note">
+                  Thoughtful design begins with understanding what makes
+                  your business different.
                 </p>
               </div>
 
-              <div className="wd-grid">
+              <div className="wd-service-grid">
                 {SERVICES.map((service) => (
                   <a
-                    className="wd-card"
-                    href={service.href}
+                    className="wd-service-card"
+                    href="/#contact"
                     key={service.number}
                   >
-                    <span className="wd-card-number">
-                      {service.number}
-                    </span>
+                    <div className="wd-service-card-top">
+                      <span className="wd-service-number">
+                        / {service.number}
+                      </span>
+
+                      <span className="wd-service-icon" aria-hidden="true">
+                        {service.icon}
+                      </span>
+                    </div>
 
                     <h3>{service.title}</h3>
 
                     <p>{service.description}</p>
 
-                    <span className="wd-card-link">
-                      Get Started <span>→</span>
+                    <span className="wd-service-link">
+                      Explore this service <span>↗</span>
                     </span>
                   </a>
                 ))}
@@ -350,38 +408,141 @@ export default function DevelopmentPage() {
             </div>
           </section>
 
-          {/* WEBSITE DESIGN PROCESS */}
+          {/* DESIGN PHILOSOPHY */}
+          <section className="wd-philosophy">
+            <div className="wd-wrap wd-philosophy-grid">
+              <div className="wd-philosophy-visual">
+                <div className="wd-philosophy-image-main">
+                  <Image
+                    src="/custom software2.jpg"
+                    alt="Creative digital interface and website design inspiration"
+                    width={1000}
+                    height={1200}
+                  />
+                </div>
+
+                <div className="wd-philosophy-image-small">
+                  <Image
+                    src="/Smiling Man Exploring Floating Analytics Dashboards.png"
+                    alt="Digital interface displayed as a modern visual experience"
+                    width={700}
+                    height={550}
+                  />
+                </div>
+
+                <div className="wd-philosophy-sticker">
+                  DESIGN
+                  <br />
+                  WITH
+                  <br />
+                  INTENTION
+                </div>
+              </div>
+
+              <div className="wd-philosophy-content">
+                <span className="wd-eyebrow">The Thinking Behind the Design</span>
+
+                <h2>
+                  Not just beautiful.
+                  <br />
+                  <span>Beautifully considered.</span>
+                </h2>
+
+                <p>
+                  Great website design is a balance between expression
+                  and usability. The colours should feel right. The
+                  typography should communicate clearly. The layout should
+                  guide visitors naturally. Every visual decision should
+                  have a reason behind it.
+                </p>
+
+                <div className="wd-philosophy-list">
+                  <div className="wd-philosophy-point">
+                    <span className="wd-philosophy-check">✓</span>
+                    <div>
+                      <strong>A recognisable visual identity</strong>
+                      <p>
+                        A consistent combination of colour, typography,
+                        imagery and design elements.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="wd-philosophy-point">
+                    <span className="wd-philosophy-check">✓</span>
+                    <div>
+                      <strong>Layouts with purpose</strong>
+                      <p>
+                        Clear visual hierarchy that helps visitors
+                        understand your content and move through your site.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="wd-philosophy-point">
+                    <span className="wd-philosophy-check">✓</span>
+                    <div>
+                      <strong>Designed for every screen</strong>
+                      <p>
+                        Responsive compositions that preserve the quality
+                        of the experience on different devices.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* DESIGN PROCESS */}
           <section className="wd-process">
             <div className="wd-wrap">
               <div className="wd-section-heading">
-                <span className="wd-eyebrow">Our Working Process</span>
+                <span className="wd-eyebrow">How We Bring Ideas to Life</span>
 
-                <h2>How We Bring Your Website to Life</h2>
+                <h2>
+                  From a blank canvas to a complete visual experience.
+                </h2>
 
                 <p>
-                  Every successful website starts with a clear plan.
-                  Our structured process takes your project from the
-                  initial idea through design, development and launch.
+                  A considered creative process helps turn your ideas into
+                  a website design with clarity, consistency and character.
                 </p>
               </div>
 
               <div className="wd-process-grid">
                 {PROCESS.map((step) => (
-                  <div className="wd-process-item" key={step.number}>
+                  <article className="wd-process-card" key={step.number}>
                     <span>STEP {step.number}</span>
 
                     <h3>{step.title}</h3>
 
                     <p>{step.description}</p>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* WEBSITE DEVELOPMENT VIDEO */}
+          {/* CINEMATIC VIDEO SHOWCASE */}
           <section className="wd-video">
-            <div className="wd-wrap wd-video-grid">
+            <div className="wd-wrap">
+              <div className="wd-video-heading">
+                <div>
+                  <span className="wd-eyebrow">Design in Motion</span>
+
+                  <h2>
+                    See how a digital idea becomes an experience.
+                  </h2>
+                </div>
+
+                <p>
+                  A closer look at the visual world of digital design:
+                  composition, interfaces, presentation and the details
+                  that make a website feel complete.
+                </p>
+              </div>
+
               <div className="wd-video-container">
                 <video
                   autoPlay
@@ -390,140 +551,118 @@ export default function DevelopmentPage() {
                   playsInline
                   controls
                   preload="metadata"
-                  aria-label="Website design and development presentation"
+                  aria-label="Website design visual showcase"
                 >
-                  <source
-                    src="/web-development.mp4"
-                    type="video/mp4"
-                  />
+                  <source src="/web-development.mp4" type="video/mp4" />
                   Your browser does not support HTML video.
                 </video>
               </div>
 
-              <div className="wd-video-content">
-                <span className="wd-eyebrow">
-                  Your Business Deserves a Great Website
-                </span>
-
-                <h2>Websites Designed to Attract, Engage and Convert</h2>
-
-                <p>
-                  Your website is often the first impression customers
-                  have of your business. We create visually appealing,
-                  easy-to-navigate and responsive websites that communicate
-                  your brand professionally and make it easier for visitors
-                  to discover your products and services.
-                </p>
-
-                <div className="wd-video-points">
-                  <div className="wd-video-point">
-                    <span>✓</span>
-                    Professional and modern website designs
-                  </div>
-
-                  <div className="wd-video-point">
-                    <span>✓</span>
-                    Responsive layouts for all screen sizes
-                  </div>
-
-                  <div className="wd-video-point">
-                    <span>✓</span>
-                    Search engine optimisation
-                  </div>
-
-                  <div className="wd-video-point">
-                    <span>✓</span>
-                    Fast-loading and secure websites
-                  </div>
-                </div>
-
-                <a
-                  href="#contact"
-                  className="wd-btn wd-btn-primary"
-                >
-                  Start Your Website Project →
-                </a>
+              <div className="wd-video-bottom">
+                <span>Zion Technologies / Creative Website Design</span>
+                <span>Visual ideas. Digital experiences.</span>
               </div>
             </div>
           </section>
 
-          {/* WEBSITE SHOWCASE */}
-          <section className="wd-gallery">
+          {/* WEBSITE DESIGN GALLERY */}
+          <section className="wd-gallery" id="design-gallery">
             <div className="wd-wrap">
               <div className="wd-section-heading">
-                <span className="wd-eyebrow">Website Inspiration</span>
+                <span className="wd-eyebrow">The Visual Playground</span>
 
-                <h2>Websites Designed for Different Business Needs</h2>
+                <h2>
+                  Different ideas deserve different design expressions.
+                </h2>
 
                 <p>
-                  Discover the different types of website experiences
-                  we can create to help businesses build their online
-                  presence and connect with their customers.
+                  Every business has its own personality. Explore a few
+                  visual directions that can inspire the design of a
+                  distinctive online presence.
                 </p>
               </div>
 
               <div className="wd-gallery-grid">
                 <div className="wd-gallery-item">
                   <Image
-                    src="/custom software2.jpg"
-                    alt="Business website design concept"
-                    width={600}
-                    height={450}
+                    src="/Web Development.png"
+                    alt="Business website design visual concept"
+                    width={1100}
+                    height={1000}
                   />
 
-                  <span className="wd-gallery-caption">
-                    Business Websites
-                  </span>
+                  <div className="wd-gallery-caption">
+                    <small>01 / Brand Presence</small>
+                    <strong>Business Website Experiences</strong>
+                  </div>
                 </div>
 
                 <div className="wd-gallery-item">
                   <Image
                     src="/Smiling Man Exploring Floating Analytics Dashboards.png"
-                    alt="E-commerce website design concept"
-                    width={600}
-                    height={450}
+                    alt="Digital commerce and interface design concept"
+                    width={850}
+                    height={650}
                   />
 
-                  <span className="wd-gallery-caption">
-                    E-commerce Websites
-                  </span>
+                  <div className="wd-gallery-caption">
+                    <small>02 / Digital Commerce</small>
+                    <strong>Online Store Experiences</strong>
+                  </div>
                 </div>
 
                 <div className="wd-gallery-item">
                   <Image
                     src="/Excited Man Using Laptop (1).png"
-                    alt="Modern responsive website experience"
-                    width={600}
-                    height={450}
+                    alt="Modern website experience being explored on a laptop"
+                    width={850}
+                    height={650}
                   />
 
-                  <span className="wd-gallery-caption">
-                    Modern Website Experiences
-                  </span>
+                  <div className="wd-gallery-caption">
+                    <small>03 / Modern Interfaces</small>
+                    <strong>Digital Experiences That Connect</strong>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* CTA */}
+          {/* DESIGN STATEMENT */}
+          <section className="wd-statement">
+            <div className="wd-wrap wd-statement-inner">
+              <span className="wd-statement-label">
+                The Zion Design Perspective
+              </span>
+
+              <h2>
+                Don't just show up online.
+                <span> Show the world who you are.</span>
+              </h2>
+            </div>
+          </section>
+
+          {/* CALL TO ACTION */}
           <section className="wd-cta">
             <div className="wd-wrap wd-cta-inner">
               <div>
                 <span className="wd-eyebrow">
-                  Let's Create Your Online Presence
+                  Your Idea Deserves Great Design
                 </span>
 
-                <h2>Ready to Build Your Website?</h2>
+                <h2>
+                  Let's create something remarkable for your brand.
+                </h2>
 
                 <p>
-                  Whether you need a new business website, an online
-                  store or a complete website redesign, Zion Technologies
-                  is ready to bring your vision to life.
+                  Tell us about your business, your ideas and the digital
+                  experience you want to create. Let's give your brand a
+                  website that feels distinctive and thoughtfully designed.
                 </p>
               </div>
 
               <a href="/#contact" className="wd-btn wd-btn-light">
-                Get a Website Quote →
+                Start Your Design Project <span>↗</span>
               </a>
             </div>
           </section>
@@ -538,13 +677,13 @@ export default function DevelopmentPage() {
       >
         <div className="wd-pre-footer-wrap">
           <div className="wd-pre-footer-about">
-            <h2>Website Design & Development</h2>
+            <h2>Creative Website Design</h2>
 
             <p>
-              Zion Technologies designs and develops professional,
-              responsive and SEO-friendly websites that help businesses
-              establish their online presence, attract customers and
-              grow their brands.
+              Zion Technologies creates distinctive, responsive and
+              user-focused website designs that help businesses present
+              their brands, communicate their ideas and build a memorable
+              online presence.
             </p>
           </div>
 
@@ -560,8 +699,8 @@ export default function DevelopmentPage() {
             <h2>Get in touch</h2>
 
             <p>
-              Have a website project in mind? We'd be glad to hear
-              from you.
+              Have a website design project in mind? Let's discuss
+              your ideas.
             </p>
 
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
@@ -582,34 +721,6 @@ export default function DevelopmentPage() {
 
             <h2>Business hours</h2>
             <p>Monday–Friday</p>
-
-            <h2>Follow us</h2>
-
-            <div className="wd-social-icons" aria-label="Social media">
-              <a href="#" aria-label="YouTube" title="YouTube">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
-                </svg>
-              </a>
-
-              <a href="#" aria-label="Facebook" title="Facebook">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.5 1.6-1.5h1.7V3.2c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.8V21h3.7Z" />
-                </svg>
-              </a>
-
-              <a href="#" aria-label="X" title="X">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.5l7.3-8.4L1.9 2h6.5l4.5 6.7L18.9 2Zm-1.1 17.9h1.7L7.4 4H5.6l12.2 15.9Z" />
-                </svg>
-              </a>
-
-              <a href="#" aria-label="TikTok" title="TikTok">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19.6 6.3a5.8 5.8 0 0 1-3.5-1.2 5.8 5.8 0 0 1-1.8-3.5h-3.7v14.1a3.1 3.1 0 1 1-3.1-3.1c.5 0 .9.1 1.3.3V9.1a7 7 0 1 0 5.5 6.8V8.7a9.4 9.4 0 0 0 5.3 1.7V6.7c0-.1 0-.3 0-.4Z" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </section>

@@ -1,11 +1,11 @@
-﻿
+
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ziontechnologie.com"),
+  metadataBase: new URL("https://www.ziontechnologies.com"),
 
   title: "Zion Technologies | Software Development Company in Ghana",
 
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GH",
     siteName: "Zion Technologies",
-    url: "https://www.ziontechnologie.com",
+    url: "https://www.ziontechnologies.com",
   },
 
   twitter: {
@@ -50,10 +50,10 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.ziontechnologie.com/#organization",
+      "@id": "https://www.ziontechnologies.com/#organization",
       name: "Zion Technologies",
-      url: "https://www.ziontechnologie.com",
-      logo: "https://www.ziontechnologie.com/logo.png",
+      url: "https://www.ziontechnologies.com",
+      logo: "https://www.ziontechnologies.com/logo.png",
       email: "hello@ziontechnologies.com",
       telephone: "+233595856187",
       address: {
@@ -66,10 +66,10 @@ const jsonLd = {
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://www.ziontechnologie.com/#service",
+      "@id": "https://www.ziontechnologies.com/#service",
       name: "Zion Technologies",
-      url: "https://www.ziontechnologie.com",
-      image: "https://www.ziontechnologie.com/logo.png",
+      url: "https://www.ziontechnologies.com",
+      image: "https://www.ziontechnologies.com/logo.png",
       telephone: "+233595856187",
       email: "hello@ziontechnologies.com",
       address: {

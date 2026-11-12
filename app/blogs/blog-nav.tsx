@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-const EMAIL = "ofori24688@gmail.com";
+const EMAIL = "hello@ziontechnologies.com";
 
 const serviceLinks = [
   { label: "Web Development", href: "/web-development" },

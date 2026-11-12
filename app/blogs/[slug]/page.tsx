@@ -25,22 +25,26 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   }
 
   return {
-    title: `${post.title} | Zion Journal`,
-    description: post.excerpt,
+    title: `${post.seoTitle ?? post.title} | Zion Technologies`,
+    description: post.metaDescription ?? post.excerpt,
     keywords: post.keywords,
     alternates: { canonical: `/blogs/${post.slug}` },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle ?? post.title,
+      description: post.metaDescription ?? post.excerpt,
       type: "article",
       images: [post.image],
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt ?? post.publishedAt,
+      authors: ["Zion Technologies"],
+      url: `https://www.ziontechnologies.com/blogs/${post.slug}`,
       locale: "en_GH",
       siteName: "Zion Technologies",
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: post.seoTitle ?? post.title,
+      description: post.metaDescription ?? post.excerpt,
       images: [post.image],
     },
   };
@@ -57,24 +61,27 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: new URL(post.image, "https://www.ziontechnologie.com").toString(),
-    url: `https://www.ziontechnologie.com/blogs/${post.slug}`,
-    mainEntityOfPage: `https://www.ziontechnologie.com/blogs/${post.slug}`,
+    image: new URL(post.image, "https://www.ziontechnologies.com").toString(),
+    url: `https://www.ziontechnologies.com/blogs/${post.slug}`,
+    mainEntityOfPage: `https://www.ziontechnologies.com/blogs/${post.slug}`,
     articleSection: post.category,
     keywords: post.keywords,
+    citation: post.sources?.map((source) => source.url),
     inLanguage: "en-GH",
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     author: {
       "@type": "Organization",
       name: "Zion Technologies",
-      url: "https://www.ziontechnologie.com",
+      url: "https://www.ziontechnologies.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Zion Technologies",
-      url: "https://www.ziontechnologie.com",
+      url: "https://www.ziontechnologies.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.ziontechnologie.com/logo.png",
+        url: "https://www.ziontechnologies.com/logo.png",
       },
     },
   };
@@ -101,17 +108,36 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             <h1>{post.title}</h1>
             <p className="journal-article-dek">{post.excerpt}</p>
             <div className="journal-byline">
-              <span>Words by Zion Technologies</span>
+              <span>Words by {post.author ?? "Zion Technologies"}</span>
               <span>{post.readTime}</span>
+              {post.publishedAt && (
+                <time dateTime={post.publishedAt}>
+                  {new Intl.DateTimeFormat("en-GH", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                    timeZone: "UTC",
+                  }).format(new Date(`${post.publishedAt}T00:00:00Z`))}
+                </time>
+              )}
             </div>
           </header>
 
           <div className="journal-article-cover">
             <Image
               src={post.image}
+              alt=""
+              aria-hidden="true"
+              fill
+              className="journal-article-cover-blur"
+              sizes="(max-width: 760px) 100vw, 900px"
+            />
+            <Image
+              src={post.image}
               alt={post.imageAlt}
               fill
               priority
+              className="journal-article-main-image"
               sizes="(max-width: 760px) 100vw, 1120px"
             />
           </div>
@@ -146,6 +172,23 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                 <span>End of story</span>
                 <Link href="/blogs">Explore more ideas ↗</Link>
               </div>
+              {post.sources && post.sources.length > 0 && (
+                <aside className="journal-sources" aria-labelledby="journal-sources-title">
+                  <h2 id="journal-sources-title">Sources &amp; further reading</h2>
+                  <ul>
+                    {post.sources.map((source) => (
+                      <li key={source.url}>
+                        <a href={source.url} target="_blank" rel="noreferrer">
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <p>
+                    Company descriptions summarize each organization&apos;s own materials; they are not independent product reviews.
+                  </p>
+                </aside>
+              )}
             </article>
           </div>
         </div>

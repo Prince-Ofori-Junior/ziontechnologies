@@ -19,7 +19,7 @@ const body = Hanken_Grotesk({
   display: "swap",
 });
 
-const EMAIL = "ofori24688@gmail.com";
+const EMAIL = "hello@ziontechnologies.com";
 
 const DEV_SUBTABS = [
   { label: "Web Development", href: "/web-development" },

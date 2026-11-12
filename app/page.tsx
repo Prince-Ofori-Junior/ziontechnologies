@@ -119,7 +119,7 @@ function ZionAd() {
 
 /* ---------- Page ---------- */
 
-const EMAIL = "ofori24688@gmail.com";
+const EMAIL = "hello@ziontechnologies.com";
 
 type Cat = "all" | "digital" | "creative";
 type ServiceIcon = "software" | "automation" | "support" | "shield" | "web" | "cloud" | "mobile";

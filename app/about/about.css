@@ -6,7 +6,7 @@
 
 .ab {
   --ab-blue: #00bfff;
-  --ab-blue-dark: #008db8;
+  --ab-blue-dark: #00bfff;
   --ab-ink: #17232d;
   --ab-muted: #687780;
   --ab-paper: #ffffff;
@@ -48,6 +48,14 @@
   line-height: 1.08;
   letter-spacing: -0.045em;
   text-wrap: balance;
+}
+
+.ab h3 {
+  color: #354451;
+  font-size: 1.25rem !important;
+  font-weight: 600;
+  line-height: 1.35 !important;
+  letter-spacing: -0.02em;
 }
 
 .ab p {
@@ -1038,7 +1046,28 @@
 
 .ab-team-info p {
   margin: 0;
-  font-size: .78rem;
+  color: var(--ab-ink);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.pre-footer .social-icons {
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.pre-footer .social-icons a {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+}
+
+.pre-footer .social-icons a svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .ab-team-info > span {
@@ -1422,7 +1451,7 @@
   }
 
   .ab-team-info p {
-    font-size: .7rem;
+    font-size: .9375rem;
   }
 
   .ab-final-cta {

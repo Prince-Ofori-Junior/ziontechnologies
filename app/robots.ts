@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.ziontechnologie.com/sitemap.xml",
+    sitemap: "https://www.ziontechnologies.com/sitemap.xml",
   };
 }

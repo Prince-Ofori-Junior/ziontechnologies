@@ -2,7 +2,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
 import "./about.css";
@@ -19,7 +19,7 @@ const body = Hanken_Grotesk({
   display: "swap",
 });
 
-const EMAIL = "ofori24688@gmail.com";
+const EMAIL = "hello@ziontechnologies.com";
 
 const DEV_SUBTABS = [
   { label: "Web Development", href: "/web-development" },
@@ -160,7 +160,52 @@ const team = [
 export default function AboutPage() {
   const [menu, setMenu] = useState(false);
   const [devMenu, setDevMenu] = useState(false);
+  const [stats, setStats] = useState([0, 0, 0, 0]);
+  const statsRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const statsElement = statsRef.current;
+    if (!statsElement) return;
+
+    const targets = [2020, 50, 6, 100];
+    const duration = 1600;
+    let animationFrame = 0;
+    let observer: IntersectionObserver;
+
+    const animateStats = () => {
+      const startTime = performance.now();
+      const update = (now: number) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        setStats(targets.map((target) => Math.round(target * easedProgress)));
+
+        if (progress < 1) animationFrame = requestAnimationFrame(update);
+      };
+
+      animationFrame = requestAnimationFrame(update);
+    };
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setStats(targets);
+      return;
+    }
+
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        animateStats();
+        observer.disconnect();
+      },
+      { threshold: 0.35 },
+    );
+    observer.observe(statsElement);
+
+    return () => {
+      observer?.disconnect();
+      cancelAnimationFrame(animationFrame);
+    };
+  }, []);
 
   return (
     <>
@@ -441,24 +486,24 @@ export default function AboutPage() {
           <p>Progress built through ideas, people and meaningful work.</p>
         </div>
 
-        <div className="ab-stats-grid">
+        <div className="ab-stats-grid" ref={statsRef}>
           <div className="ab-stat">
-            <strong>2020</strong>
+            <strong>{stats[0]}</strong>
             <span>Year established</span>
           </div>
 
           <div className="ab-stat">
-            <strong>50<span>+</span></strong>
+            <strong>{stats[1]}<span>+</span></strong>
             <span>Projects delivered</span>
           </div>
 
           <div className="ab-stat">
-            <strong>6</strong>
+            <strong>{stats[2]}</strong>
             <span>Technology capabilities</span>
           </div>
 
           <div className="ab-stat">
-            <strong>100<span>%</span></strong>
+            <strong>{stats[3]}<span>%</span></strong>
             <span>Commitment to quality</span>
           </div>
         </div>
@@ -687,13 +732,11 @@ export default function AboutPage() {
     {/* TEAM */}
     <section className="ab-team-section">
       <div className="ab-wrap">
-
         <div className="ab-section-heading ab-team-heading">
           <div>
             <span className="ab-section-index">07 / THE PEOPLE</span>
             <h2>Meet the minds behind the work.</h2>
           </div>
-
           <p>
             Different skills. Shared ambition. One commitment to building
             technology that makes a difference.
@@ -703,7 +746,6 @@ export default function AboutPage() {
         <div className="ab-team-grid">
           {team.map((member, index) => (
             <article className="ab-team-card" key={member.name}>
-
               <div className="ab-team-image">
                 <Image
                   src={member.image}
@@ -711,25 +753,17 @@ export default function AboutPage() {
                   fill
                   sizes="(max-width: 600px) 85vw, (max-width: 1000px) 45vw, 25vw"
                 />
-
-                <span className="ab-team-number">
-                  0{index + 1}
-                </span>
+                <span className="ab-team-number">0{index + 1}</span>
               </div>
-
               <div className="ab-team-info">
                 <div>
-                  <h3>{member.name}</h3>
                   <p>{member.role}</p>
                 </div>
-
                 <span>↗</span>
               </div>
-
             </article>
           ))}
         </div>
-
       </div>
     </section>
 

@@ -37,42 +37,42 @@ const SERVICES = [
     icon: "✳",
     title: "Business Website Design",
     description:
-      "Distinctive business websites with carefully composed layouts, professional visuals and clear messaging that introduce your brand with confidence.",
+      "A polished website that tells your story, builds trust and helps the right customers take action.",
   },
   {
     number: "02",
     icon: "◈",
     title: "E-commerce Website Design",
     description:
-      "Beautiful online storefronts with engaging product presentation, intuitive shopping journeys and thoughtfully designed customer experiences.",
+      "A considered storefront that presents products clearly and makes browsing and buying feel effortless.",
   },
   {
     number: "03",
     icon: "↗",
     title: "Landing Page Design",
     description:
-      "Purposeful landing pages with strong visual hierarchy, compelling content sections and clear calls to action.",
+      "Focused landing pages with persuasive content, strong visual hierarchy and a clear next step.",
   },
   {
     number: "04",
     icon: "▧",
     title: "Website Redesign",
     description:
-      "Transform an outdated website into a modern digital experience with refreshed layouts, improved presentation and a more cohesive identity.",
+      "Refresh your layout, content and visual identity to make your website feel current and easier to use.",
   },
   {
     number: "05",
     icon: "▣",
     title: "Responsive Website Design",
     description:
-      "Carefully adapted layouts that deliver a consistent, polished experience across smartphones, tablets, laptops and desktop screens.",
+      "Responsive layouts that feel natural and readable on phones, tablets, laptops and large screens.",
   },
   {
     number: "06",
     icon: "◎",
     title: "UI & UX Website Design",
     description:
-      "User-focused interface design that makes your website easier to understand, navigate and interact with.",
+      "Intuitive page structures and interfaces that help visitors find information and complete tasks.",
   },
 ];
 
@@ -81,25 +81,25 @@ const PROCESS = [
     number: "01",
     title: "Discover",
     description:
-      "We understand your brand, audience, objectives and the impression you want your website to create.",
+      "We align on your goals, audience, priorities and what success should look like.",
   },
   {
     number: "02",
     title: "Art Direction",
     description:
-      "We establish the visual direction, page structure, typography, colour palette and overall design language.",
+      "We define the visual direction, page structure, typography and colour palette for your brand.",
   },
   {
     number: "03",
     title: "Design",
     description:
-      "We shape the experience with intentional layouts, engaging imagery, thoughtful details and responsive compositions.",
+      "We create page layouts and responsive designs that make your content clear and engaging.",
   },
   {
     number: "04",
     title: "Refine",
     description:
-      "We review the design, improve the details and prepare the finished website experience for implementation.",
+      "We review the details with you, make refinements and prepare the design for implementation.",
   },
 ];
 
@@ -241,27 +241,17 @@ export default function DevelopmentPage() {
                 </h1>
 
                 <p className="wd-hero-description">
-                  Your website should be more than a place people visit.
-                  It should express your identity, capture attention and
-                  make your brand unforgettable. We create distinctive
-                  website designs that bring ideas to life.
+                  Distinctive websites that express your brand, engage visitors
+                  and help your business grow, designed with clarity and
+                  personality for every screen.
                 </p>
 
-                {/* <div className="wd-actions">
+                <div className="wd-actions">
                   <a href="/#contact" className="wd-btn wd-btn-primary">
-                    Let's Create Together <span>↗</span>
+                    Start a Website Project
                   </a>
-
-                  <a href="#design-gallery" className="wd-btn wd-btn-outline">
-                    Explore Design <span>↓</span>
-                  </a>
-                </div> */}
-
-                <div className="wd-hero-meta">
-                  <span><i></i> Brand-led creativity</span>
-                  <span><i></i> Thoughtful experiences</span>
-                  <span><i></i> Responsive layouts</span>
                 </div>
+
               </div>
 
               <div className="wd-hero-visual">
@@ -285,25 +275,6 @@ export default function DevelopmentPage() {
                   />
                 </div>
 
-                <div className="wd-hero-label">
-                  <span className="wd-hero-label-mark">✳</span>
-                  <div>
-                    <strong>Creative Direction</strong>
-                    <small>Made around your identity</small>
-                  </div>
-                </div>
-
-                <div className="wd-hero-bubble">
-                  IDEAS
-                  <br />
-                  INTO
-                  <br />
-                  DESIGN
-                </div>
-
-                <span className="wd-hero-caption">
-                  Designed to make an impression
-                </span>
               </div>
             </div>
           </section>
@@ -321,36 +292,6 @@ export default function DevelopmentPage() {
                   Responsive Design <b>✳</b>
                 </span>
               ))}
-            </div>
-          </section>
-
-          {/* INTRODUCTION */}
-          <section className="wd-intro">
-            <div className="wd-wrap wd-intro-layout">
-              <div className="wd-intro-side">
-                <strong>01.</strong>
-                <span>
-                  A fresh perspective on how your brand appears online.
-                </span>
-              </div>
-
-              <div className="wd-intro-main">
-                <span className="wd-eyebrow">A Different Kind of Website</span>
-
-                <h2>
-                  Your brand deserves a digital presence that feels
-                  <span> unmistakably yours.</span>
-                </h2>
-
-                <p>
-                  Every brand has a story. The right website design gives
-                  that story a visual identity, a clear structure and a
-                  memorable place to live. At Zion Technologies, we combine
-                  creative thinking, purposeful layouts and user-centred
-                  design to create digital experiences that feel considered
-                  from the first impression to the final detail.
-                </p>
-              </div>
             </div>
           </section>
 
@@ -524,47 +465,6 @@ export default function DevelopmentPage() {
             </div>
           </section>
 
-          {/* CINEMATIC VIDEO SHOWCASE */}
-          <section className="wd-video">
-            <div className="wd-wrap">
-              <div className="wd-video-heading">
-                <div>
-                  <span className="wd-eyebrow">Design in Motion</span>
-
-                  <h2>
-                    See how a digital idea becomes an experience.
-                  </h2>
-                </div>
-
-                <p>
-                  A closer look at the visual world of digital design:
-                  composition, interfaces, presentation and the details
-                  that make a website feel complete.
-                </p>
-              </div>
-
-              <div className="wd-video-container">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls
-                  preload="metadata"
-                  aria-label="Website design visual showcase"
-                >
-                  <source src="/web-development.mp4" type="video/mp4" />
-                  Your browser does not support HTML video.
-                </video>
-              </div>
-
-              <div className="wd-video-bottom">
-                <span>Zion Technologies / Creative Website Design</span>
-                <span>Visual ideas. Digital experiences.</span>
-              </div>
-            </div>
-          </section>
-
           {/* WEBSITE DESIGN GALLERY */}
           <section className="wd-gallery" id="design-gallery">
             <div className="wd-wrap">
@@ -592,8 +492,8 @@ export default function DevelopmentPage() {
                   />
 
                   <div className="wd-gallery-caption">
-                    <small>01 / Brand Presence</small>
-                    <strong>Business Website Experiences</strong>
+                    <small>Brand Presence</small>
+                    <strong>Websites with a distinct point of view</strong>
                   </div>
                 </div>
 
@@ -606,8 +506,8 @@ export default function DevelopmentPage() {
                   />
 
                   <div className="wd-gallery-caption">
-                    <small>02 / Digital Commerce</small>
-                    <strong>Online Store Experiences</strong>
+                    <small>Digital Commerce</small>
+                    <strong>Shopping journeys made clearer</strong>
                   </div>
                 </div>
 
@@ -620,25 +520,11 @@ export default function DevelopmentPage() {
                   />
 
                   <div className="wd-gallery-caption">
-                    <small>03 / Modern Interfaces</small>
-                    <strong>Digital Experiences That Connect</strong>
+                    <small>Modern Interfaces</small>
+                    <strong>Digital experiences for every screen</strong>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          {/* DESIGN STATEMENT */}
-          <section className="wd-statement">
-            <div className="wd-wrap wd-statement-inner">
-              <span className="wd-statement-label">
-                The Zion Design Perspective
-              </span>
-
-              <h2>
-                Don't just show up online.
-                <span> Show the world who you are.</span>
-              </h2>
             </div>
           </section>
 

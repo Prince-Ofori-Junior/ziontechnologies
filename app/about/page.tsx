@@ -100,6 +100,10 @@ const services = [
     d: "Applications for Windows, macOS and Linux.",
   },
   {
+    t: "Tech consulting",
+    d: "Practical guidance for choosing and planning technology.",
+  },
+  {
     t: "Cloud solutions",
     d: "Infrastructure, migration and managed hosting.",
   },
@@ -107,60 +111,19 @@ const services = [
     t: "UI/UX design",
     d: "Interfaces people understand on the first try.",
   },
-  {
-    t: "Brand & print",
-    d: "Logos, brochures and company profiles.",
-  },
 ];
 
-// Why Choose Us
-const reasons = [
-  [
-    "Local expertise",
-    "We understand how business works in Ghana and across Africa.",
-  ],
-  [
-    "Clear communication",
-    "One point of contact, regular updates, honest timelines.",
-  ],
-  [
-    "Maintainable code",
-    "Well documented, so your team can extend it.",
-  ],
-  [
-    "Fair rates",
-    "Quality work at prices growing businesses can plan for.",
-  ],
-];
-
-// Team Members
-const team = [
-  {
-    name: "Team Member One",
-    role: "Chief Executive Officer",
-    image: "/Member1.jpg",
-  },
-  {
-    name: "Team Member Two",
-    role: "Lead Software Engineer",
-    image: "/Member2.png",
-  },
-  {
-    name: "Team Member Three",
-    role: "UI/UX Designer",
-    image: "/Menber3.jpg",
-  },
-  {
-    name: "Team Member Four",
-    role: "Project Manager",
-    image: "/Member4.jpg",
-  },
+const teamPhotos = [
+  "/Member1.jpg",
+  "/Member2.png",
+  "/Menber3.jpg",
+  "/Member4.jpg",
 ];
 
 export default function AboutPage() {
   const [menu, setMenu] = useState(false);
   const [devMenu, setDevMenu] = useState(false);
-  const [stats, setStats] = useState([0, 0, 0, 0]);
+  const [stats, setStats] = useState([0, 0, 0]);
   const statsRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
@@ -168,7 +131,7 @@ export default function AboutPage() {
     const statsElement = statsRef.current;
     if (!statsElement) return;
 
-    const targets = [2020, 50, 6, 100];
+    const targets = [2020, 50, 6];
     const duration = 1600;
     let animationFrame = 0;
     let observer: IntersectionObserver;
@@ -372,31 +335,10 @@ export default function AboutPage() {
 
             <div className="ab-hero-actions">
               <a href="/#contact" className="ab-primary-btn">
-                Start a conversation <span>↗</span>
-              </a>
-              <a href="#our-story" className="ab-text-link">
-                Discover our story <span>↓</span>
+                Start a conversation
               </a>
             </div>
 
-            <div className="ab-hero-proof">
-              <div className="ab-proof-avatars">
-                {team.slice(0, 3).map((member) => (
-                  <Image
-                    key={member.name}
-                    src={member.image}
-                    alt=""
-                    width={42}
-                    height={42}
-                  />
-                ))}
-              </div>
-
-              <div>
-                <strong>Built around people.</strong>
-                <span>Driven by technology and purpose.</span>
-              </div>
-            </div>
           </div>
 
           <div className="ab-hero-visual">
@@ -409,69 +351,17 @@ export default function AboutPage() {
                 priority
                 sizes="(max-width: 760px) 90vw, 45vw"
               />
-              <div className="ab-image-shade" />
-
-              <div className="ab-image-caption">
-                <span>THE PEOPLE BEHIND THE TECHNOLOGY</span>
-                <strong>Ideas into impact.</strong>
-              </div>
             </div>
 
-            <div className="ab-floating-card ab-floating-card-top">
-              <span className="ab-floating-icon">✳</span>
+            <div className="ab-hero-float">
+              <span className="ab-hero-float-mark" aria-hidden="true">Z</span>
               <div>
                 <strong>Purpose-built</strong>
-                <span>Digital solutions</span>
+                <span>Technology for real work</span>
               </div>
             </div>
-
-            <div className="ab-floating-card ab-floating-card-bottom">
-              <strong>2020</strong>
-              <span>Our journey began in Accra</span>
-            </div>
-
-            <div className="ab-hero-decoration" />
           </div>
 
-        </div>
-
-        <div className="ab-hero-bottom">
-          <span>INNOVATION WITH PURPOSE</span>
-          <span>SOFTWARE · DESIGN · TECHNOLOGY</span>
-          <span>ACCRA, GHANA</span>
-        </div>
-
-      </div>
-    </section>
-
-    {/* COMPANY INTRODUCTION */}
-    <section className="ab-intro-section">
-      <div className="ab-wrap ab-intro-grid">
-
-        <div className="ab-intro-label">
-          <span className="ab-section-index">01 / THE COMPANY</span>
-          <span className="ab-small-line" />
-          <p>Technology with a clear direction.</p>
-        </div>
-
-        <div className="ab-intro-content">
-          <h2>
-            We are more than a technology provider. We are a partner in
-            <span> progress.</span>
-          </h2>
-
-          <p>
-            Zion Technologies is a Ghana-based technology company focused on
-            building digital products and software solutions that help
-            businesses operate better, serve customers effectively and
-            prepare for what comes next.
-          </p>
-
-          <p>
-            We combine practical thinking, thoughtful design and modern
-            engineering to create solutions that are useful today and
-            adaptable for tomorrow.
-          </p>
         </div>
 
       </div>
@@ -502,66 +392,6 @@ export default function AboutPage() {
             <span>Technology capabilities</span>
           </div>
 
-          <div className="ab-stat">
-            <strong>{stats[3]}<span>%</span></strong>
-            <span>Commitment to quality</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    {/* STORY */}
-    <section className="ab-story-section" id="our-story">
-      <div className="ab-wrap ab-story-grid">
-
-        <div className="ab-story-visual">
-          <div className="ab-story-video">
-            <video
-              src="/story.mp4"
-              poster="/Orange ZionTechnologie.png"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-label="Zion Technologies company story"
-            />
-          </div>
-
-          <div className="ab-story-stamp">
-            <span>OUR</span>
-            <strong>STORY</strong>
-            <span>EST. 2020</span>
-          </div>
-        </div>
-
-        <div className="ab-story-content">
-          <span className="ab-section-index">02 / OUR STORY</span>
-
-          <h2>
-            A vision to make technology work <span>for everyone.</span>
-          </h2>
-
-          <p>
-            Our journey began in 2020 with a simple idea: businesses deserve
-            technology that makes their work easier, not more complicated.
-          </p>
-
-          <p>
-            We started by helping businesses establish their digital
-            presence. Over time, our work expanded into custom web
-            applications, mobile products, desktop software, cloud
-            infrastructure and ongoing technical support.
-          </p>
-
-          <p>
-            Today, that same commitment drives us: understand the problem,
-            build the right solution and support it beyond launch.
-          </p>
-
-          <a href="/#contact" className="ab-story-link">
-            Build something with us <span>↗</span>
-          </a>
         </div>
 
       </div>
@@ -572,15 +402,12 @@ export default function AboutPage() {
       <div className="ab-wrap">
 
         <div className="ab-purpose-heading">
-          <span className="ab-section-index">03 / OUR PURPOSE</span>
           <h2>What drives everything we build.</h2>
         </div>
 
         <div className="ab-purpose-grid">
 
           <article className="ab-purpose-card ab-purpose-primary">
-            <span className="ab-purpose-number">01</span>
-            <span className="ab-purpose-symbol">↗</span>
             <span className="ab-purpose-label">OUR MISSION</span>
 
             <h3>Empowering growth through technology.</h3>
@@ -593,7 +420,6 @@ export default function AboutPage() {
           </article>
 
           <article className="ab-purpose-card ab-purpose-secondary">
-            <span className="ab-purpose-number">02</span>
             <span className="ab-purpose-symbol">◎</span>
             <span className="ab-purpose-label">OUR VISION</span>
 
@@ -616,7 +442,6 @@ export default function AboutPage() {
 
         <div className="ab-section-heading">
           <div>
-            <span className="ab-section-index">04 / WHAT WE BELIEVE</span>
             <h2>Our values shape every solution.</h2>
           </div>
 
@@ -627,17 +452,15 @@ export default function AboutPage() {
         </div>
 
         <div className="ab-values-grid">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <article className="ab-value-card" key={value.t}>
               <div className="ab-value-card-top">
-                <span>0{index + 1}</span>
                 <div className="ab-value-icon">{value.icon}</div>
               </div>
 
               <h3>{value.t}</h3>
               <p>{value.d}</p>
 
-              <span className="ab-value-arrow">↗</span>
             </article>
           ))}
         </div>
@@ -650,8 +473,6 @@ export default function AboutPage() {
       <div className="ab-wrap">
 
         <div className="ab-capabilities-heading">
-          <span className="ab-section-index">05 / WHAT WE DO</span>
-
           <h2>
             The capabilities to turn your next idea into reality.
           </h2>
@@ -664,104 +485,51 @@ export default function AboutPage() {
         </div>
 
         <div className="ab-capabilities-grid">
-          {services
-            .filter((service) => service.t !== "Brand & print")
-            .map((service, index) => (
+          {services.map((service) => (
               <article className="ab-capability-card" key={service.t}>
-                <span className="ab-capability-number">
-                  0{index + 1}
-                </span>
-
                 <div>
                   <h3>{service.t}</h3>
                   <p>{service.d}</p>
                 </div>
 
-                <span className="ab-capability-arrow">↗</span>
+                <span className="ab-capability-arrow" aria-hidden="true">↗</span>
+
               </article>
-            ))}
+          ))}
         </div>
 
         <a href="/#services" className="ab-capabilities-link">
-          Explore our services <span>↗</span>
+          Explore our services
         </a>
-
-      </div>
-    </section>
-
-    {/* WHY ZION */}
-    <section className="ab-difference-section">
-      <div className="ab-wrap ab-difference-grid">
-
-        <div className="ab-difference-intro">
-          <span className="ab-section-index">06 / THE ZION DIFFERENCE</span>
-
-          <h2>
-            Good technology is built on <span>understanding.</span>
-          </h2>
-
-          <p>
-            We believe the best solutions start with listening. We take
-            time to understand your goals, your users and the challenges
-            your business needs to overcome.
-          </p>
-
-          <a href="/#contact" className="ab-primary-btn">
-            Let's work together <span>↗</span>
-          </a>
-        </div>
-
-        <div className="ab-difference-list">
-          {reasons.map(([title, description], index) => (
-            <article className="ab-difference-item" key={title}>
-              <span>0{index + 1}</span>
-
-              <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </div>
-
-              <span className="ab-difference-arrow">↗</span>
-            </article>
-          ))}
-        </div>
 
       </div>
     </section>
 
     {/* TEAM */}
     <section className="ab-team-section">
-      <div className="ab-wrap">
+      <div className="ab-wrap ab-team-content">
         <div className="ab-section-heading ab-team-heading">
           <div>
-            <span className="ab-section-index">07 / THE PEOPLE</span>
-            <h2>Meet the minds behind the work.</h2>
+            <h2>Meet the team.</h2>
           </div>
           <p>
-            Different skills. Shared ambition. One commitment to building
-            technology that makes a difference.
+            The people behind the work, bringing design and engineering
+            together to build useful digital products.
           </p>
         </div>
 
         <div className="ab-team-grid">
-          {team.map((member, index) => (
-            <article className="ab-team-card" key={member.name}>
+          {teamPhotos.map((photo) => (
+            <div className="ab-team-card" key={photo}>
               <div className="ab-team-image">
                 <Image
-                  src={member.image}
-                  alt={member.name}
+                  src={photo}
+                  alt="Zion Technologies team member"
                   fill
-                  sizes="(max-width: 600px) 85vw, (max-width: 1000px) 45vw, 25vw"
+                  sizes="(max-width: 700px) 46vw, 23vw"
                 />
-                <span className="ab-team-number">0{index + 1}</span>
               </div>
-              <div className="ab-team-info">
-                <div>
-                  <p>{member.role}</p>
-                </div>
-                <span>↗</span>
-              </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
@@ -785,14 +553,20 @@ export default function AboutPage() {
             </p>
 
             <a href="/#contact" className="ab-final-cta-btn">
-              Start your project <span>↗</span>
+              Start your project
             </a>
           </div>
 
           <div className="ab-final-decoration">
             <div className="ab-orbit ab-orbit-one" />
             <div className="ab-orbit ab-orbit-two" />
-            <div className="ab-orbit-core">Z</div>
+            <div className="ab-orbit-core" aria-hidden="true">
+              {teamPhotos.slice(0, 3).map((photo) => (
+                <div className="ab-orbit-photo" key={photo}>
+                  <Image src={photo} alt="" fill sizes="76px" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

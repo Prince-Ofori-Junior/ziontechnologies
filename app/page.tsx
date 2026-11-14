@@ -143,10 +143,10 @@ const DEV_SUBTABS: { label: string; href: string }[] = [
 
 const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; text: string; image: string; imageAlt: string }[] = [
   { cat: "digital", icon: "web", title: "Web Development", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/Web development.jpg", imageAlt: "Web development service." },
-  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Mobile Application.jpg", imageAlt: "Mobile application service." },
-  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/Desktop Application.jpg", imageAlt: "Desktop application service." },
-  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/Tech Consulting.jpg", imageAlt: "Technology consulting service." },
-  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/Digital Support.jpg", imageAlt: "Digital support service." },
+  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Mobile Application00.avif", imageAlt: "Mobile application service." },
+  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/Desktop Application.avif", imageAlt: "Desktop application service." },
+  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/Tech Consulting0.jpg", imageAlt: "Technology consulting service." },
+  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/Digital support.avif", imageAlt: "Digital support service." },
   { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/Cloud migration.jpg", imageAlt: "Cloud migration service." },
 ];
 
@@ -381,12 +381,12 @@ export default function Home() {
         <section className="work-partners-section">
           <div className="marquee-row">
             <div className="marquee-track" onMouseEnter={() => setMarqueePaused(true)} onMouseLeave={() => setMarqueePaused(false)} style={{ animationPlayState: marqueePaused ? 'paused' : 'running' }}>
-              {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
+              {["/work1.avif", "/work2.avif", "/work3.avif", "/work4.avif", "/campaign_creators-web-3828301_1920.jpg", "/apexdigitalagency-laptop-8305452_1920.jpg", "/stocksnap-computer-2563737_1920.jpg", "/web-development-8554218_1280.jpg", "/e-commerce-digital-internet-technology-web-concept.jpg", "/tunarus-website-2341973.jpg"].map((src) => (
                 <figure key={src} className="work-img-card">
                   <Image src={src} alt="Work" width={340} height={200} />
                 </figure>
               ))}
-              {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
+              {["/work1.avif", "/work2.avif", "/work3.avif", "/work4.avif", "/campaign_creators-web-3828301_1920.jpg", "/apexdigitalagency-laptop-8305452_1920.jpg", "/stocksnap-computer-2563737_1920.jpg", "/web-development-8554218_1280.jpg", "/e-commerce-digital-internet-technology-web-concept.jpg", "/tunarus-website-2341973.jpg"].map((src) => (
                 <figure key={src + "-a"} className="work-img-card">
                   <Image src={src} alt="Work" width={340} height={200} />
                 </figure>
@@ -395,12 +395,12 @@ export default function Home() {
           </div>
           <div className="marquee-row marquee-row--reverse">
             <div className="marquee-track" onMouseEnter={() => setMarqueePaused(true)} onMouseLeave={() => setMarqueePaused(false)} style={{ animationPlayState: marqueePaused ? 'paused' : 'running' }}>
-              {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
+              {["/work5.avif", "/work 6.avif", "/work7.avif", "/work8.avif", "/website-9571960_1280.jpg", "/apexdigitalagency-website-8305450_1920.jpg", "/stocksnap-macbook-2587217_1920.jpg", "/peteralison-web-development-10407063_1920.png", "/noseberrydigitals-design-9824072_1920.jpg", "/vikili2026-office-10154738_1280.jpg"].map((src) => (
                 <figure key={src + "-b"} className="work-img-card">
                   <Image src={src} alt="Work" width={280} height={200} />
                 </figure>
               ))}
-              {["/Brand Identity.jpg", "/Creative Design.jpg", "/Print Production.jpg", "/Customes softwares.jpg", "/Digital Support.jpg", "/image2.jpg"].map((src, i) => (
+              {["/work5.avif", "/work 6.avif", "/work7.avif", "/work8.avif", "/website-9571960_1280.jpg", "/apexdigitalagency-website-8305450_1920.jpg", "/stocksnap-macbook-2587217_1920.jpg", "/peteralison-web-development-10407063_1920.png", "/noseberrydigitals-design-9824072_1920.jpg", "/vikili2026-office-10154738_1280.jpg"].map((src) => (
                 <figure key={src + "-c"} className="work-img-card">
                   <Image src={src} alt="Work" width={280} height={200} />
                 </figure>

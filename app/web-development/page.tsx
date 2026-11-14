@@ -284,12 +284,12 @@ export default function DevelopmentPage() {
             <div className="wd-marquee-track">
               {[0, 1].map((item) => (
                 <span key={item}>
-                  Website Design <b>✳</b>
-                  Creative Direction <b>✳</b>
-                  Digital Experiences <b>✳</b>
-                  UI & UX Design <b>✳</b>
-                  Visual Storytelling <b>✳</b>
-                  Responsive Design <b>✳</b>
+                  Website Design <b></b>
+                  Creative Direction <b></b>
+                  Digital Experiences <b></b>
+                  UI & UX Design <b></b>
+                  Visual Storytelling <b></b>
+                  Responsive Design <b></b>
                 </span>
               ))}
             </div>

@@ -632,7 +632,7 @@ export default function UiUxDesignPage() {
 
       <article className="ux-gallery-item ux-gallery-tall">
         <img
-          src="/Mobile Development2.jpg"
+          src="\Mobile Application-.avif"
           alt="Mobile application development"
           loading="lazy"
         />

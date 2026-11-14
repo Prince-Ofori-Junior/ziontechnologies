@@ -771,15 +771,15 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 310px;
-  height: 220px;
+  width: 460px;
+  height: 320px;
   transform: translate(-50%, -50%);
 }
 
 .ab-orbit-photo {
   position: absolute;
-  width: 122px;
-  height: 166px;
+  width: 180px;
+  height: 220px;
   overflow: hidden;
   border: 5px solid #ffffff;
   border-radius: 16px;
@@ -790,6 +790,9 @@
 
 .ab-orbit-photo img {
   object-fit: cover;
+  object-position: center;
+  width: 100% !important;
+  height: 100% !important;
   transition: transform .7s ease;
 }
 

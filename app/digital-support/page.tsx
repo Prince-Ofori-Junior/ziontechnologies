@@ -132,7 +132,7 @@ export default function DigitalSupportPage() {
         <div className="ds-hero-visual">
           <div className="ds-hero-image">
             <Image
-              src="/Digital Support.jpg"
+              src="/flutie8211-man-10379289.jpg"
               alt="Technical support professional working with digital systems"
               fill
               priority
@@ -352,7 +352,7 @@ export default function DigitalSupportPage() {
         <div className="ds-feature-visual">
           <div className="ds-feature-image">
             <Image
-              src="/Digital Support2.jpg"
+              src="/Digital Support 1.jpg"
               alt="IT specialist working on digital systems and technical maintenance"
               fill
               sizes="(max-width: 850px) 100vw, 50vw"
@@ -474,7 +474,7 @@ export default function DigitalSupportPage() {
         <div className="ds-audience-visual">
           <div className="ds-audience-image">
             <Image
-              src="/Digital Support.jpg"
+              src="/eren098566-meeting-9498211_1920.jpg"
               alt="Technology professional providing digital support"
               fill
               sizes="(max-width: 850px) 100vw, 48vw"
@@ -528,7 +528,7 @@ export default function DigitalSupportPage() {
         <div className="ds-gallery-grid">
           <div className="ds-gallery-main">
             <Image
-              src="/Digital Support2.jpg"
+              src="/paman0744-natue-6908208_1920.jpg"
               alt="Technical specialist maintaining digital systems"
               fill
               sizes="(max-width: 760px) 100vw, 58vw"
@@ -542,7 +542,7 @@ export default function DigitalSupportPage() {
           <div className="ds-gallery-side">
             <div className="ds-gallery-side-image">
               <Image
-                src="/Digital Support.jpg"
+                src="/mv-fotos-woman-10159725_1280.png"
                 alt="Professional technical assistance"
                 fill
                 sizes="(max-width: 760px) 100vw, 38vw"

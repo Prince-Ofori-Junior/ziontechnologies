@@ -561,7 +561,7 @@ export default function AboutPage() {
             <div className="ab-orbit ab-orbit-one" />
             <div className="ab-orbit ab-orbit-two" />
             <div className="ab-orbit-core" aria-hidden="true">
-              {teamPhotos.slice(0, 3).map((photo) => (
+              {["/About.jpg", "/About1.avif", "/About2.jpg"].map((photo) => (
                 <div className="ab-orbit-photo" key={photo}>
                   <Image src={photo} alt="" fill sizes="76px" />
                 </div>

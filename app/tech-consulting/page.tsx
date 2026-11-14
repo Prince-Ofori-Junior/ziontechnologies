@@ -707,7 +707,7 @@ export default function TechConsultingPage() {
                 <div className="tc-perspective-card">
 
                   <Image
-                    src="/technology-architecture.jpg"
+                     src="/Tech Consulting1.jpg"
                     alt="Enterprise technology architecture and system planning"
                     width={750}
                     height={900}
@@ -724,7 +724,7 @@ export default function TechConsultingPage() {
                 <div className="tc-perspective-card">
 
                   <Image
-                    src="/business-advisory.jpg"
+                    src="/Tech Consulting0.jpg"
                     alt="Business advisory and technology planning"
                     width={750}
                     height={900}
@@ -741,7 +741,7 @@ export default function TechConsultingPage() {
                 <div className="tc-perspective-card">
 
                   <Image
-                    src="/team-consulting.jpg"
+                    src="/work1.avif"
                     alt="Technology professionals collaborating on digital solutions"
                     width={750}
                     height={900}

@@ -345,20 +345,6 @@ export default function CloudSolutionsPage() {
               {/* CLOUD DASHBOARD VISUAL */}
               <div className="cs-hero-visual">
 
-                {/* FLOATING CLOUD IMAGE */}
-                <div className="cs-hero-floating-image">
-                  <Image
-                    src="/Cloud Solutions2.jpg"
-                    alt="Modern cloud computing infrastructure and server technology"
-                    fill
-                    priority
-                    sizes="(max-width: 760px) 80vw, 360px"
-                  />
-
-                  <div className="cs-floating-image-overlay"></div>
-
-                  <span>SMART CLOUD INFRASTRUCTURE</span>
-                </div>
 
                 {/* MAIN DASHBOARD */}
                 <div className="cs-dashboard">
@@ -539,7 +525,7 @@ export default function CloudSolutionsPage() {
             <div className="cs-wrap cs-platform-layout">
               <div className="cs-platform-image">
                 <Image
-                  src="/Cloud Solutions1.jpg"
+                  src="/cloud1.jpg"
                   alt="Modern cloud computing infrastructure"
                   fill
                   sizes="(max-width: 760px) 100vw, 50vw"
@@ -672,7 +658,7 @@ export default function CloudSolutionsPage() {
 
               <div className="cs-security-visual">
                 <Image
-                  src="/Cloud Solutions00.jpg"
+                  src="/F.jpg"
                   alt="Digital infrastructure and cloud technology"
                   fill
                   sizes="(max-width: 760px) 100vw, 45vw"
@@ -715,7 +701,7 @@ export default function CloudSolutionsPage() {
               <div className="cs-image-story-grid">
                 <div className="cs-story-image cs-story-image-main">
                   <Image
-                    src="/Cloud Solutions2.jpg"
+                    src="/I.avif"
                     alt="Modern cloud computing data centre with server infrastructure"
                     fill
                     sizes="(max-width: 760px) 100vw, 65vw"
@@ -734,7 +720,7 @@ export default function CloudSolutionsPage() {
                 <div className="cs-story-side">
                   <div className="cs-story-image cs-story-image-secondary">
                     <Image
-                      src="/Cloud Solutions3.jpg"
+                      src="/CS.avif"
                       alt="Connected cloud technology and modern business network"
                       fill
                       sizes="(max-width: 760px) 100vw, 35vw"

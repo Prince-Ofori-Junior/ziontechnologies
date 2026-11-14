@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { ScrollProgress, WhatsAppFab, WhyZion, TechTicker, CtaBanner } from "./Extras";
 
 /* ---------- Animated Why Zion ad (photo story) ---------- */
 /* Needs: images in public/zion-ad/ and the zion-ad.css styles appended to globals.css */
@@ -169,14 +170,6 @@ function ServiceIconGraphic({ icon }: { icon: ServiceIcon }) {
   );
 }
 
-const steps = [
-  ["Discover", "Goals, audience, scope, and success measures."],
-  ["Design", "Direction, prototypes, identity, and practical specifications."],
-  ["Deliver", "Development, production, quality checks, and launch."],
-  ["Support", "Training, updates, refinements, and ongoing care."],
-];
-
-
 const solutions = [
   [
     "Startups & SMEs",
@@ -241,6 +234,9 @@ export default function Home() {
 
   return (  
     <>
+      <ScrollProgress />
+      <WhatsAppFab />
+
       <header className="site-header">
         <nav className="main-nav" aria-label="Main navigation">
           <a className="brand" href="#top" aria-label="Zion Technologies home"><img src="/logo.png" alt="Zion Technologies logo" /><div className="brand-text"><span className="logo-aqua"> </span><span className="logo-blue"></span></div></a>
@@ -296,6 +292,8 @@ export default function Home() {
           <div><strong>Reliable production</strong><small>Print checked before it ships</small></div>
         </section>
 
+        <TechTicker />
+
         <section className="features-section" id="services" ref={features}>
           <div className="section-heading">
             <h2 className="services-title">Powerful work, made simple.</h2>
@@ -331,15 +329,17 @@ export default function Home() {
               </div>
               <div className="service-gallery-track" ref={serviceGallery} tabIndex={0} aria-label="Swipe or scroll to explore images of our six services">
                 {services.map((service) => (
-                  <article className="service-gallery-card" key={service.title}>
-                    <Image
-                      src={service.title === "Cloud Solutions" ? "/woman-scrolling-laptop (1).jpg" : service.image}
-                      alt={service.title === "Cloud Solutions" ? "Woman scrolling on a laptop" : service.imageAlt}
-                      width={540}
-                      height={360}
-                    />
+                  <div className="service-gallery-item" key={service.title}>
+                    <article className="service-gallery-card">
+                      <Image
+                        src={service.title === "Cloud Solutions" ? "/woman-scrolling-laptop (1).jpg" : service.image}
+                        alt={service.title === "Cloud Solutions" ? "Woman scrolling on a laptop" : service.imageAlt}
+                        width={540}
+                        height={360}
+                      />
+                    </article>
                     <h4>{service.title}</h4>
-                  </article>
+                  </div>
                 ))}
               </div>
               <div className="service-gallery-controls">
@@ -348,6 +348,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <WhyZion />
 
         <section className="payment-section" aria-labelledby="payment-heading">
           <div className="payment-copy">
@@ -364,20 +366,6 @@ export default function Home() {
             style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
           />
         </section>
-
-        {/* <section className="process-section" id="process">
-          <div className="process-copy">
-            <p className="kicker">How it works</p>
-            <h2>Clear steps. No lost context.</h2>
-            <p>One accountable team manages the project from briefing to delivery, with regular updates along the way.</p>
-            <a href="/contact">Plan a project <span>→</span></a>
-          </div>
-          <ol className="process-board">
-            {steps.map(([t, d], i) => (
-              <li key={t}><span>{String(i + 1).padStart(2, "0")}</span><div><h3>{t}</h3><p>{d}</p></div></li>
-            ))}
-          </ol>
-        </section> */}
 
         <section className="solutions-section" id="solutions">
           <div className="solutions-heading">
@@ -420,6 +408,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <CtaBanner />
 
         <section className="seoFaqSection" id="faq" aria-label="Frequently asked questions">
           <h2>FAQ</h2>
@@ -524,6 +514,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
       </main>
 
       <footer id="about">

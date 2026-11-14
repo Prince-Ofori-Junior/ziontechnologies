@@ -7,6 +7,7 @@ const siteRoutes = [
   "",
   "/about",
   "/blogs",
+  "/contact",
   "/cloud-solutions",
   "/desktop-application",
   "/digital-support",

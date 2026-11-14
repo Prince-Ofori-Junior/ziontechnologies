@@ -220,7 +220,7 @@ export default function UiUxDesignPage() {
           </div>
 
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">
               Get a quote
             </a>
@@ -275,7 +275,7 @@ export default function UiUxDesignPage() {
                 </p>
 
                 <div className="ux-actions">
-                  <a href="/#contact" className="ux-btn">
+                  <a href="/contact" className="ux-btn">
                     Start a Design Project <span>→</span>
                   </a>
 
@@ -691,7 +691,7 @@ export default function UiUxDesignPage() {
                   understandable, consistent and accessible.
                 </p>
 
-                <a href="/#contact" className="ux-btn ux-btn-dark">
+                <a href="/contact" className="ux-btn ux-btn-dark">
                   Work with our design team <span>→</span>
                 </a>
               </div>

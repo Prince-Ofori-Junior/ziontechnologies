@@ -126,7 +126,7 @@ export default function TechConsultingPage() {
           </div>
 
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">
               Get a quote
             </a>
@@ -194,7 +194,7 @@ export default function TechConsultingPage() {
 
                 <div className="tc-hero-actions">
 
-                  <a href="/#contact" className="tc-primary-btn">
+                  <a href="/contact" className="tc-primary-btn">
                     DISCUSS YOUR BUSINESS <span>↗</span>
                   </a>
 
@@ -308,7 +308,7 @@ export default function TechConsultingPage() {
                     informed decisions with confidence.
                   </p>
 
-                  <a href="/#contact" className="tc-arrow-link">
+                  <a href="/contact" className="tc-arrow-link">
                     LET'S TALK <span>↗</span>
                   </a>
 
@@ -383,7 +383,7 @@ export default function TechConsultingPage() {
                       to get there.
                     </p>
 
-                    <a href="/#contact">
+                    <a href="/contact">
                       EXPLORE YOUR OPPORTUNITIES ↗
                     </a>
 
@@ -550,7 +550,7 @@ export default function TechConsultingPage() {
                 strategy and practical implementation priorities.
               </p>
 
-              <a href="/#contact" className="tc-primary-btn">
+              <a href="/contact" className="tc-primary-btn">
                 START YOUR DIGITAL TRANSFORMATION <span>↗</span>
               </a>
 
@@ -789,7 +789,7 @@ export default function TechConsultingPage() {
                   long-term objectives.
                 </p>
 
-                <a href="/#contact" className="tc-arrow-link">
+                <a href="/contact" className="tc-arrow-link">
                   DISCUSS YOUR REQUIREMENTS <span>↗</span>
                 </a>
 
@@ -867,7 +867,7 @@ export default function TechConsultingPage() {
                 what your organisation needs.
               </p>
 
-              <a href="/#contact" className="tc-contact-btn">
+              <a href="/contact" className="tc-contact-btn">
                 TALK TO OUR CONSULTING TEAM <span>↗</span>
               </a>
 

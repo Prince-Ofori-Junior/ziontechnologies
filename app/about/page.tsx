@@ -270,7 +270,7 @@ export default function AboutPage() {
 
           {/* Desktop Navigation Actions */}
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
 
             <a
               className="nav-cta nav-cta--accent"
@@ -334,7 +334,7 @@ export default function AboutPage() {
             </p>
 
             <div className="ab-hero-actions">
-              <a href="/#contact" className="ab-primary-btn">
+              <a href="/contact" className="ab-primary-btn">
                 Start a conversation
               </a>
             </div>
@@ -552,7 +552,7 @@ export default function AboutPage() {
               technology and take the next step.
             </p>
 
-            <a href="/#contact" className="ab-final-cta-btn">
+            <a href="/contact" className="ab-final-cta-btn">
               Start your project
             </a>
           </div>

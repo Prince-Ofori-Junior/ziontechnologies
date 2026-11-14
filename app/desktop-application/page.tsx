@@ -211,7 +211,7 @@ export default function DesktopApplicationPage() {
           </div>
 
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">
               Get a quote
             </a>
@@ -264,7 +264,7 @@ export default function DesktopApplicationPage() {
                 </p>
 
                 <div className="da-actions">
-                  <a href="#da-contact" className="da-btn">
+                  <a href="/contact" className="da-btn">
                     Discuss your project <span>↗</span>
                   </a>
 
@@ -332,7 +332,7 @@ export default function DesktopApplicationPage() {
                     <div className="da-solution-bottom">
                       <h3>{item.title}</h3>
                       <p>{item.description}</p>
-                      <a href="#da-contact" aria-label={`Discuss ${item.title}`}>
+                      <a href="/contact" aria-label={`Discuss ${item.title}`}>
                         Discuss your needs <span>↗</span>
                       </a>
                     </div>
@@ -432,12 +432,7 @@ export default function DesktopApplicationPage() {
               </div>
 
               <div className="da-cta-actions">
-                <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                    "Desktop Application Development Enquiry"
-                  )}`}
-                  className="da-btn da-btn-light"
-                >
+                <a href="/contact" className="da-btn da-btn-light">
                   Start a project <span>↗</span>
                 </a>
 

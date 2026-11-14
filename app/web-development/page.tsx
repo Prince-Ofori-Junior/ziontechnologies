@@ -193,7 +193,7 @@ export default function DevelopmentPage() {
           </div>
 
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">
               Get a quote
             </a>
@@ -247,7 +247,7 @@ export default function DevelopmentPage() {
                 </p>
 
                 <div className="wd-actions">
-                  <a href="/#contact" className="wd-btn wd-btn-primary">
+                  <a href="/contact" className="wd-btn wd-btn-primary">
                     Start a Website Project
                   </a>
                 </div>
@@ -323,7 +323,7 @@ export default function DevelopmentPage() {
                 {SERVICES.map((service) => (
                   <a
                     className="wd-service-card"
-                    href="/#contact"
+                    href="/contact"
                     key={service.number}
                   >
                     <div className="wd-service-card-top">
@@ -535,7 +535,7 @@ export default function DevelopmentPage() {
                 </p>
               </div>
 
-              <a href="/#contact" className="wd-btn wd-btn-light">
+              <a href="/contact" className="wd-btn wd-btn-light">
                 Start Your Design Project <span>↗</span>
               </a>
             </div>

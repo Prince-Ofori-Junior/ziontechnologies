@@ -252,7 +252,7 @@ export default function CloudSolutionsPage() {
           </div>
 
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">
               Get a quote
             </a>
@@ -314,7 +314,7 @@ export default function CloudSolutionsPage() {
                 </p>
 
                 <div className="cs-hero-actions">
-                  <a href="/#contact" className="cs-primary-button">
+                  <a href="/contact" className="cs-primary-button">
                     Build your cloud strategy <span>↗</span>
                   </a>
 
@@ -522,7 +522,7 @@ export default function CloudSolutionsPage() {
                     </ul>
 
                     <a
-                      href="/#contact"
+                      href="/contact"
                       aria-label={`Enquire about ${service.title}`}
                     >
                       <span>Discuss this service</span>
@@ -599,7 +599,7 @@ export default function CloudSolutionsPage() {
                   </div>
                 </div>
 
-                <a href="/#contact" className="cs-inline-link">
+                <a href="/contact" className="cs-inline-link">
                   Discuss your infrastructure <span>↗</span>
                 </a>
               </div>
@@ -665,7 +665,7 @@ export default function CloudSolutionsPage() {
                   <div><span>04</span> Recovery planning</div>
                 </div>
 
-                <a href="/#contact" className="cs-security-link">
+                <a href="/contact" className="cs-security-link">
                   Talk about cloud security <span>↗</span>
                 </a>
               </div>
@@ -808,7 +808,7 @@ export default function CloudSolutionsPage() {
                   infrastructure, hosting and migration.
                 </p>
 
-                <a href="/#contact" className="cs-inline-link">
+                <a href="/contact" className="cs-inline-link">
                   Speak with our team <span>↗</span>
                 </a>
               </div>

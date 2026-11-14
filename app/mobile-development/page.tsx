@@ -278,7 +278,7 @@ export default function MobileDevelopmentPage() {
           </div>
 
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">
               Get a quote
             </a>
@@ -330,7 +330,7 @@ export default function MobileDevelopmentPage() {
                 </p>
 
                 <div className="md-actions">
-                  <a href="/#contact" className="md-btn">
+                  <a href="/contact" className="md-btn">
                     Start Your App Project <span>→</span>
                   </a>
 
@@ -388,7 +388,7 @@ export default function MobileDevelopmentPage() {
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
 
-                    <a href="/#contact" className="md-card-link">
+                    <a href="/contact" className="md-card-link">
                       Discuss your project <span>→</span>
                     </a>
                   </article>
@@ -542,7 +542,7 @@ export default function MobileDevelopmentPage() {
                   </div>
                 </div>
 
-                <a href="/#contact" className="md-btn">
+                <a href="/contact" className="md-btn">
                   Discuss Your App Idea <span>→</span>
                 </a>
               </div>

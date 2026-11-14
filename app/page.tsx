@@ -262,7 +262,7 @@ export default function Home() {
             <a className="nav-cta nav-cta--accent mobile-only" href="#contact" onClick={() => setMenu(false)}>Get a quote</a>
           </div>
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="#contact">Get a quote</a>
           </div>
           <button className="menu-btn" type="button" aria-expanded={menu} aria-label="Toggle menu" onClick={() => setMenu(!menu)}>
@@ -354,7 +354,7 @@ export default function Home() {
             <p className="kicker">Flexible payment options</p>
             <h2 id="payment-heading">Flexible payments, agreed upfront.</h2>
             <p>We’ll agree on a payment schedule that fits your project, with clear costs and milestones before work begins.</p>
-            <a href={`mailto:${EMAIL}`}>Discuss your project</a>
+            <a href="/contact">Discuss your project</a>
           </div>
           <Image
             src="/Excited Man Using Laptop (1).png"
@@ -370,7 +370,7 @@ export default function Home() {
             <p className="kicker">How it works</p>
             <h2>Clear steps. No lost context.</h2>
             <p>One accountable team manages the project from briefing to delivery, with regular updates along the way.</p>
-            <a href="#contact">Plan a project <span>→</span></a>
+            <a href="/contact">Plan a project <span>→</span></a>
           </div>
           <ol className="process-board">
             {steps.map(([t, d], i) => (

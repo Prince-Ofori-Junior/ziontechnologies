@@ -558,7 +558,7 @@ export default function BlogsPage() {
                 worth exploring? Start a conversation with our team.
               </p>
 
-              <Link href="/#contact" className="jhome-contact-link">
+              <Link href="/contact" className="jhome-contact-link">
                 Talk to Zion Technologies
 
                 <span>

@@ -74,7 +74,7 @@ export default function DigitalSupportPage() {
             </a>
           </div>
           <div className="nav-actions">
-            <a href={`mailto:${EMAIL}`}>Contact</a>
+            <a href="/contact">Contact</a>
             <a className="nav-cta nav-cta--accent" href="/#contact">Get a quote</a>
           </div>
           <button className="menu-btn" type="button" aria-expanded={menu} aria-label="Toggle menu" onClick={() => { setMenu(!menu); if (menu) setDevMenu(false); }}>
@@ -115,7 +115,7 @@ export default function DigitalSupportPage() {
           </p>
 
           <div className="ds-actions">
-            <a href="/#contact" className="ds-btn">
+            <a href="/contact" className="ds-btn">
               Get technical support <span>↗</span>
             </a>
             <a href="#ds-services" className="ds-secondary-link">
@@ -219,7 +219,7 @@ export default function DigitalSupportPage() {
             issues, maintain your platforms and get more from the technology
             you already use.
           </p>
-          <a href="/#contact" className="ds-inline-link">
+          <a href="/contact" className="ds-inline-link">
             Let's discuss your support needs <span>↗</span>
           </a>
         </div>
@@ -257,7 +257,7 @@ export default function DigitalSupportPage() {
                 system problems and the technical challenges that interrupt
                 your workflow.
               </p>
-              <a href="/#contact">Get assistance <span>↗</span></a>
+              <a href="/contact">Get assistance <span>↗</span></a>
             </div>
             <span className="ds-card-watermark">01</span>
           </article>
@@ -273,7 +273,7 @@ export default function DigitalSupportPage() {
                 Keep your digital tools updated and properly maintained
                 through routine checks and technical upkeep.
               </p>
-              <a href="/#contact">Maintain your systems <span>↗</span></a>
+              <a href="/contact">Maintain your systems <span>↗</span></a>
             </div>
             <span className="ds-card-watermark">02</span>
           </article>
@@ -289,7 +289,7 @@ export default function DigitalSupportPage() {
                 Get help with software updates, security checks and
                 practical recommendations to reduce avoidable risks.
               </p>
-              <a href="/#contact">Improve protection <span>↗</span></a>
+              <a href="/contact">Improve protection <span>↗</span></a>
             </div>
             <span className="ds-card-watermark">03</span>
           </article>
@@ -305,7 +305,7 @@ export default function DigitalSupportPage() {
                 Identify bottlenecks and improve the speed, responsiveness
                 and usability of your websites and applications.
               </p>
-              <a href="/#contact">Improve performance <span>↗</span></a>
+              <a href="/contact">Improve performance <span>↗</span></a>
             </div>
             <span className="ds-card-watermark">04</span>
           </article>
@@ -321,7 +321,7 @@ export default function DigitalSupportPage() {
                 Establish practical backup routines and recovery plans
                 to help protect important business information.
               </p>
-              <a href="/#contact">Protect your data <span>↗</span></a>
+              <a href="/contact">Protect your data <span>↗</span></a>
             </div>
             <span className="ds-card-watermark">05</span>
           </article>
@@ -337,7 +337,7 @@ export default function DigitalSupportPage() {
                 Ongoing technical attention for business websites,
                 web applications and essential digital products.
               </p>
-              <a href="/#contact">Support my platform <span>↗</span></a>
+              <a href="/contact">Support my platform <span>↗</span></a>
             </div>
             <span className="ds-card-watermark">06</span>
           </article>
@@ -394,7 +394,7 @@ export default function DigitalSupportPage() {
             </div>
           </div>
 
-          <a href="/#contact" className="ds-btn">
+          <a href="/contact" className="ds-btn">
             Talk to a technical specialist <span>↗</span>
           </a>
         </div>
@@ -551,7 +551,7 @@ export default function DigitalSupportPage() {
             <div className="ds-gallery-side-copy">
               <span>02 / TECHNICAL ASSISTANCE</span>
               <h3>Practical help when you need it.</h3>
-              <a href="/#contact">Speak with our team <span>↗</span></a>
+              <a href="/contact">Speak with our team <span>↗</span></a>
             </div>
           </div>
         </div>
@@ -574,7 +574,7 @@ export default function DigitalSupportPage() {
           let's work out the next step.
         </p>
         <div className="ds-cta-actions">
-          <a href="/#contact" className="ds-btn">
+          <a href="/contact" className="ds-btn">
             Contact Zion Technologies <span>↗</span>
           </a>
           <a href={`mailto:${EMAIL}`} className="ds-cta-email">

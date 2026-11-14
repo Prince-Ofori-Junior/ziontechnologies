@@ -86,7 +86,7 @@ export function BlogNav() {
         </div>
 
         <div className="nav-actions">
-          <a href={`mailto:${EMAIL}`}>Contact</a>
+          <a href="/contact">Contact</a>
           <Link className="nav-cta nav-cta--accent" href="/#contact">
             Get a quote
           </Link>

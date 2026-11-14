@@ -1194,12 +1194,10 @@ button {
   background: #fff;
   scroll-snap-align: start;
   font-family: var(--sans);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .service-gallery-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .service-gallery-card img {
@@ -1222,7 +1220,7 @@ button {
   font-size: 16px !important;
   font-weight: 800;
   letter-spacing: -0.02em;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 191, 255, 0.3);
+  text-shadow: none !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: transform 0.3s ease, color 0.3s ease;
@@ -2794,3 +2792,9 @@ footer p {
   }
 }
 
+
+@media (min-width: 901px) {
+  .hero .zs {
+    margin-top: 24px;
+  }
+}

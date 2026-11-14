@@ -2285,3 +2285,9 @@
     transition: none;
   }
 }
+
+@media (min-width: 901px) {
+  .ux-hero-grid {
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+}

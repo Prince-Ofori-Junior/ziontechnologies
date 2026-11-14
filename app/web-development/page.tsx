@@ -257,8 +257,8 @@ export default function DevelopmentPage() {
               <div className="wd-hero-visual">
                 <div className="wd-hero-main-image">
                   <Image
-                    src="/Web Development.png"
-                    alt="Creative website design concept displayed on a digital screen"
+                    src="/peteralison-web-development-10407063_1920.png"
+                    alt="Web developer working on a website"
                     width={1100}
                     height={950}
                     priority
@@ -267,8 +267,8 @@ export default function DevelopmentPage() {
 
                 <div className="wd-hero-mini-image">
                   <Image
-                    src="/Excited Man Using Laptop (1).png"
-                    alt="Person exploring a digital experience on a laptop"
+                    src="/web-development-8554218_1280.jpg"
+                    alt="Web development project displayed on a screen"
                     width={650}
                     height={500}
                     priority
@@ -355,8 +355,8 @@ export default function DevelopmentPage() {
               <div className="wd-philosophy-visual">
                 <div className="wd-philosophy-image-main">
                   <Image
-                    src="/custom software2.jpg"
-                    alt="Creative digital interface and website design inspiration"
+                    src="/geralt-ai-10171006_1920.jpg"
+                    alt="Artificial intelligence concept for digital design"
                     width={1000}
                     height={1200}
                   />
@@ -364,8 +364,8 @@ export default function DevelopmentPage() {
 
                 <div className="wd-philosophy-image-small">
                   <Image
-                    src="/Smiling Man Exploring Floating Analytics Dashboards.png"
-                    alt="Digital interface displayed as a modern visual experience"
+                    src="/geralt-seo-3007488_1920.jpg"
+                    alt="Search engine optimization concept"
                     width={700}
                     height={550}
                   />
@@ -485,44 +485,32 @@ export default function DevelopmentPage() {
               <div className="wd-gallery-grid">
                 <div className="wd-gallery-item">
                   <Image
-                    src="/Web Development.png"
-                    alt="Business website design visual concept"
+                    src="/businesswomen-seal-report-achievement.jpg"
+                    alt="Businesswomen celebrating a successful report"
                     width={1100}
                     height={1000}
                   />
 
-                  <div className="wd-gallery-caption">
-                    <small>Brand Presence</small>
-                    <strong>Websites with a distinct point of view</strong>
-                  </div>
                 </div>
 
                 <div className="wd-gallery-item">
                   <Image
-                    src="/Smiling Man Exploring Floating Analytics Dashboards.png"
-                    alt="Digital commerce and interface design concept"
+                    src="/financial-advisor-works-revenue-balance-with-annual-statistics.jpg"
+                    alt="Financial advisor reviewing revenue and annual statistics"
                     width={850}
                     height={650}
                   />
 
-                  <div className="wd-gallery-caption">
-                    <small>Digital Commerce</small>
-                    <strong>Shopping journeys made clearer</strong>
-                  </div>
                 </div>
 
                 <div className="wd-gallery-item">
                   <Image
-                    src="/Excited Man Using Laptop (1).png"
-                    alt="Modern website experience being explored on a laptop"
+                    src="/flutie8211-man-10379289.jpg"
+                    alt="Man working with digital technology"
                     width={850}
                     height={650}
                   />
 
-                  <div className="wd-gallery-caption">
-                    <small>Modern Interfaces</small>
-                    <strong>Digital experiences for every screen</strong>
-                  </div>
                 </div>
               </div>
             </div>

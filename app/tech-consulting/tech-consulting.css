@@ -1565,3 +1565,9 @@
     animation-duration: .01ms !important;
   }
 }
+
+@media (min-width: 901px) {
+  .tc-hero-grid {
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+}

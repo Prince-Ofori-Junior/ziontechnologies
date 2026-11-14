@@ -348,8 +348,8 @@ export default function MobileDevelopmentPage() {
               <div className="md-hero-visual">
                 <div className="md-hero-image">
                   <Image
-                    src="/Mobile Application.jpg"
-                    alt="Mobile application interface and development"
+                    src="/tech3.jpg"
+                    alt="Technology and mobile application development"
                     width={900}
                     height={1000}
                     priority
@@ -460,8 +460,8 @@ export default function MobileDevelopmentPage() {
               <div className="md-visual-collage">
                 <div className="md-collage-image md-collage-one">
                   <Image
-                    src="/Mobile Application.jpg"
-                    alt="Mobile application development"
+                    src="/apexdigitalagency-laptop-8305452_1920.jpg"
+                    alt="Laptop displaying a digital agency website"
                     fill
                     sizes="(max-width: 768px) 45vw, 300px"
                   />
@@ -469,8 +469,8 @@ export default function MobileDevelopmentPage() {
 
                 <div className="md-collage-image md-collage-two">
                   <Image
-                    src="/Mobile Application1.jpg"
-                    alt="Mobile application interface"
+                    src="/geralt-social-media-4140959_1920.jpg"
+                    alt="Social media content displayed on a digital device"
                     fill
                     sizes="(max-width: 768px) 45vw, 300px"
                   />
@@ -478,8 +478,8 @@ export default function MobileDevelopmentPage() {
 
                 <div className="md-collage-image md-collage-three">
                   <Image
-                    src="/Mobile Application2.jpg"
-                    alt="Mobile app user experience"
+                    src="/Mobile Application Page Hero1.avif"
+                    alt="Mobile application shown on a smartphone"
                     fill
                     sizes="(max-width: 768px) 45vw, 300px"
                   />
@@ -487,8 +487,8 @@ export default function MobileDevelopmentPage() {
 
                 <div className="md-collage-image md-collage-four">
                   <Image
-                    src="/Mobile Application3.jpg"
-                    alt="Mobile technology and application design"
+                    src="/Mobile Application Page1.avif"
+                    alt="Mobile application interface displayed on a phone"
                     fill
                     sizes="(max-width: 768px) 45vw, 300px"
                   />

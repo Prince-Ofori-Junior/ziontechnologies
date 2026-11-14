@@ -141,12 +141,12 @@ const DEV_SUBTABS: { label: string; href: string }[] = [
 ];
 
 const services: { cat: Exclude<Cat, "all">; icon: ServiceIcon; title: string; text: string; image: string; imageAlt: string }[] = [
-  { cat: "digital", icon: "web", title: "Web Development", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/Customes softwares.jpg", imageAlt: "A website design displayed across desktop and mobile devices." },
-  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Mobile Application1.jpg", imageAlt: "A professional working with mobile applications." },
-  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/Desktop Application0.jpg", imageAlt: "Desktop applications running on multiple devices." },
-  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/Tech Consult.png", imageAlt: "Technology consulting services." },
-  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/Digital Support2.jpg", imageAlt: "A customer support professional wearing a headset." },
-  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/Cloud Solutions00.jpg", imageAlt: "Cloud computing infrastructure and migration services." },
+  { cat: "digital", icon: "web", title: "Web Development", text: "Websites, mobile apps, and business systems shaped around your workflow.", image: "/Web development.jpg", imageAlt: "Web development service." },
+  { cat: "digital", icon: "mobile", title: "Mobile Application", text: "Native and cross-platform mobile apps for iOS and Android that deliver seamless user experiences.", image: "/Mobile Application.jpg", imageAlt: "Mobile application service." },
+  { cat: "digital", icon: "software", title: "Desktop Application", text: "Powerful desktop applications for Windows, macOS, and Linux that run smoothly offline.", image: "/Desktop Application.jpg", imageAlt: "Desktop application service." },
+  { cat: "digital", icon: "support", title: "Tech Consulting", text: "Expert guidance to help you make the right technology decisions for your business.", image: "/Tech Consulting.jpg", imageAlt: "Technology consulting service." },
+  { cat: "digital", icon: "shield", title: "Digital Support", text: "Reliable updates, maintenance, hosting guidance, and technical support.", image: "/Digital Support.jpg", imageAlt: "Digital support service." },
+  { cat: "digital", icon: "cloud", title: "Cloud Solutions", text: "Scalable cloud infrastructure and migration services that help your business grow.", image: "/Cloud migration.jpg", imageAlt: "Cloud migration service." },
 ];
 
 function ServiceIconGraphic({ icon }: { icon: ServiceIcon }) {
@@ -332,7 +332,12 @@ export default function Home() {
               <div className="service-gallery-track" ref={serviceGallery} tabIndex={0} aria-label="Swipe or scroll to explore images of our six services">
                 {services.map((service) => (
                   <article className="service-gallery-card" key={service.title}>
-                    <Image src={service.image} alt={service.imageAlt} width={540} height={360} />
+                    <Image
+                      src={service.title === "Cloud Solutions" ? "/woman-scrolling-laptop (1).jpg" : service.image}
+                      alt={service.title === "Cloud Solutions" ? "Woman scrolling on a laptop" : service.imageAlt}
+                      width={540}
+                      height={360}
+                    />
                     <h4>{service.title}</h4>
                   </article>
                 ))}

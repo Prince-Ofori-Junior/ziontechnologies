@@ -219,8 +219,8 @@ export default function TechConsultingPage() {
 
                 <div className="tc-hero-photo">
                   <Image
-                    src="/tech-consulting-hero.jpg"
-                    alt="Technology consultants analysing business strategy and digital transformation"
+                    src="/volvo1234-man-8149563_1920.jpg"
+                    alt="Professional reviewing technology and business information"
                     width={900}
                     height={1100}
                     priority
@@ -361,8 +361,8 @@ export default function TechConsultingPage() {
 
                   <div className="tc-capability-feature-image">
                     <Image
-                      src="/tech-strategy.jpg"
-                      alt="Technology strategy and business consulting session"
+                      src="/Blog.jpg"
+                      alt="Technology consulting article and business strategy"
                       width={850}
                       height={1100}
                     />

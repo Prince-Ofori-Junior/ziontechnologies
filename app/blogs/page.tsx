@@ -572,16 +572,16 @@ export default function BlogsPage() {
               <div className="jhome-contact-ring jhome-contact-ring-two" />
               <div className="jhome-contact-image jhome-contact-image-one">
                 <Image
-                  src={featuredPost.image}
-                  alt=""
+                  src="/Blog.jpg"
+                  alt="A blog cover image displayed in the contact section"
                   fill
                   sizes="(max-width: 680px) 45vw, 220px"
                 />
               </div>
               <div className="jhome-contact-image jhome-contact-image-two">
                 <Image
-                  src={latestPosts[0]?.image ?? featuredPost.image}
-                  alt=""
+                  src="/Blog1.jpg"
+                  alt="A blog cover image displayed in the contact section"
                   fill
                   sizes="(max-width: 680px) 45vw, 220px"
                 />

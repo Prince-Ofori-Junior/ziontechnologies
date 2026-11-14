@@ -990,3 +990,9 @@
     animation-duration: .01ms !important;
   }
 }
+
+@media (min-width: 901px) {
+  .da-hero-grid {
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+}

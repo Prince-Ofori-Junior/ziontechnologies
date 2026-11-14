@@ -620,8 +620,8 @@ export default function UiUxDesignPage() {
     <div className="ux-gallery">
       <article className="ux-gallery-item ux-gallery-featured">
         <img
-          src="/images/ux-gallery-01.jpg"
-          alt="Creative website interface design displayed on a desktop screen"
+          src="/geralt-ai-10171006_1920.jpg"
+          alt="Artificial intelligence concept for digital design"
           loading="lazy"
         />
         <div className="ux-gallery-overlay">
@@ -632,8 +632,8 @@ export default function UiUxDesignPage() {
 
       <article className="ux-gallery-item ux-gallery-tall">
         <img
-          src="/images/ux-gallery-02.jpg"
-          alt="Modern mobile application interface design"
+          src="/Mobile Development2.jpg"
+          alt="Mobile application development"
           loading="lazy"
         />
         <div className="ux-gallery-overlay">
@@ -644,8 +644,8 @@ export default function UiUxDesignPage() {
 
       <article className="ux-gallery-item">
         <img
-          src="/images/ux-gallery-03.jpg"
-          alt="Creative user experience wireframes and design process"
+          src="/mobileappdevelopment-people-10102262_1920.jpg"
+          alt="People collaborating on mobile app development"
           loading="lazy"
         />
         <div className="ux-gallery-overlay">
@@ -656,8 +656,8 @@ export default function UiUxDesignPage() {
 
       <article className="ux-gallery-item">
         <img
-          src="/images/ux-gallery-04.jpg"
-          alt="Modern e-commerce website and product interface design"
+          src="/istockphoto-2211378155-1024x1024.jpg"
+          alt="Digital design concept"
           loading="lazy"
         />
         <div className="ux-gallery-overlay">

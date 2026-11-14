@@ -2734,3 +2734,8 @@
     animation: none;
   }
 }
+@media (min-width: 901px) {
+  .cs-hero-inner {
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+}

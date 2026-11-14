@@ -282,8 +282,8 @@ export default function DesktopApplicationPage() {
               <div className="da-hero-visual">
                 <div className="da-hero-image">
                   <Image
-                    src="/Desktop Application0.jpg"
-                    alt="Desktop application interface"
+                    src="/stocksnap-computer-2563737_1920.jpg"
+                    alt="Computer workstation displaying a desktop application"
                     fill
                     priority
                     sizes="(max-width: 700px) 100vw, 55vw"
@@ -360,8 +360,8 @@ export default function DesktopApplicationPage() {
               <div className="da-capabilities-layout">
                 <div className="da-capabilities-visual">
                   <Image
-                    src="/Desktop Application1.jpg"
-                    alt="Desktop software workspace"
+                    src="/Desktop Application 1.jpg"
+                    alt="Desktop application screen and computer equipment"
                     fill
                     sizes="(max-width: 700px) 100vw, 40vw"
                   />

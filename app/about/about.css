@@ -1491,3 +1491,9 @@ main .ab > section {
     margin-bottom: 24px;
   }
 }
+
+@media (min-width: 901px) {
+  .ab-hero-grid {
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+}

@@ -3284,3 +3284,9 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+@media (min-width: 901px) {
+  .jhome-hero-inner {
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+}

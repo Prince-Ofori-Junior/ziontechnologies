@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "./blogs/blog-data";
 
-const siteUrl = "https://www.ziontechnologies.com";
+const siteUrl = "https://www.ziontechnologie.com";
 
 const siteRoutes = [
   "",

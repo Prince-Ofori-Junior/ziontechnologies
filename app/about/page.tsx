@@ -114,8 +114,8 @@ const services = [
 ];
 
 const teamPhotos = [
-  "/Member1.jpg",
-  "/Member2.png",
+  "/Membera.jpg",
+  "/Memberb.png",
   "/Menber3.jpg",
   "/Member4.jpg",
 ];
@@ -345,7 +345,7 @@ export default function AboutPage() {
 
             <div className="ab-hero-image-main">
               <Image
-                src="/Member1.jpg"
+                src="/Membera.jpg"
                 alt="Zion Technologies team member"
                 fill
                 priority

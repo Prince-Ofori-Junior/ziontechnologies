@@ -1,3 +1,4 @@
+
 import type { MetadataRoute } from "next";
 import { blogPosts } from "./blogs/blog-data";
 
@@ -21,13 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...siteRoutes.map((route) => ({
       url: `${siteUrl}${route}`,
+      lastModified: new Date(),
       changeFrequency: route === "/blogs" ? "weekly" as const : "monthly" as const,
+      priority: route === "" ? 1 : 0.8,
     })),
+
     ...blogPosts.map((post) => ({
       url: `${siteUrl}/blogs/${post.slug}`,
-      ...((post.updatedAt ?? post.publishedAt) && {
-        lastModified: new Date(`${post.updatedAt ?? post.publishedAt}T00:00:00Z`),
-      }),
+      lastModified: new Date(
+        `${post.updatedAt ?? post.publishedAt}T00:00:00Z`
+      ),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }
